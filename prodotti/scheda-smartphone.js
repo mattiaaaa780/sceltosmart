@@ -84,7 +84,7 @@ section("Fotocamere",[
  ["Fotocamera frontale",unit(model.frontMp,"MP")]
 ]);
 section("Batteria e ricarica",[
- ["Capacità nominale dichiarata",unit(model.battery,"mAh")],
+ ["Capacità tipica dichiarata",unit(model.battery,"mAh")],
  ["Riproduzione video Apple",model.videoNote||unit(model.video,"ore (fino a)")],
  ["Ricarica cablata",unit(model.charge,"W")],
  ["Ricarica wireless",model.wireless===true?"Supportata":model.wireless===false?"Non supportata":null],
