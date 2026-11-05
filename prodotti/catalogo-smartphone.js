@@ -56,6 +56,19 @@
   if(root.querySelectorAll(".family-card").length !== families.length)root.innerHTML=output;
   // Aggiorna i pulsanti delle versioni dal file di configurazione, senza ricreare
   // la lista visibile. Così i nuovi link aggiunti in futuro compaiono da soli.
+  // Tutte le 71 varianti hanno accesso alla propria scheda.
+  root.querySelectorAll(".family-card").forEach(card=>{
+    const picture=card.querySelector(".family-image");
+    if(!picture || picture.querySelector(".family-photo-link"))return;
+    const image=picture.querySelector("img");
+    if(!image)return;
+    const link=document.createElement("a");
+    link.className="family-photo-link";
+    link.href="scheda-smartphone.html?famiglia="+encodeURIComponent(card.id);
+    link.setAttribute("aria-label","Apri le schede della famiglia "+(card.querySelector("h2")?.textContent||"smartphone"));
+    image.replaceWith(link);
+    link.append(image);
+  });
   root.querySelectorAll(".variant-item").forEach(item=>{
     const model=item.getAttribute("data-variant");
     const actions=item.querySelector(".variant-actions");
@@ -106,13 +119,12 @@
   // Le famiglie restano visibili se almeno una variante corrisponde.
   root.querySelectorAll(".variant-item").forEach(item=>{
     const model=modelByName.get((item.dataset.variant||"").toLocaleLowerCase("it"));
-    if(!model)return;
     const actions=item.querySelector(".variant-actions");
     if(!actions||actions.querySelector(".variant-details"))return;
     const a=document.createElement("a");
     a.className="variant-details";
-    a.textContent="Scheda completa ↗";
-    a.href="scheda-smartphone.html?modello="+encodeURIComponent(model.name);
+    a.textContent=model?"Scheda tecnica ↗":"Apri scheda ↗";
+    a.href="scheda-smartphone.html?modello="+encodeURIComponent(item.dataset.variant||"");
     actions.prepend(a);
   });
   function filter(){
