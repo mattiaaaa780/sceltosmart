@@ -1,6 +1,5 @@
-/* Dati produttori per il catalogo SceltoSmart. Consultare sempre le fonti indicate.
-   I campi assenti non sono inventati, i modelli possono avere varianti di mercato.
-*/
+/* Specifiche SceltoSmart con riferimenti ufficiali, verifiche al 5 novembre 2026.
+   I dati variano per capacità di memoria, regione e versione del dispositivo. */
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
@@ -159,7 +158,7 @@ window.SCELTOSMART_SPECIFICHE = {
     "checkedAt": "2026-11-05"
   },
   "Google Pixel 11": {
-    "source": "https://store.google.com/it/product/pixel_11_specs?hl=it",
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
     "screen": 6.3,
     "hz": 120,
     "battery": 4985,
@@ -170,29 +169,53 @@ window.SCELTOSMART_SPECIFICHE = {
     "wireless": true,
     "wirelessChargeW": 25,
     "displayTech": "OLED Actua",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "resolution": "1080 × 2424",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 5,
+    "teleMp": 10.8,
+    "frontMp": 10.5
   },
   "Google Pixel 11 Pro": {
-    "source": "https://store.google.com/it/product/pixel_11_pro_specs?hl=it",
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
     "screen": 6.3,
     "hz": 120,
     "battery": 4850,
     "chip": "Google Tensor G6",
     "weight": 204,
     "storage": "256 GB, 512 GB, 1 TB",
-    "displayTech": "OLED Super Actua LTPO",
-    "checkedAt": "2026-11-05"
+    "displayTech": "OLED LTPO Super Actua",
+    "checkedAt": "2026-11-05",
+    "resolution": "1280 × 2856",
+    "ram": "12 GB (256 GB); 16 GB (512 GB e 1 TB)",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 5,
+    "teleMp": 48,
+    "frontMp": 42,
+    "wireless": true,
+    "wirelessChargeW": 25
   },
   "Google Pixel 11 Pro XL": {
-    "source": "https://store.google.com/it/product/pixel_11_pro_specs?hl=it",
-    "screen": 6.7,
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
+    "screen": 6.8,
     "hz": 120,
     "battery": 5115,
     "chip": "Google Tensor G6",
     "weight": 226,
     "storage": "256 GB, 512 GB, 1 TB",
-    "displayTech": "OLED Super Actua LTPO",
-    "checkedAt": "2026-11-05"
+    "displayTech": "OLED LTPO Super Actua",
+    "checkedAt": "2026-11-05",
+    "resolution": "1344 × 2992",
+    "ram": "12 GB (256 GB); 16 GB (512 GB e 1 TB)",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 5,
+    "teleMp": 48,
+    "frontMp": 42,
+    "wireless": true,
+    "wirelessChargeW": 25
   },
   "Google Pixel 9a": {
     "source": "https://store.google.com/it/product/pixel_9a_specs?hl=it",
