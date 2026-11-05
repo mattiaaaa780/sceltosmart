@@ -82,6 +82,21 @@ root.querySelectorAll("[data-amazon-protection-kind]").forEach(link=>{
   const flag=link.parentElement.querySelector(".protection-amazon-flag");
   if(flag)flag.textContent="Link affiliato · verifica modello, variante e venditore";
 });
+/* L'indice completo ripristina i filtri prima di aprire la scheda selezionata. */
+document.querySelectorAll("[data-protection-jump]").forEach(link=>{
+  link.addEventListener("click",event=>{
+    const id=link.dataset.protectionJump;
+    const target=document.getElementById(id);
+    if(!target)return;
+    event.preventDefault();
+    brand="all";
+    search.value="";
+    fillModels();
+    model.value="all";
+    apply();
+    target.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+});
 fillModels();
 const deepModel=params.get("id");
 if(deepModel&&items.some(x=>x.id===deepModel)){model.value=deepModel;search.value="";}
