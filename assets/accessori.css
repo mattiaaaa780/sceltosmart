@@ -52,3 +52,13 @@
 @media(max-width:620px){.accessories-page .accessory-hero{padding:25px 20px;border-radius:20px}.accessories-page .accessory-hero h1{font-size:clamp(2.2rem,10vw,3rem)}.accessories-page .accessory-quick-categories{gap:9px}.accessories-page .accessory-category{min-height:97px;padding:12px;gap:8px;align-items:flex-start}.accessories-page .accessory-category-icon{width:36px;height:36px;flex-basis:36px;border-radius:10px;font-size:19px}.accessories-page .accessory-category-name{font-size:12px}.accessories-page .accessory-category-desc{font-size:11px}.accessories-page .accessory-category-total{display:none}.accessories-page .accessory-filter-wrap{padding:13px}.accessories-page .accessory-filter-wrap .catalog-toolbar{display:grid;grid-template-columns:1fr;align-items:stretch}.accessories-page .accessory-filter-wrap .catalog-toolbar label{width:100%;flex:unset}.accessories-page .accessory-filter-wrap .catalog-toolbar input,.accessories-page .accessory-filter-wrap .catalog-toolbar select{width:100%;max-width:100%}.accessories-page .catalog-picture{min-height:180px}.accessories-page .catalog-picture img{max-height:174px;height:174px}.accessories-page .catalog-copy{padding:19px}.accessories-page .accessory-helper-grid{grid-template-columns:1fr}}
 @media(max-width:400px){.accessories-page .accessory-category{padding:9px;gap:7px}.accessories-page .accessory-category-icon{width:30px;height:30px;flex-basis:30px;font-size:17px}.accessories-page .accessory-category-name{font-size:11px}.accessories-page .accessory-category-desc{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.accessories-page .accessory-category,.accessories-page .catalog-row{transition:none}}
+
+/* Intestazioni per gruppi nel catalogo */
+.accessories-page .accessory-group{display:grid;gap:15px;margin-bottom:32px}
+.accessories-page .accessory-group[hidden]{display:none!important}
+.accessories-page .accessory-group-heading{display:flex;align-items:center;gap:12px;padding:12px 4px 0}
+.accessories-page .accessory-group-heading h3{font-size:1.32rem;letter-spacing:-.035em;color:#282844;margin:0}
+.accessories-page .accessory-group-heading p{margin:0;color:#777e93;font-size:12px}
+.accessories-page .accessory-group-symbol{font-size:23px;background:#eae6ff;border-radius:12px;width:45px;height:45px;display:grid;place-items:center;flex:0 0 45px}
+.accessories-page .accessory-quick-categories button:focus-visible{outline:3px solid #8065ec;outline-offset:3px}
+.accessories-page .accessory-quick-categories button[aria-pressed=true] .accessory-category-name{color:#5130af}
