@@ -1,6 +1,6 @@
-/* Schede SceltoSmart — dati tecnici e URL dei produttori; aggiornamenti mirati 2026-11-05.
-   Campo assente = non confermato per la variante; evitare confronti mAh vs ore video.
-   Le specifiche e la disponibilità possono cambiare per mercato e configurazione. */
+/* SceltoSmart — caratteristiche documentate modello per modello; controllo 5 novembre 2026.
+   Non estendere valori da una versione all'altra. Le note del produttore prevalgono.
+*/
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
@@ -222,7 +222,8 @@ window.SCELTOSMART_SPECIFICHE = {
     "frontMp": 50,
     "tele": 3.2,
     "ipRating": "IP68",
-    "features": "Teleobiettivo Leica con zoom ottico variabile 3,2–4,3×; ripresa 8K a 30 fps"
+    "features": "Teleobiettivo Leica a focale variabile 75–100 mm; zoom ottico 3,2–4,3×",
+    "videoRecording": "8K a 30 fps; 4K fino a 120 fps"
   },
   "Xiaomi 17T": {
     "source": "https://www.mi.com/it/product/xiaomi-17t/specs/",
@@ -456,7 +457,6 @@ window.SCELTOSMART_SPECIFICHE = {
     "storage": "128 GB, 256 GB",
     "checkedAt": "2026-11-05",
     "ram": "8 GB",
-    "screen": 6.78,
     "displayTech": "AMOLED flessibile",
     "hz": 120,
     "chip": "Snapdragon 7s Gen 4",
@@ -487,7 +487,8 @@ window.SCELTOSMART_SPECIFICHE = {
     "frontMp": 32,
     "ultrawide": true,
     "ipRating": "IP65",
-    "features": "Glyph Matrix; scocca in alluminio; Gorilla Glass 7i"
+    "features": "Glyph Matrix; scocca in alluminio; Gorilla Glass 7i",
+    "updatesInfo": "3 anni di aggiornamenti del sistema operativo e 6 anni di sicurezza"
   },
   "Nothing Phone (3a)": {
     "source": "https://it.nothing.tech/products/phone-3a",
@@ -525,7 +526,6 @@ window.SCELTOSMART_SPECIFICHE = {
     "screen": 6.77,
     "displayTech": "AMOLED",
     "hz": 120,
-    "chip": "Processore octa-core a 4 nm (modello non indicato nella fonte consultata)",
     "mainMp": 50,
     "frontMp": 16,
     "ultrawide": true,
@@ -561,7 +561,9 @@ window.SCELTOSMART_SPECIFICHE = {
     "ultrawide": true,
     "charge": 80,
     "updates": 6,
-    "features": "4 aggiornamenti Android; 6 anni di patch di sicurezza"
+    "features": "Aqua Touch; ricarica bypass",
+    "updatesInfo": "4 versioni Android e 6 anni di patch di sicurezza",
+    "videoRecording": "4K a 60 fps"
   },
   "OnePlus Nord CE5": {
     "source": "https://www.oneplus.com/it/nord-ce5",
@@ -576,7 +578,9 @@ window.SCELTOSMART_SPECIFICHE = {
     "ultrawide": true,
     "charge": 80,
     "updates": 6,
-    "features": "4 aggiornamenti Android; 6 anni di patch di sicurezza"
+    "features": "4 aggiornamenti Android; 6 anni di patch di sicurezza",
+    "updatesInfo": "4 versioni Android e 6 anni di patch di sicurezza",
+    "videoRecording": "4K a 60 fps"
   },
   "OPPO Find X9 Ultra": {
     "source": "https://www.oppo.com/it/smartphones/series-find-x/find-x9-ultra/specs/",
@@ -615,7 +619,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "teleMp": 200,
     "frontMp": 50,
     "ipRating": "IP68, IP69 e IP69K",
-    "features": "Fotocamera frontale con rilevamento profondità 3D; Wi‑Fi 7; NFC"
+    "features": "Fotocamera frontale con rilevamento profondità 3D; Wi‑Fi 7; NFC",
+    "wifi": "Wi‑Fi 7",
+    "bluetooth": "Bluetooth 6.0",
+    "nfc": "Sì",
+    "usb": "USB‑C 3.2 Gen 1",
+    "sim": "nano‑SIM ed eSIM (a seconda della configurazione)",
+    "videoRecording": "Fino a 4K 120 fps, secondo modalità",
+    "updatesInfo": null
   },
   "HONOR Magic8 Lite": {
     "source": "https://www.honor.com/it/phones/honor-magic8-lite/spec/",
@@ -634,7 +645,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "ultrawide": true,
     "frontMp": 16,
     "ipRating": "IP66, IP68, IP69 e IP69K",
-    "features": "Wi‑Fi 6; Bluetooth 5.2; NFC; audio stereo"
+    "features": "Wi‑Fi 6; Bluetooth 5.2; NFC; audio stereo",
+    "wifi": "Wi‑Fi 6",
+    "bluetooth": "Bluetooth 5.2",
+    "nfc": "Sì",
+    "usb": "USB‑C 2.0",
+    "sim": "nano‑SIM + nano‑SIM/eSIM (secondo mercato)"
   },
   "Motorola Razr 70": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192566/~/specifiche--motorola-razr-70",
@@ -647,7 +663,8 @@ window.SCELTOSMART_SPECIFICHE = {
     "displayTech": "LTPO Extreme AMOLED pieghevole",
     "wireless": true,
     "wirelessChargeW": 15,
-    "features": "Android 16; audio stereo Dolby Atmos; NFC"
+    "features": "Android 16; audio stereo Dolby Atmos",
+    "nfc": "Sì"
   },
   "Motorola Razr 70 Plus": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192565/~/specifiche--motorola-razr-70-plus",
@@ -671,7 +688,10 @@ window.SCELTOSMART_SPECIFICHE = {
     "weight": 199,
     "wireless": true,
     "wirelessChargeW": 50,
-    "features": "Schermo esterno 4,0″, 1272 × 1080; Wi‑Fi 7; Android 16"
+    "features": "Android 16; Dolby Vision e HDR10+; audio stereo Dolby Atmos",
+    "coverDisplay": "4,0″ Extreme AMOLED, 1272 × 1080, fino a 165 Hz",
+    "wifi": "Wi‑Fi 7 / 6E / 6 / 5",
+    "nfc": "Sì"
   },
   "Samsung Galaxy S26 FE": {
     "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s26-fe-blueberry-128gb-sm-s741bzvdeub/",
@@ -719,7 +739,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "tele": 3,
     "frontMp": 12,
     "ipRating": "IP68",
-    "features": "Bluetooth 5.4; Wi‑Fi 6E; NFC; Samsung DeX"
+    "features": "Bluetooth 5.4; Wi‑Fi 6E; NFC; Samsung DeX",
+    "wifi": "Wi‑Fi 6E",
+    "bluetooth": "Bluetooth 5.4",
+    "nfc": "Sì",
+    "usb": "USB‑C 3.2 Gen 1",
+    "sim": "nano‑SIM e/o eSIM",
+    "videoRecording": "Fino a UHD 8K 30 fps",
+    "updatesInfo": "Patch di sicurezza dichiarate fino al 30 settembre 2032"
   },
   "Samsung Galaxy S25 Edge": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
@@ -810,7 +837,8 @@ window.SCELTOSMART_SPECIFICHE = {
     "tele": 3.5,
     "teleMp": 50,
     "frontMp": 32,
-    "features": "Tripla fotocamera da 50 MP; registrazione Dolby Vision 4K 120 fps"
+    "features": "Display LTPO 1,5K; tripla fotocamera da 50 MP; ricarica SUPERVOOC e AIRVOOC",
+    "videoRecording": "Dolby Vision 4K fino a 120 fps"
   },
   "OnePlus 15R": {
     "source": "https://www.oneplus.com/it/15r",
@@ -822,7 +850,8 @@ window.SCELTOSMART_SPECIFICHE = {
     "mainMp": 50,
     "checkedAt": "2026-11-05",
     "frontMp": 32,
-    "ultrawide": true
+    "ultrawide": true,
+    "videoRecording": "4K fino a 120 fps in modalità slow motion"
   },
   "Google Pixel 10a": {
     "screen": 6.3,
@@ -992,7 +1021,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "source": "https://www.apple.com/it/iphone-17/specs/",
     "storage": "256 GB, 512 GB",
     "displayTech": "OLED Super Retina XDR",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "resolution": "2622 × 1206",
+    "ipRating": "IP68 (fino a 6 m per 30 minuti, test di laboratorio)",
+    "frontMp": 18,
+    "sim": "nano-SIM + eSIM; dual eSIM",
+    "features": "Fotocamera principale 48 MP; ultragrandangolo Fusion 48 MP; Center Stage; ProMotion"
   },
   "iPhone 17 Pro": {
     "screen": 6.3,
