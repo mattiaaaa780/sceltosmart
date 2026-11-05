@@ -1,0 +1,33 @@
+name: Audit mobile SceltoSmart
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-mobile.yml'
+      - 'qa/mobile-smoke.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mobile-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Installa Playwright e Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Verifica homepage, Finder e cataloghi a varie larghezze
+        run: node qa/mobile-smoke.cjs
+      - name: Salva schermate mobile
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sceltosmart-audit-mobile
+          path: qa-results/*.png
+          if-no-files-found: ignore
+          retention-days: 7
