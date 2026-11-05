@@ -48,6 +48,30 @@
     return '<article class="catalog-row family-card" id="'+htmlEscape(f.id)+'" data-family-brand="'+htmlEscape(f.brand)+'" data-family-os="'+htmlEscape(f.os)+'" data-family-search="'+htmlEscape((f.brand+" "+f.title+" "+f.desc+" "+f.models.join(" ")).toLowerCase())+'"><div class="catalog-picture family-image"><img src="'+htmlEscape(imgUrl)+'" alt="Foto rappresentativa della gamma '+htmlEscape(f.title)+'; le varianti possono avere un aspetto diverso" width="220" height="220" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="catalog-copy"><div class="family-tags"><span class="small-tag">'+htmlEscape(f.brand)+'</span><span class="small-tag green">'+htmlEscape(f.models.length)+' versioni</span></div><h2>'+htmlEscape(f.title)+'</h2><p>'+htmlEscape(f.desc)+'</p><details class="family-variants"'+open+'><summary>Mostra le '+htmlEscape(f.models.length)+' versioni della famiglia <span aria-hidden="true">⌄</span></summary><ul class="variant-list">'+models+'</ul></details><p class="catalog-credit">Foto esemplificativa: '+htmlEscape(f.credit)+'. <a href="'+htmlEscape(src)+'" target="_blank" rel="noopener noreferrer">Fonte ufficiale del produttore ↗</a></p></div></article>';
   }).join("");
   if(root.querySelectorAll(".family-card").length !== families.length)root.innerHTML=output;
+  // Aggiorna i pulsanti delle versioni dal file di configurazione, senza ricreare
+  // la lista visibile. Così i nuovi link aggiunti in futuro compaiono da soli.
+  root.querySelectorAll(".variant-item").forEach(item=>{
+    const model=item.getAttribute("data-variant");
+    const actions=item.querySelector(".variant-actions");
+    if(!model||!actions)return;
+    const prev=actions.querySelector(".variant-amazon, .variant-pending");
+    if(prev)prev.remove();
+    const affiliate=validLink(links[keyFor(model)]);
+    if(affiliate){
+      const a=document.createElement("a");
+      a.className="variant-amazon";
+      a.href=affiliate;
+      a.target="_blank";
+      a.rel="sponsored noopener noreferrer";
+      a.textContent="Vedi su Amazon · affiliato ↗";
+      actions.append(a);
+    }else{
+      const span=document.createElement("span");
+      span.className="variant-pending";
+      span.textContent="Link Amazon da aggiungere";
+      actions.append(span);
+    }
+  });
   root.querySelectorAll(".family-image img").forEach(img=>{
     img.addEventListener("error",()=>{
       img.hidden=true;
