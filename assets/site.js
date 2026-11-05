@@ -31,7 +31,7 @@
   const feedback = document.getElementById("search-feedback");
   const root = form.dataset.root || "";
   const matches = [
-    {keys:["airpods","buds","wh-1000","jbl","anker","cuffie","auricolari","power bank","powerbank","caricatore","caricabatterie","custodia","accessori"],url:"prodotti/accessori.html",filter:true},
+    {keys:["airpods","buds","wh-1000","jbl","anker","cuffie","auricolari","power bank","powerbank","caricatore","caricabatterie","custodia","accessori","spigen","airtag","smarttag","halolock","esr","ulanzi","ugreen","maggo","qi2","vetro","vetro temperato","cavo","treppiede","supporto auto","localizzatore"],url:"prodotti/accessori.html",filter:true},
     {keys:["pixel","google","galaxy","samsung","iphone","apple","xiaomi","redmi","poco","nothing","motorola","honor","oppo","oneplus","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html",filter:true},
     {keys:["guida","guide","consigli"],url:"guide/index.html",filter:false}
   ];
@@ -54,8 +54,9 @@
 })();
 
 
-/* Filtri locali sul catalogo: nessuna richiesta al server e nessun cookie. */
+/* Filtri locali sul catalogo: ricerca, categorie e schede responsive, senza tracciamento. */
 (function () {
+  "use strict";
   const catalog=document.querySelector("[data-catalog]");
   if(!catalog)return;
   const search=document.querySelector("[data-catalog-search]");
@@ -63,24 +64,70 @@
   const cards=[...catalog.querySelectorAll("[data-catalog-item]")];
   const counter=document.querySelector("[data-catalog-count]");
   const empty=document.querySelector("[data-catalog-empty]");
-  const normalize=s=>(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  const chips=[...document.querySelectorAll("[data-accessory-category]")];
+  const groups=[...catalog.querySelectorAll("[data-accessory-group]")];
+  const clear=document.querySelector("[data-accessory-clear]");
+  const normalize=s=>(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"");
   function update(){
-    const q=normalize(search&&search.value.trim()), filter=type?type.value:"all";
+    const q=normalize(search&&search.value.trim());
+    const filter=type?type.value:"all";
     let visible=0;
     cards.forEach(card=>{
       const text=normalize(card.dataset.search);
       const matches=(!q||text.includes(q))&&(filter==="all"||card.dataset.group===filter);
-      card.hidden=!matches;if(matches)visible++;
+      card.hidden=!matches;
+      if(matches)visible++;
     });
-    if(counter)counter.textContent=visible+" prodotti mostrati";
-    if(empty)empty.style.display=visible?"none":"block";
+    groups.forEach(group=>{
+      group.hidden=![...group.querySelectorAll("[data-catalog-item]")].some(card=>!card.hidden);
+    });
+    chips.forEach(chip=>chip.setAttribute("aria-pressed",String(chip.dataset.accessoryCategory===filter)));
+    if(counter)counter.textContent=visible+" "+(visible===1?"prodotto mostrato":"prodotti mostrati");
+    if(empty){
+      empty.hidden=visible!==0;
+      empty.style.display=visible?"none":"block";
+    }
   }
+  const params=new URLSearchParams(window.location.search);
   if(search){
-    const initial=new URLSearchParams(window.location.search).get("q");
+    const initial=params.get("q");
     if(initial)search.value=initial.slice(0,120);
     search.addEventListener("input",update);
   }
-  if(type)type.addEventListener("change",update);
+  if(type){
+    const initial=params.get("categoria");
+    if(initial&&[...type.options].some(option=>option.value===initial))type.value=initial;
+    type.addEventListener("change",update);
+  }
+  chips.forEach(chip=>chip.addEventListener("click",function(){
+    if(!type)return;
+    const target=chip.dataset.accessoryCategory;
+    type.value=type.value===target?"all":target;
+    update();
+    const catalogStart=document.getElementById("catalogo-accessori");
+    if(catalogStart)catalogStart.scrollIntoView({behavior:"smooth",block:"start"});
+  }));
+  if(clear)clear.addEventListener("click",function(){
+    if(type)type.value="all";
+    if(search)search.value="";
+    update();
+    if(search)search.focus();
+  });
+  catalog.querySelectorAll(".catalog-picture img").forEach(img=>{
+    const showFallback=()=>{
+      if(img.dataset.fallbackShown==="true")return;
+      img.dataset.fallbackShown="true";
+      img.hidden=true;
+      const art=document.createElement("span");
+      art.className="accessory-no-image";
+      art.setAttribute("role","img");
+      art.setAttribute("aria-label","Immagine temporaneamente non disponibile");
+      art.textContent=img.closest("[data-catalog-item]")?.dataset.group==="audio"?"🎧":"📦";
+      img.parentElement.append(art);
+    };
+    if(img.complete&&!img.naturalWidth)showFallback();
+    else img.addEventListener("error",showFallback,{once:true});
+  });
   update();
 })();
 
