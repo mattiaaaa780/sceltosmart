@@ -1,0 +1,38 @@
+name: SceltoSmart - controllo siti e link
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - '**/*.js'
+      - '**/*.css'
+      - 'sitemap.xml'
+      - 'sitemap.txt'
+      - 'robots.txt'
+      - 'scripts/site_audit.py'
+      - '.github/workflows/site-audit.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica file, link, sitemap e 71 schede
+        run: python scripts/site_audit.py
+      - name: Verifica sintassi JavaScript
+        shell: bash
+        run: |
+          set -e
+          for file in assets/*.js prodotti/*.js; do
+            node --check "$file"
+          done
