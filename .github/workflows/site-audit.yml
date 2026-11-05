@@ -5,6 +5,7 @@ on:
     paths:
       - '**/*.html'
       - '**/*.js'
+      - '**/*.cjs'
       - '**/*.css'
       - 'sitemap.xml'
       - 'sitemap.txt'
@@ -39,3 +40,6 @@ jobs:
           for file in assets/*.js prodotti/*.js; do
             node --check "$file"
           done
+          node --check scripts/sync_schede.cjs
+      - name: Verifica allineamento delle 71 schede
+        run: node scripts/sync_schede.cjs --check
