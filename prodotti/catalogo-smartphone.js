@@ -73,14 +73,19 @@
     }
   });
   root.querySelectorAll(".family-image img").forEach(img=>{
-    img.addEventListener("error",()=>{
+    const fallback=()=>{
+      if(img.dataset.fallbackShown==="true")return;
+      img.dataset.fallbackShown="true";
       img.hidden=true;
       const placeholder=document.createElement("span");
       placeholder.className="photo-fallback";
-      placeholder.setAttribute("aria-label","Immagine non disponibile");
+      placeholder.setAttribute("role","img");
+      placeholder.setAttribute("aria-label","Immagine temporaneamente non disponibile");
       placeholder.textContent="📱";
       img.parentElement.append(placeholder);
-    },{once:true});
+    };
+    if(img.complete&&!img.naturalWidth)fallback();
+    else img.addEventListener("error",fallback,{once:true});
   });
   const cards=[...root.querySelectorAll(".family-card")];
   const normalize=s=>String(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
