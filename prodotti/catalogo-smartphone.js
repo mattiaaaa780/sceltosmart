@@ -39,7 +39,7 @@
       const key=keyFor(model);
       const affiliate=validLink(links[key]);
       const action=affiliate
-        ? '<a class="variant-amazon" href="'+htmlEscape(affiliate)+'" target="_blank" rel="sponsored noopener noreferrer">Vedi su Amazon · affiliato ↗</a>'
+        ? '<a class="variant-amazon" href="'+htmlEscape(affiliate)+'" target="_blank" rel="sponsored noopener noreferrer">Vedi su Amazon ↗</a>'
         : '<span class="variant-pending">Link Amazon da aggiungere</span>';
       const legacy=model==="Google Pixel 10a"?' id="pixel"':model==="Samsung Galaxy A57 5G"?' id="samsung"':"";
       return '<li class="variant-item"'+legacy+' data-variant="'+htmlEscape(model)+'"><div class="variant-name"><strong>'+htmlEscape(model)+'</strong><small>Versione specifica: verifica memoria, colore e venditore.</small></div><div class="variant-actions"><a href="'+htmlEscape(src)+'" target="_blank" rel="noopener noreferrer">Produttore ↗</a>'+action+'</div></li>';
@@ -63,7 +63,7 @@
       a.href=affiliate;
       a.target="_blank";
       a.rel="sponsored noopener noreferrer";
-      a.textContent="Vedi su Amazon · affiliato ↗";
+      a.textContent="Vedi su Amazon ↗";
       actions.append(a);
     }else{
       const span=document.createElement("span");
