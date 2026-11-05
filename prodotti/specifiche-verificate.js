@@ -1,4 +1,6 @@
-/* Valori specifici del modello verificati su pagine dei produttori, novembre 2026.\n   I campi assenti NON sono stimati. Non applicare informazioni di una variante alle altre. */\nwindow.SCELTOSMART_SPECIFICHE= {
+/* Valori specifici del modello verificati su pagine dei produttori, novembre 2026.
+   I campi assenti NON sono stimati. Non applicare informazioni di una variante alle altre. */
+window.SCELTOSMART_SPECIFICHE= {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
     "screen": 6.3,
@@ -346,4 +348,4 @@
     "battery": 5000,
     "chip": "Snapdragon 8 Elite"
   }
-};\n
+};
