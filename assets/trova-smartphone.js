@@ -94,16 +94,32 @@
     if(v.size==="large")pool=pool.filter(isLarge);
     const priorityLabels={daily:"uso quotidiano",battery:"batteria e ricarica",camera:"fotocamera",performance:"prestazioni e processore"};
     const ranked=pool.map((p,index)=>({p,index,score:rank(p,v.use)}))
-      .sort((a,b)=>b.score-a.score||a.index-b.index).slice(0,3).map(x=>x.p);
+      .sort((a,b)=>b.score-a.score||a.index-b.index);
+    let picks=ranked.slice(0,3);
+    let mixedSystems=false;
+    if(v.os==="any"){
+      // Per "Indifferente" non escludere un ecosistema solo perché i
+      // punteggi sono basati su metriche non confrontabili (es. mAh e ore video).
+      // Ordina ciascun sistema in modo indipendente; non confrontare i due score.
+      const android=ranked.filter(entry=>entry.p.os==="Android");
+      const iphone=ranked.filter(entry=>entry.p.os==="iOS");
+      if(android.length&&iphone.length){
+        mixedSystems=true;
+        // Mostra entrambi subito; completa il terzetto con un secondo Android
+        // se disponibile (la selezione documentata include più Android).
+        picks=[android[0],iphone[0],android[1]||iphone[1]].filter(Boolean);
+      }
+    }
+    const suggested=picks.map(entry=>entry.p);
     count.textContent=pool.length+" "+(pool.length===1?"modello selezionato":"modelli selezionati")+" su "+models.length+" documentati";
-    if(!ranked.length){
+    if(!suggested.length){
       summary.textContent="Nessun modello della selezione risponde a tutti i filtri. Prova a cambiare dimensioni o sistema operativo.";
       output.innerHTML='<div class="finder-no-results">Non abbiamo una scheda verificata per questa combinazione. <a href="prodotti/smartphone.html">Esplora il catalogo completo ↗</a></div>';
     }else{
       const sizeLabel=v.size==="small"?" · dimensioni compatte":v.size==="large"?" · schermo grande":"";
       const osLabel=v.os==="any"?"iOS e Android":v.os;
-      summary.textContent=ranked.length+" proposte ragionate per "+osLabel+" · "+priorityLabels[v.use]+sizeLabel+". Ordine orientativo, non una classifica per qualità o prezzo.";
-      output.innerHTML=ranked.map((p,i)=>deviceCard(p,i,v.use,v.size)).join("");
+      summary.textContent=suggested.length+" proposte ragionate per "+osLabel+" · "+priorityLabels[v.use]+sizeLabel+". "+(mixedSystems?"Con Indifferente mostriamo Android e iPhone: ciascun sistema è valutato separatamente. ":"")+"Non è una classifica per qualità o prezzo.";
+      output.innerHTML=suggested.map((p,i)=>deviceCard(p,i,v.use,v.size)).join("");
     }
   }
   form.addEventListener("change",refresh);
