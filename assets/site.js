@@ -159,3 +159,23 @@
     if(img.complete&&!img.naturalWidth)recover();
   });
 })();
+
+/* Recapito SceltoSmart su tutti i footer, incluse le schede HTML statiche. */
+(function(){
+  "use strict";
+  const address="contatti.sceltosmart@gmail.com";
+  document.querySelectorAll(".site-footer .footer-grid").forEach(grid=>{
+    if(grid.querySelector(".footer-contact"))return;
+    const groups=[...grid.children];
+    const info=groups.find(col=>col.querySelector('.footer-list a[href$="cookie.html"]'))||groups[groups.length-1];
+    if(!info)return;
+    const paragraph=document.createElement("p");
+    paragraph.className="footer-contact";
+    paragraph.append(document.createTextNode("Scrivici: "));
+    const link=document.createElement("a");
+    link.href="mailto:"+address;
+    link.textContent=address;
+    paragraph.append(link);
+    info.append(paragraph);
+  });
+})();
