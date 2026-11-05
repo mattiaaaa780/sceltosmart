@@ -9,6 +9,12 @@
   const brand=document.getElementById("family-brand");
   const os=document.getElementById("family-os");
   const counter=document.getElementById("family-count");
+  const size=document.getElementById("family-size");
+  const spec=document.getElementById("family-spec");
+  const sort=document.getElementById("family-sort");
+  const reset=document.getElementById("family-reset");
+  const documented=Array.isArray(window.SCELTOSMART_FINDER_MODELS)?window.SCELTOSMART_FINDER_MODELS:[];
+  const modelByName=new Map(documented.map(m=>[m.name.toLocaleLowerCase("it"),m]));
   const empty=document.getElementById("family-empty");
   const htmlEscape=x=>String(x==null?"":x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const keyFor=s=>{
@@ -96,25 +102,63 @@
   });
   const cards=[...root.querySelectorAll(".family-card")];
   const normalize=s=>String(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  // Le dimensioni possono essere filtrate soltanto per i modelli documentati.
+  // Le famiglie restano visibili se almeno una variante corrisponde.
+  root.querySelectorAll(".variant-item").forEach(item=>{
+    const model=modelByName.get((item.dataset.variant||"").toLocaleLowerCase("it"));
+    if(!model)return;
+    const actions=item.querySelector(".variant-actions");
+    if(!actions||actions.querySelector(".variant-details"))return;
+    const a=document.createElement("a");
+    a.className="variant-details";
+    a.textContent="Scheda completa ↗";
+    a.href="scheda-smartphone.html?modello="+encodeURIComponent(model.name);
+    actions.prepend(a);
+  });
   function filter(){
     let shown=0,versions=0;
     const q=normalize(search.value.trim());
+    const chosenSize=size?size.value:"all";
+    const documentedOnly=spec&&spec.value==="documented";
     cards.forEach(card=>{
       const matchBrand=!brand.value||brand.value==="all"||card.dataset.familyBrand===brand.value;
       const matchOs=!os.value||os.value==="all"||card.dataset.familyOs===os.value;
-      const matches=!q||normalize(card.dataset.familySearch).includes(q);
-      const visible=matchBrand&&matchOs&&matches;
+      const variants=[...card.querySelectorAll(".variant-item")];
+      let matchingVersions=0;
+      variants.forEach(item=>{
+        const name=item.dataset.variant||"";
+        const model=modelByName.get(name.toLocaleLowerCase("it"));
+        const matchText=!q||normalize(name+" "+card.dataset.familySearch).includes(q);
+        const matchSize=chosenSize==="all"||(model&&
+          (chosenSize==="small"?model.screen<=6.4:chosenSize==="medium"?model.screen>6.4&&model.screen<6.65:model.screen>=6.65));
+        const visible=matchText&&matchSize&&(!documentedOnly||!!model);
+        item.hidden=!visible;
+        if(visible)matchingVersions++;
+      });
+      const visible=matchBrand&&matchOs&&matchingVersions>0;
       card.hidden=!visible;
-      if(visible){shown++;versions+=card.querySelectorAll(".variant-item").length;if(q)card.querySelector("details").open=true;}
+      if(visible){
+        shown++;versions+=matchingVersions;
+        if(q||chosenSize!=="all"||documentedOnly)card.querySelector("details").open=true;
+      }
     });
     counter.textContent=shown+" famiglie · "+versions+" versioni";
     empty.hidden=shown!==0;
+    if(sort&&sort.value!=="original"){
+      [...cards].sort((a,b)=>a.querySelector("h2").textContent.localeCompare(b.querySelector("h2").textContent,"it")*(sort.value==="az"?1:-1)).forEach(card=>root.append(card));
+    }else{
+      cards.forEach(card=>root.append(card));
+    }
   }
   const initialQuery=new URLSearchParams(window.location.search).get("q");
   if(initialQuery)search.value=initialQuery.slice(0,120);
   search.addEventListener("input",filter);
   brand.addEventListener("change",filter);
   os.addEventListener("change",filter);
+  if(size)size.addEventListener("change",filter);
+  if(spec)spec.addEventListener("change",filter);
+  if(sort)sort.addEventListener("change",filter);
+  if(reset)reset.addEventListener("click",()=>{search.value="";brand.value="all";os.value="all";if(size)size.value="all";if(spec)spec.value="all";if(sort)sort.value="original";filter();search.focus();});
   filter();
   if(window.location.hash){
     const id=decodeURIComponent(window.location.hash.slice(1));
