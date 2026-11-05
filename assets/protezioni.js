@@ -54,6 +54,34 @@ root.querySelectorAll(".protection-device-head img").forEach(img=>{
  const failed=()=>{img.hidden=true;const place=document.createElement("span");place.className="protection-img-fallback";place.textContent="📱";place.setAttribute("aria-label","Immagine non disponibile");img.parentNode.insertBefore(place,img.nextSibling);};
  if(img.complete&&!img.naturalWidth)failed();else img.addEventListener("error",failed,{once:true});
 });
+/* I link Amazon della tabella sono ricerche NON affiliate per impostazione
+   predefinita. Sostituisci soltanto quando esiste un link prodotto specifico,
+   fornito dal proprietario del sito nella mappa separata. */
+const affiliateMap=window.SCELTOSMART_PROTEZIONI_AFFILIATI||{};
+function validAffiliate(value){
+  if(typeof value!=="string"||!value.trim())return null;
+  try{
+    const u=new URL(value.trim());
+    if(u.protocol!=="https:")return null;
+    const host=u.hostname.toLowerCase();
+    if(["link.amazon","amzn.to","amzn.eu"].includes(host))return u.href;
+    if(["amazon.it","www.amazon.it"].includes(host)&&u.searchParams.has("tag"))return u.href;
+  }catch(e){return null}
+  return null;
+}
+root.querySelectorAll("[data-amazon-protection-kind]").forEach(link=>{
+  const modelName=link.dataset.amazonProtectionModel;
+  const kind=link.dataset.amazonProtectionKind;
+  const fromMap=affiliateMap[modelName];
+  const target=fromMap&&typeof fromMap==="object"?validAffiliate(fromMap[kind]):null;
+  if(!target)return;
+  link.href=target;
+  link.rel="sponsored noopener noreferrer";
+  link.classList.add("is-affiliate");
+  link.textContent="Vedi "+(kind==="cover"?"la cover":"il vetro")+" su Amazon ↗";
+  const flag=link.parentElement.querySelector(".protection-amazon-flag");
+  if(flag)flag.textContent="Link affiliato · verifica modello, variante e venditore";
+});
 fillModels();
 const deepModel=params.get("id");
 if(deepModel&&items.some(x=>x.id===deepModel)){model.value=deepModel;search.value="";}
