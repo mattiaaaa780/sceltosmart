@@ -4,7 +4,7 @@
   const families=Array.isArray(window.SCELTOSMART_FAMIGLIE)?window.SCELTOSMART_FAMIGLIE:[];
   const links=window.SCELTOSMART_LINK_AMAZON||{};
   const root=document.getElementById("family-catalog");
-  if(!root)return;
+  if(!root||families.length===0)return;
   const search=document.getElementById("family-search");
   const brand=document.getElementById("family-brand");
   const os=document.getElementById("family-os");
@@ -44,10 +44,10 @@
       const legacy=model==="Google Pixel 10a"?' id="pixel"':model==="Samsung Galaxy A57 5G"?' id="samsung"':"";
       return '<li class="variant-item"'+legacy+' data-variant="'+htmlEscape(model)+'"><div class="variant-name"><strong>'+htmlEscape(model)+'</strong><small>Versione specifica: verifica memoria, colore e venditore.</small></div><div class="variant-actions"><a href="'+htmlEscape(src)+'" target="_blank" rel="noopener noreferrer">Produttore ↗</a>'+action+'</div></li>';
     }).join("");
-    const open=(f.id==="pixel10"||f.id==="galaxya57")?" open":"";
+    const open=" open";
     return '<article class="catalog-row family-card" id="'+htmlEscape(f.id)+'" data-family-brand="'+htmlEscape(f.brand)+'" data-family-os="'+htmlEscape(f.os)+'" data-family-search="'+htmlEscape((f.brand+" "+f.title+" "+f.desc+" "+f.models.join(" ")).toLowerCase())+'"><div class="catalog-picture family-image"><img src="'+htmlEscape(imgUrl)+'" alt="Foto rappresentativa della gamma '+htmlEscape(f.title)+'; le varianti possono avere un aspetto diverso" width="220" height="220" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="catalog-copy"><div class="family-tags"><span class="small-tag">'+htmlEscape(f.brand)+'</span><span class="small-tag green">'+htmlEscape(f.models.length)+' versioni</span></div><h2>'+htmlEscape(f.title)+'</h2><p>'+htmlEscape(f.desc)+'</p><details class="family-variants"'+open+'><summary>Mostra le '+htmlEscape(f.models.length)+' versioni della famiglia <span aria-hidden="true">⌄</span></summary><ul class="variant-list">'+models+'</ul></details><p class="catalog-credit">Foto esemplificativa: '+htmlEscape(f.credit)+'. <a href="'+htmlEscape(src)+'" target="_blank" rel="noopener noreferrer">Fonte ufficiale del produttore ↗</a></p></div></article>';
   }).join("");
-  root.innerHTML=output;
+  if(root.querySelectorAll(".family-card").length !== families.length)root.innerHTML=output;
   root.querySelectorAll(".family-image img").forEach(img=>{
     img.addEventListener("error",()=>{
       img.hidden=true;
