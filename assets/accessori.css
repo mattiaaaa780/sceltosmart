@@ -62,3 +62,12 @@
 .accessories-page .accessory-group-symbol{font-size:23px;background:#eae6ff;border-radius:12px;width:45px;height:45px;display:grid;place-items:center;flex:0 0 45px}
 .accessories-page .accessory-quick-categories button:focus-visible{outline:3px solid #8065ec;outline-offset:3px}
 .accessories-page .accessory-quick-categories button[aria-pressed=true] .accessory-category-name{color:#5130af}
+
+/* Scorciatoia visiva per i 36 modelli con protezioni dedicate */
+.accessories-page .accessory-protection-banner{display:flex;gap:19px;align-items:center;flex-wrap:wrap;padding:24px;border-radius:22px;background:linear-gradient(120deg,#eeeaff,#f9fbff);border:1px solid #dad1f9;margin:27px 0 12px}
+.accessories-page .accessory-protection-icon{width:65px;height:65px;border-radius:18px;background:#fff;display:grid;place-items:center;font-size:31px;flex:0 0 65px}
+.accessories-page .accessory-protection-banner>div:nth-child(2){flex:1 1 250px}
+.accessories-page .accessory-protection-banner h2{margin:8px 0;font-size:clamp(1.4rem,2.7vw,1.8rem);letter-spacing:-.04em}
+.accessories-page .accessory-protection-banner p{font-size:13px;color:#636b84;margin:0;line-height:1.65}
+.accessories-page .accessory-protection-banner .btn{flex-shrink:0}
+@media(max-width:620px){.accessories-page .accessory-protection-banner{padding:18px;gap:12px}.accessories-page .accessory-protection-banner .btn{width:100%}}
