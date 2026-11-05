@@ -1,0 +1,54 @@
+/* SceltoSmart | ricerca protezioni per modello · solo su .protection-page */
+.protection-page{background:#f7f8fd}
+.protection-page .protections-hero{margin:14px 0 28px;border-radius:28px;padding:clamp(26px,4vw,50px);background:radial-gradient(circle at 92% 6%,#dbd0fe 0,transparent 40%),linear-gradient(120deg,#ffffff,#eeeefe);border:1px solid #dddaf0;position:relative;overflow:hidden}
+.protection-page .protections-hero h1{font-size:clamp(2.4rem,5vw,3.85rem);max-width:740px;margin:12px 0 12px;line-height:1.12}
+.protection-page .protections-hero p{font-size:16px;max-width:730px;color:#5d657e}
+.protection-page .protections-counts{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.protection-page .protections-counts span{padding:8px 13px;background:white;border:1px solid #dad5f1;color:#51419b;font-weight:800;font-size:12px;border-radius:999px}
+.protection-page .protections-note{border:1px solid #dfdcf5;background:#f0eeff;border-radius:16px;padding:17px 21px;margin:0 0 25px;color:#4e4773;font-size:13px;line-height:1.7}
+.protection-page .protections-note strong{color:#382c79}
+.protection-page .protection-filters{background:#fff;border:1px solid #e1e3ef;box-shadow:0 10px 34px #1617430a;border-radius:22px;padding:22px;margin:0 0 30px}
+.protection-page .protection-filters h2{font-size:1.25rem;margin:0 0 15px}
+.protection-page .protection-brand-buttons{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.protection-page .protection-brand-buttons button{border:1px solid #e2ddf5;border-radius:12px;padding:10px 15px;color:#51458f;font-size:13px;font-weight:800;background:#f8f6ff;min-height:43px}
+.protection-page .protection-brand-buttons button:hover{background:#ede7ff}
+.protection-page .protection-brand-buttons button[aria-pressed=true]{background:#6044d1;border-color:#6044d1;color:white}
+.protection-page .protection-search-controls{display:grid;grid-template-columns:1fr minmax(210px,280px) auto;gap:13px;align-items:end}
+.protection-page .protection-search-controls label{font-weight:800;font-size:12px;color:#525873;display:grid;gap:5px}
+.protection-page .protection-search-controls input,.protection-page .protection-search-controls select{border:1px solid #d7d9e8;background:#fff;border-radius:12px;min-height:47px;padding:10px 12px;color:#252942;font-size:14px;width:100%;min-width:0}
+.protection-page .protection-search-controls button{min-height:47px}
+.protection-page .protections-results{font-size:13px;color:#667087;font-weight:750;margin:13px 1px 0}
+.protection-page .protection-brand-group{margin:35px 0 40px}
+.protection-page .protection-brand-group[hidden]{display:none!important}
+.protection-page .protection-group-heading{display:flex;align-items:center;gap:12px;border-bottom:1px solid #e4e4f0;padding-bottom:15px;margin-bottom:18px}
+.protection-page .protection-brand-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#ece7ff;font-size:24px}
+.protection-page .protection-group-heading h2{margin:0;font-size:1.6rem}
+.protection-page .protection-group-heading p{margin:0;color:#7a8192;font-size:13px}
+.protection-page .protection-device-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.protection-page .protection-device{background:#fff;border:1px solid #e5e6ef;border-radius:23px;overflow:hidden;box-shadow:0 9px 27px #17163a08;min-width:0;scroll-margin-top:110px}
+.protection-page .protection-device[hidden]{display:none!important}
+.protection-page .protection-device-head{display:grid;grid-template-columns:108px minmax(0,1fr);align-items:center;gap:10px;padding:20px 20px 15px;border-bottom:1px solid #ecebf3;background:linear-gradient(135deg,#fbfaff,#f7f7ff)}
+.protection-page .protection-device-head img{display:block;width:100%;height:92px;object-fit:contain;filter:drop-shadow(0 9px 12px #26234520)}
+.protection-page .protection-device-head span{font-weight:900;font-size:10px;color:#7058aa;letter-spacing:.12em;text-transform:uppercase}
+.protection-page .protection-device-head h3{font-size:1.26rem;line-height:1.2;margin:7px 0 6px;word-break:break-word}
+.protection-page .protection-device-head p{font-size:12px;color:#81869b;margin:0}
+.protection-page .protection-device-picks{display:grid;gap:12px;padding:19px 20px}
+.protection-page .protection-pick{padding:15px 15px 16px;border:1px solid #e9e7f1;background:#fcfbff;border-radius:15px}
+.protection-page .protection-pick:last-child{background:#f8fcff;border-color:#e6eff8}
+.protection-page .protection-pick-kind{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:850;color:#6046b4;margin:0 0 8px}
+.protection-page .protection-pick h4{font-size:15px;line-height:1.35;margin:0 0 7px}
+.protection-page .protection-pick p{font-size:12px;line-height:1.65;margin:0 0 11px;color:#667089}
+.protection-page .protection-pick a{display:inline-block;font-size:12px;font-weight:850;color:#5d3cbd;text-decoration:none;border-bottom:1px solid #a294e2}
+.protection-page .protection-pick a:hover{color:#34218b}
+.protection-page .protection-pick small{font-size:10px;display:block;color:#80879a;margin-top:7px;line-height:1.45}
+.protection-page .protection-fold-warning{border-radius:11px;padding:10px 12px;margin:0 20px 19px;background:#fff8e9;border:1px solid #eadba9;color:#735d31;font-size:12px}
+.protection-page .protections-empty{padding:31px;border:1px dashed #bcabea;border-radius:18px;text-align:center;background:#fff}
+.protection-page .protections-empty[hidden]{display:none!important}
+.protection-page .protections-empty p{color:#717889}
+.protection-page .protection-footer{margin:32px 0 45px;background:linear-gradient(120deg,#272247,#4d358e);color:#fff;padding:clamp(25px,4vw,37px);border-radius:23px}
+.protection-page .protection-footer h2{margin:0 0 12px;color:#fff}
+.protection-page .protection-footer p{max-width:750px;color:#ddd9ee}
+.protection-page .protection-footer .btn{background:white;color:#31265d}
+@media(max-width:970px){.protection-page .protection-search-controls{grid-template-columns:1fr 1fr}.protection-page .protection-search-controls button{grid-column:1/-1}.protection-page .protection-device-list{gap:13px}.protection-page .protection-device-head{grid-template-columns:83px 1fr;padding:16px}.protection-page .protection-device-head img{height:87px}}
+@media(max-width:700px){.protection-page .protections-hero{border-radius:21px;padding:26px 22px}.protection-page .protection-filters{padding:17px}.protection-page .protection-search-controls{grid-template-columns:1fr}.protection-page .protection-search-controls button{grid-column:auto}.protection-page .protection-device-list{grid-template-columns:1fr}.protection-page .protection-device-picks{padding:15px}.protection-page .protection-device-head{grid-template-columns:98px 1fr}.protection-page .protection-brand-buttons{display:grid;grid-template-columns:repeat(2,1fr)}.protection-page .protection-brand-buttons button{padding:10px 8px}}
+@media(prefers-reduced-motion:reduce){.protection-page *{scroll-behavior:auto}}
