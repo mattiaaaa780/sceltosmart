@@ -102,6 +102,9 @@ for path in ROOT.rglob("*.html"):
         continue
     pages[path.resolve()] = parser
     relative = path.relative_to(ROOT).as_posix()
+    # Il file di verifica Search Console e' un token e NON una pagina HTML.
+    if re.fullmatch(r"google[0-9a-f]+\.html", path.name):
+        continue
     if not parser.lang:
         fail("Manca lang=it: " + relative)
     if parser.h1 != 1:
