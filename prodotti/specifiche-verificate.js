@@ -1,6 +1,5 @@
-/* Specifiche dichiarate nelle schede ufficiali dei singoli produttori, controllo 2026-11-05.
-   Un campo assente significa che il valore non è presente nel riepilogo verificato; non dedurre dati da modelli affini.
-   Controllare regione e configurazione sul sito della fonte ufficiale prima dell'acquisto. */
+/* Schede SceltoSmart — collegamenti e dati dai produttori, aggiornati il 2026-11-05.
+   I campi assenti restano non compilati: controllare sempre versione e area di vendita. */
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
@@ -451,7 +450,8 @@ window.SCELTOSMART_SPECIFICHE = {
   "Nothing Phone (4a)": {
     "source": "https://it.nothing.tech/products/phone-4a",
     "storage": "256 GB",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "ram": "8 GB"
   },
   "Nothing Phone (4a) Pro": {
     "source": "https://it.nothing.tech/products/phone-4a-pro",
@@ -463,10 +463,11 @@ window.SCELTOSMART_SPECIFICHE = {
     "tele": 3.5,
     "charge": 50,
     "updates": 3,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "ram": "8 GB"
   },
   "Nothing Phone (3a)": {
-    "source": "https://checkout-eu.nothing.tech/pages/phone-3a-pro",
+    "source": "https://it.nothing.tech/products/phone-3a",
     "storage": "128 GB",
     "chip": "Snapdragon 7s Gen 3",
     "screen": 6.77,
@@ -476,10 +477,11 @@ window.SCELTOSMART_SPECIFICHE = {
     "tele": 2,
     "charge": 50,
     "displayTech": "AMOLED",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "ram": "8 GB"
   },
   "Nothing Phone (3a) Pro": {
-    "source": "https://checkout-eu.nothing.tech/pages/phone-3a-pro",
+    "source": "https://it.nothing.tech/products/phone-3a-pro",
     "storage": "256 GB",
     "screen": 6.77,
     "hz": 120,
@@ -489,7 +491,8 @@ window.SCELTOSMART_SPECIFICHE = {
     "mainMp": 50,
     "tele": 3,
     "displayTech": "AMOLED",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "ram": "12 GB"
   },
   "Nothing Phone (3a) Lite": {
     "source": "https://it.nothing.tech/products/phone-3a-lite",
