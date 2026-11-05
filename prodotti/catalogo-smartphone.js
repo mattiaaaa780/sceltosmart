@@ -123,9 +123,11 @@
     if(!actions||actions.querySelector(".variant-details"))return;
     const a=document.createElement("a");
     a.className="variant-details";
-    a.textContent=model?"Scheda tecnica ↗":"Apri scheda ↗";
+    a.textContent="Scheda tecnica ↗";
     a.href="scheda-smartphone.html?modello="+encodeURIComponent(item.dataset.variant||"");
     actions.prepend(a);
+    const strong=item.querySelector(".variant-name strong");
+    if(strong){const nameLink=document.createElement("a");nameLink.href=a.href;nameLink.className="variant-name-link";nameLink.textContent=strong.textContent;strong.replaceChildren(nameLink);}
   });
   function filter(){
     let shown=0,versions=0;
