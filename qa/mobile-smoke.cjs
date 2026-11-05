@@ -6,7 +6,7 @@ const {spawn}=require("node:child_process");
 const {mkdirSync}=require("node:fs");
 const server=spawn("python3",["-m","http.server","8765","--bind","127.0.0.1"],{stdio:"ignore"});
 const base="http://127.0.0.1:8765";
-const files=["index.html","trova-smartphone.html","prodotti/smartphone.html","prodotti/accessori.html","prodotti/protezioni.html","privacy.html","cookie.html"];
+const files=["index.html","trova-smartphone.html","prodotti/smartphone.html","prodotti/accessori.html","prodotti/protezioni.html","privacy.html","cookie.html","prodotti/schede/google-pixel-11.html","prodotti/schede/iphone-17.html","prodotti/schede/xiaomi-17-ultra.html"];
 mkdirSync("qa-results",{recursive:true});
 let browser;
 (async()=>{
@@ -33,7 +33,7 @@ let browser;
    assert.equal(dims.h1,1,"H1 "+file);
    if(file==="index.html"){
      assert.equal(await page.locator(".home-product").count(),4);
-     const img=page.locator('.home-product[href*="#xiaomi17"] img');
+     const img=page.locator('.home-product[href*="famiglia=xiaomi17"] img');
      await img.scrollIntoViewIfNeeded();
      await page.waitForFunction(()=>{const e=document.querySelector('.home-product[href*="#xiaomi17"] img');return !!e&&e.complete&&e.naturalWidth>0;},null,{timeout:10000});
      assert.match(await img.getAttribute("src"),/xiaomi17-riserva\.svg$/);
@@ -58,6 +58,32 @@ let browser;
      await page.waitForFunction(()=>{const e=document.querySelector("#xiaomi17 .family-image img");return !!e&&e.complete&&e.naturalWidth>0;},null,{timeout:10000});
      assert.match(await page.locator("#xiaomi17 .family-image img").getAttribute("src"),/xiaomi17-riserva\.svg$/);
      if(width===390)await page.screenshot({path:"qa-results/catalogo-mobile.png",fullPage:true});
+   }
+
+   if(file==="prodotti/smartphone.html"){
+     assert.equal(await page.locator(".variant-details").count(),71,"71 schede cliccabili");
+     const missingLinks=await page.locator('.variant-details:not([href^="schede/"])').count();
+     assert.equal(missingLinks,0,"Collegamenti alle pagine statiche");
+     const controls=await page.evaluate(()=>[...document.querySelectorAll(".catalog-toolbar label")].map(x=>{const r=x.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom};}));
+     for(let a=0;a<controls.length;a++)for(let b=a+1;b<controls.length;b++){
+       const x=controls[a],y=controls[b];
+       const overlap=Math.min(x.right,y.right)-Math.max(x.x,y.x)>3&&Math.min(x.bottom,y.bottom)-Math.max(x.y,y.y)>3;
+       assert.equal(overlap,false,"Filtri sovrapposti "+a+"/"+b+" a "+width+"px");
+     }
+   }
+   if(file.startsWith("prodotti/schede/")){
+     const canonical=await page.locator('link[rel="canonical"]').getAttribute("href");
+     assert(canonical.endsWith("/"+file),"Canonical specifico per "+file);
+     assert((await page.locator(".product-source-link").count())===1,"Fonte ufficiale disponibile");
+     assert((await page.locator("[data-smartphone-back]").count())===2,"Pulsanti torna indietro");
+     assert((await page.locator(".product-details-spec").count())>=4,"Specifiche compilate");
+     if(width===390&&file.endsWith("google-pixel-11.html")){
+       await page.screenshot({path:"qa-results/scheda-mobile.png",fullPage:true});
+       await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
+       await page.waitForTimeout(150);
+       assert(await page.locator("[data-product-scroll-top]").isVisible(),"Pulsante Torna su");
+       await page.locator("[data-product-scroll-top]").click();
+     }
    }
    if(file==="prodotti/accessori.html")assert.equal(await page.locator("[data-catalog-item]").count(),12);
    if(file==="prodotti/protezioni.html")assert.equal(await page.locator("[data-protection-device]").count(),36);
