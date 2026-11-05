@@ -7,12 +7,55 @@ const el=document.getElementById("detail-content");
 const name=document.getElementById("detail-name");
 const subtitle=document.getElementById("detail-subtitle");
 const requested=new URLSearchParams(location.search).get("modello")||"";
-const model=models.find(m=>m.name.toLocaleLowerCase("it")===requested.toLocaleLowerCase("it"));
-if(!model){name.textContent="Scheda non disponibile";subtitle.textContent="Non abbiamo ancora una scheda tecnica documentata per questo modello.";el.textContent="";const a=document.createElement("a");a.href="smartphone.html";a.textContent="Torna a tutti gli smartphone ↗";a.className="btn";el.append(a);return;}
+const familyRequested=new URLSearchParams(location.search).get("famiglia")||"";
+const familyByModel=families.find(f=>f.models.some(n=>n.toLocaleLowerCase("it")===requested.toLocaleLowerCase("it")));
+const familySelected=families.find(f=>f.id===familyRequested);
+const family=familyByModel||familySelected;
+const fullName=familyByModel?.models.find(n=>n.toLocaleLowerCase("it")===requested.toLocaleLowerCase("it"))||"";
+const model=models.find(m=>m.name.toLocaleLowerCase("it")===fullName.toLocaleLowerCase("it"));
+if(!fullName && familySelected){
+  name.textContent=familySelected.title;
+  subtitle.textContent="Scegli la versione precisa: le caratteristiche possono cambiare tra modello base, Plus, Pro e Ultra.";
+  el.replaceChildren();
+  const layout=document.createElement("div");layout.className="product-details-grid";
+  const visual=document.createElement("div");visual.className="product-details-visual";
+  const img=document.createElement("img");img.src=familySelected.img;img.alt="Foto rappresentativa della famiglia "+familySelected.title;img.referrerPolicy="no-referrer";img.onerror=()=>{visual.textContent="📱 Immagine non disponibile";};visual.append(img);
+  const panel=document.createElement("div");panel.className="product-details-panel";
+  const h=document.createElement("h2");h.textContent="Quale versione vuoi consultare?";panel.append(h);
+  const list=document.createElement("div");list.className="product-version-picker";
+  familySelected.models.forEach(n=>{const a=document.createElement("a");a.href="scheda-smartphone.html?modello="+encodeURIComponent(n);a.textContent=n+" ↗";list.append(a);});
+  panel.append(list);layout.append(visual,panel);el.append(layout);return;
+}
+if(!fullName){
+  name.textContent="Smartphone non trovato";
+  subtitle.textContent="Seleziona un telefono dal catalogo.";
+  el.replaceChildren();const a=document.createElement("a");a.href="smartphone.html";a.className="btn";a.textContent="Torna al catalogo ↗";el.append(a);return;
+}
+if(!model){
+  name.textContent=fullName;
+  document.title=fullName+" — Scheda prodotto | SceltoSmart";
+  subtitle.textContent=family.desc;
+  const section=document.createElement("div");section.className="product-details-grid";
+  const visual=document.createElement("div");visual.className="product-details-visual";
+  const img=document.createElement("img");img.src=family.img;img.referrerPolicy="no-referrer";img.alt="Immagine rappresentativa della famiglia "+family.title;
+  img.onerror=()=>{visual.textContent="📱 Immagine non disponibile";};visual.append(img);
+  const panel=document.createElement("div");panel.className="product-details-panel";
+  const h=document.createElement("h2");h.textContent="Informazioni sul modello";panel.append(h);
+  const dl=document.createElement("dl");dl.className="product-details-specs";
+  [["Produttore",family.brand],["Sistema operativo",family.os],["Famiglia",family.title]].forEach(([k,v])=>{const box=document.createElement("div");box.className="product-details-spec";const dt=document.createElement("dt");dt.textContent=k;const dd=document.createElement("dd");dd.textContent=v;box.append(dt,dd);dl.append(box);});panel.append(dl);
+  const notice=document.createElement("p");notice.className="product-details-note";notice.textContent="Specifiche dettagliate non ancora documentate per questa versione. Display, batteria, processore, fotocamere e aggiornamenti non vengono indicati finché non sono verificati con una scheda ufficiale del modello esatto.";panel.append(notice);
+  const actions=document.createElement("div");actions.className="product-details-actions";
+  const link=document.createElement("a");link.className="btn btn-soft";link.href=family.source;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Consulta il produttore ↗";actions.append(link);
+  panel.append(actions);
+  const other=document.createElement("h3");other.textContent="Altre versioni della famiglia";panel.append(other);
+  const picker=document.createElement("div");picker.className="product-version-picker";
+  family.models.forEach(n=>{const a=document.createElement("a");a.href="scheda-smartphone.html?modello="+encodeURIComponent(n);a.textContent=n+" ↗";if(n===fullName)a.setAttribute("aria-current","page");picker.append(a);});panel.append(picker);
+  section.append(visual,panel);el.replaceChildren(section);return;
+}
 document.title=model.name+" — Scheda tecnica | SceltoSmart";
 name.textContent=model.name;
 subtitle.textContent=model.note;
-const family=families.find(f=>f.id===model.family);
+// family deriva dalla variante esatta; non si attribuiscono immagini a una variante specifica.
 const validHttps=raw=>{try{const u=new URL(raw);return u.protocol==="https:"?u.href:null}catch(e){return null}};
 const specEntries=[
 ["Sistema operativo",model.os],["Schermo",model.screen?String(model.screen).replace(".",",")+" pollici":null],
@@ -46,6 +89,9 @@ const affiliate=window.SCELTOSMART_LINK_AMAZON&&window.SCELTOSMART_LINK_AMAZON[k
 const safeAffiliate=validHttps(affiliate);
 if(safeAffiliate&&["link.amazon","amzn.to","amzn.eu","amazon.it","www.amazon.it"].includes(new URL(safeAffiliate).hostname)){link(safeAffiliate,"Vedi su Amazon ↗","btn btn-green","sponsored noopener noreferrer");}
 panel.append(actions);
+const relatedTitle=document.createElement("h3");relatedTitle.textContent="Altre versioni della famiglia";panel.append(relatedTitle);
+const related=document.createElement("div");related.className="product-version-picker";
+if(family)family.models.forEach(n=>{const a=document.createElement("a");a.href="scheda-smartphone.html?modello="+encodeURIComponent(n);a.textContent=n+" ↗";if(n===fullName)a.setAttribute("aria-current","page");related.append(a);});panel.append(related);
 const disclosure=document.createElement("p");disclosure.className="note-inline";disclosure.textContent="I link Amazon, quando presenti, sono affiliati: SceltoSmart può ricevere una commissione sugli acquisti idonei. Non mostriamo prezzi o disponibilità in tempo reale.";panel.append(disclosure);
 section.append(visual,panel);el.replaceChildren(section);
 })();
