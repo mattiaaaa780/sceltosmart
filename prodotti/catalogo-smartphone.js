@@ -14,7 +14,9 @@
   const sort=document.getElementById("family-sort");
   const reset=document.getElementById("family-reset");
   const documented=Array.isArray(window.SCELTOSMART_FINDER_MODELS)?window.SCELTOSMART_FINDER_MODELS:[];
-  const modelByName=new Map(documented.map(m=>[m.name.toLocaleLowerCase("it"),m]));
+  const verified=window.SCELTOSMART_SPECIFICHE||{};
+  const modelByName=new Map(Object.entries(verified).map(([name,record])=>[name.toLocaleLowerCase("it"),record]));
+  documented.forEach(model=>{const k=model.name.toLocaleLowerCase("it");modelByName.set(k,{...model,...(modelByName.get(k)||{})});});
   const empty=document.getElementById("family-empty");
   const htmlEscape=x=>String(x==null?"":x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const keyFor=s=>{
@@ -145,7 +147,7 @@
         const matchText=!q||normalize(name+" "+card.dataset.familySearch).includes(q);
         const matchSize=chosenSize==="all"||(model&&
           (chosenSize==="small"?model.screen<=6.4:chosenSize==="medium"?model.screen>6.4&&model.screen<6.65:model.screen>=6.65));
-        const visible=matchText&&matchSize&&(!documentedOnly||!!model);
+        const visible=matchText&&matchSize&&(!documentedOnly||(model&&["screen","battery","chip","mainMp","weight","hz","storage"].filter(field=>model[field]!==undefined&&model[field]!==null&&model[field]!=="").length>=4));
         item.hidden=!visible;
         if(visible)matchingVersions++;
       });
