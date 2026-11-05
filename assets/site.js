@@ -31,8 +31,8 @@
   const feedback = document.getElementById("search-feedback");
   const root = form.dataset.root || "";
   const matches = [
-    {keys:["cover","vetri","vetro temperato","protezione schermo","pellicola","case per","custodia per"],url:"prodotti/protezioni.html",filter:true,protect:true},
-    {keys:["airpods","buds","wh-1000","jbl","anker","cuffie","auricolari","power bank","powerbank","caricatore","caricabatterie","custodia","accessori","spigen","airtag","smarttag","halolock","esr","ulanzi","ugreen","maggo","qi2","vetro","vetro temperato","cavo","treppiede","supporto auto","localizzatore"],url:"prodotti/accessori.html",filter:true},
+    {keys:["cover","vetri","vetro temperato","protezione schermo","pellicola","case per","custodia per","spigen"],url:"prodotti/protezioni.html",filter:true,protect:true},
+    {keys:["airpods","buds","wh-1000","jbl","anker","cuffie","auricolari","power bank","powerbank","caricatore","caricabatterie","custodia","accessori","airtag","smarttag","halolock","esr","ulanzi","ugreen","maggo","qi2","vetro","vetro temperato","cavo","treppiede","supporto auto","localizzatore"],url:"prodotti/accessori.html",filter:true},
     {keys:["pixel","google","galaxy","samsung","iphone","apple","xiaomi","redmi","poco","nothing","motorola","honor","oppo","oneplus","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html",filter:true},
     {keys:["guida","guide","consigli"],url:"guide/index.html",filter:false}
   ];
