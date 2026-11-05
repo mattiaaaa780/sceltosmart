@@ -31,10 +31,8 @@
   const feedback = document.getElementById("search-feedback");
   const root = form.dataset.root || "";
   const matches = [
-    {keys:["pixel","google pixel","galaxy","samsung","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html"},
-    {keys:["notebook","portatile","pc","computer","laptop","informatica","tablet"],url:"guide/scegliere-notebook.html"},
-    {keys:["cuffie","auricolari","wireless","bluetooth","accessori"],url:"guide/scegliere-cuffie.html"},
-    {keys:["casa","domotica","smart home","wifi","router","lampadine"],url:"guide/casa-smart.html"},
+    {keys:["pixel","google pixel","galaxy","samsung","iphone","apple","xiaomi","redmi","nothing","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html"},
+    {keys:["cuffie","auricolari","airpods","buds","sony","jbl","anker","batteria","power bank","caricatore","accessori"],url:"prodotti/accessori.html"},
     {keys:["guida","guide","consigli"],url:"guide/index.html"}
   ];
   form.addEventListener("submit", function (event) {
@@ -53,4 +51,31 @@
       if (target) target.scrollIntoView({behavior:"smooth"});
     }
   });
+})();
+
+
+/* Filtri locali sul catalogo: nessuna richiesta al server e nessun cookie. */
+(function () {
+  const catalog=document.querySelector("[data-catalog]");
+  if(!catalog)return;
+  const search=document.querySelector("[data-catalog-search]");
+  const type=document.querySelector("[data-catalog-filter]");
+  const cards=[...catalog.querySelectorAll("[data-catalog-item]")];
+  const counter=document.querySelector("[data-catalog-count]");
+  const empty=document.querySelector("[data-catalog-empty]");
+  const normalize=s=>(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  function update(){
+    const q=normalize(search&&search.value.trim()), filter=type?type.value:"all";
+    let visible=0;
+    cards.forEach(card=>{
+      const text=normalize(card.dataset.search);
+      const matches=(!q||text.includes(q))&&(filter==="all"||card.dataset.group===filter);
+      card.hidden=!matches;if(matches)visible++;
+    });
+    if(counter)counter.textContent=visible+" prodotti mostrati";
+    if(empty)empty.style.display=visible?"none":"block";
+  }
+  if(search)search.addEventListener("input",update);
+  if(type)type.addEventListener("change",update);
+  update();
 })();
