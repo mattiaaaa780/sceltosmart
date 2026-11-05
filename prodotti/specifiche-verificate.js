@@ -1,4 +1,4 @@
-/* Specifiche verificate per modello da pagine ufficiali, novembre 2026. I valori assenti restano non documentati. */
+/* Schede per modello: solo informazioni supportate da pagine ufficiali; valori non presenti non stimati. */
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
@@ -268,15 +268,28 @@ window.SCELTOSMART_SPECIFICHE = {
   },
   "Nothing Phone (4a) Pro": {
     "source": "https://it.nothing.tech/products/phone-4a-pro",
-    "storage": "128 GB"
+    "storage": "128 GB",
+    "screen": 6.83,
+    "hz": 144,
+    "battery": 5080,
+    "mainMp": 50,
+    "tele": 3.5,
+    "charge": 50,
+    "updates": 3
   },
   "Nothing Phone (3a)": {
     "source": "https://it.nothing.tech/products/phone-3a",
-    "storage": "128 GB"
+    "storage": "128 GB",
+    "chip": "Snapdragon 7s Gen 3"
   },
   "Nothing Phone (3a) Pro": {
     "source": "https://it.nothing.tech/products/phone-3a-pro",
-    "storage": "256 GB"
+    "storage": "256 GB",
+    "screen": 6.77,
+    "hz": 120,
+    "battery": 5000,
+    "chip": "Snapdragon 7s Gen 3",
+    "charge": 50
   },
   "Nothing Phone (3a) Lite": {
     "source": "https://it.nothing.tech/products/phone-3a-lite",
@@ -355,7 +368,10 @@ window.SCELTOSMART_SPECIFICHE = {
   "Samsung Galaxy S25+": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s25-series-and-a-series/",
     "screen": 6.7,
-    "hz": 120
+    "hz": 120,
+    "battery": 4900,
+    "mainMp": 50,
+    "storage": "256 GB, 512 GB, 1 TB"
   },
   "Samsung Galaxy S25 FE": {
     "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s25-fe-icyblue-256gb-sm-s731blbgeue/",
@@ -366,7 +382,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "mainMp": 50
   },
   "Samsung Galaxy S25 Edge": {
-    "source": "https://www.samsung.com/it/smartphones/galaxy-s25-edge/"
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
+    "screen": 6.7,
+    "hz": 120,
+    "battery": 3900,
+    "chip": "Snapdragon 8 Elite per Galaxy",
+    "weight": 163,
+    "mainMp": 200,
+    "storage": "256 GB, 512 GB"
   },
   "Google Pixel 11 Pro Fold": {
     "source": "https://store.google.com/product/pixel_11_pro_fold_specs?hl=en-US",
