@@ -55,3 +55,12 @@
 
 .protection-page .protection-img-fallback{display:grid;place-items:center;width:100%;height:90px;font-size:49px}
 .protection-page .protection-device-head a{color:#6043c3;font-weight:800}
+
+/* Amazon: le ricerche NON affiliate rimangono distinguibili dai link prodotto affiliati. */
+.protection-page .protection-amazon-actions{margin-top:14px;padding-top:12px;border-top:1px dashed #dfdfef;display:grid;gap:6px;justify-items:start}
+.protection-page .protection-amazon-search,.protection-page .protection-amazon-search:visited{display:inline-flex;align-items:center;justify-content:center;min-height:41px;padding:10px 14px;border:1px solid #b6a7e8;border-radius:11px;background:#f0ebff;color:#45319c;font-size:12px;line-height:1.45;font-weight:850;text-decoration:none}
+.protection-page .protection-amazon-search:hover{background:#e4daff;color:#35217f;border-color:#9584e1}
+.protection-page .protection-amazon-search.is-affiliate,.protection-page .protection-amazon-search.is-affiliate:visited{background:#e4f7ee;border-color:#a9ddbf;color:#166340}
+.protection-page .protection-amazon-search.is-affiliate:hover{background:#d4f2e2}
+.protection-page .protection-amazon-flag{font-size:11px;color:#7e8497}
+@media(max-width:700px){.protection-page .protection-amazon-actions{justify-items:stretch}.protection-page .protection-amazon-search{width:100%}}
