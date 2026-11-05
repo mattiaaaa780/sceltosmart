@@ -13,6 +13,9 @@ on:
       - 'privacy.html'
       - 'cookie.html'
   workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
