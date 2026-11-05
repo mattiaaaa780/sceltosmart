@@ -215,3 +215,24 @@
 .home-revamp .home-accessory-shortcuts a{display:inline-flex;align-items:center;padding:9px 13px;min-height:39px;border-radius:99px;border:1px solid #dedaf2;background:#fff;color:#5c42b4;font-size:12px;font-weight:800;text-decoration:none;transition:background .18s,border-color .18s}
 .home-revamp .home-accessory-shortcuts a:hover{background:#ede9ff;border-color:#ac9cef}
 @media(max-width:600px){.home-revamp .home-accessory-shortcuts{gap:7px}.home-revamp .home-accessory-shortcuts>span{width:100%}.home-revamp .home-accessory-shortcuts a{padding:8px 11px;font-size:11px}}
+
+/* SceltoSmart Finder — invito editoriale dalla homepage */
+.home-revamp .home-finder-section{padding:52px 0 0}
+.home-revamp .home-finder-panel{background:linear-gradient(122deg,#e7e3ff,#f3f8ff);border:1px solid #ded8f4;border-radius:25px;padding:clamp(24px,4.5vw,44px);display:grid;grid-template-columns:minmax(0,1.13fr) minmax(260px,.87fr);align-items:center;gap:31px;overflow:hidden;box-shadow:0 12px 34px #211d5013}
+.home-revamp .home-finder-kicker{font-size:11px;letter-spacing:.13em;font-weight:900;color:#7052bf}
+.home-revamp .home-finder-text h2{font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.055em;line-height:1.2;margin:13px 0}
+.home-revamp .home-finder-text p{color:#5e657e;font-size:14px;line-height:1.75;max-width:555px;margin:0 0 17px}
+.home-revamp .home-finder-points{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:19px}
+.home-revamp .home-finder-points span{background:#ffffffaa;border:1px solid #d8d4ed;color:#5b4e91;border-radius:99px;padding:7px 10px;font-size:11px;font-weight:800}
+.home-revamp .home-finder-button,.home-revamp .home-finder-button:visited{background:#6046c0;color:#fff;border-color:transparent;box-shadow:0 10px 25px #5742aa27}
+.home-revamp .home-finder-button:hover{background:#4931a6;color:#fff}
+.home-revamp .home-finder-preview{background:#fff;border:1px solid #e1dbee;border-radius:22px;padding:19px;box-shadow:0 20px 40px #28225121;transform:rotate(2deg)}
+.home-revamp .home-finder-preview-title{font-size:12px;font-weight:900;color:#393162;padding:3px 4px 14px}
+.home-revamp .home-finder-preview-title span{color:#6944ce;font-size:21px}
+.home-revamp .home-finder-preview-row{display:flex;align-items:center;gap:10px;background:#f8f7ff;border:1px solid #ebe8f5;border-radius:12px;padding:13px;margin-bottom:8px}
+.home-revamp .home-finder-preview-row>span{display:grid;place-items:center;width:24px;height:24px;border-radius:8px;background:#e6dfff;color:#6146ae;font-size:11px;font-weight:900}
+.home-revamp .home-finder-preview-row b{font-size:12px;color:#35314f}
+.home-revamp .home-finder-preview-row small{font-size:11px;color:#277f5c;font-weight:800;margin-left:auto;text-align:right}
+.home-revamp .home-finder-preview-foot{font-size:12px;font-weight:850;color:#6444ba;padding:8px 5px 2px;display:flex;justify-content:space-between}
+@media(max-width:830px){.home-revamp .home-finder-panel{grid-template-columns:1fr}.home-revamp .home-finder-preview{max-width:490px;width:100%;transform:none}}
+@media(max-width:600px){.home-revamp .home-finder-section{padding-top:29px}.home-revamp .home-finder-panel{padding:23px;border-radius:20px}.home-revamp .home-finder-preview{padding:15px}.home-revamp .home-finder-button{width:100%}.home-revamp .home-finder-preview-row{flex-wrap:wrap}.home-revamp .home-finder-preview-row small{margin-left:auto}}
