@@ -1,5 +1,5 @@
-/* Dati ufficiali delle versioni smartphone presenti nel catalogo SceltoSmart.
-   Valori dipendenti da mercato/configurazione da confrontare con le fonti indicate.
+/* Dati produttori per il catalogo SceltoSmart. Consultare sempre le fonti indicate.
+   I campi assenti non sono inventati, i modelli possono avere varianti di mercato.
 */
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
@@ -49,7 +49,13 @@ window.SCELTOSMART_SPECIFICHE = {
     "storage": "256 GB, 512 GB, 1 TB",
     "video": 27,
     "displayTech": "OLED Super Retina XDR",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "resolution": "2736 × 1260",
+    "mainMp": 48,
+    "frontMp": 18,
+    "ipRating": "IP68 (fino a 6 metri per 30 minuti in laboratorio)",
+    "features": "Spessore 5,64 mm; struttura in titanio; Center Stage; Dynamic Island",
+    "videoRecording": "4K Dolby Vision fino a 60 fps"
   },
   "iPhone Duo": {
     "source": "https://www.apple.com/it/iphone-duo/specs/",
@@ -673,7 +679,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "chip": "Snapdragon 8s Gen 3",
     "weight": 189,
     "charge": 45,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "LTPO Extreme AMOLED pieghevole",
+    "wireless": true,
+    "wirelessChargeW": 15,
+    "nfc": "Sì",
+    "features": "Android 16; audio stereo Dolby Atmos"
   },
   "Motorola Razr 70 Ultra": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192564",
@@ -783,14 +794,19 @@ window.SCELTOSMART_SPECIFICHE = {
     "checkedAt": "2026-11-05"
   },
   "Google Pixel 10 Pro Fold": {
-    "source": "https://store.google.com/product/pixel_10_pro_fold_specs?hl=en-US",
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
     "screen": 8,
     "hz": 120,
     "battery": 5015,
     "chip": "Google Tensor G5",
     "storage": "256 GB, 512 GB, 1 TB",
-    "displayTech": "OLED pieghevole",
-    "checkedAt": "2026-11-05"
+    "displayTech": "OLED Super Actua Flex",
+    "checkedAt": "2026-11-05",
+    "resolution": "2076 × 2152",
+    "coverDisplay": "6,4″ OLED Actua, 1080 × 2364",
+    "weight": 258,
+    "wireless": true,
+    "wirelessChargeW": 15
   },
   "Google Pixel 9": {
     "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
