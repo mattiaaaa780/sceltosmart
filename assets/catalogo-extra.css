@@ -96,3 +96,22 @@
  .catalog-toolbar #family-reset{justify-self:stretch;width:100%}
  .catalog-toolbar .catalog-count{grid-column:auto}
 }
+
+/* Fonti ufficiali e schede complete, ottimizzate per mobile */
+.product-source-banner{display:flex;flex-direction:column;align-items:flex-start;gap:6px;background:#f1edff;border:1px solid #dfd6fc;border-radius:14px;padding:16px;margin-bottom:25px}
+.product-source-banner strong{color:#332176;font-size:1rem}
+.product-source-banner p{margin:0;color:#4c526c;font-size:.92rem}
+.product-source-banner small{color:#687088;font-size:.82rem}
+.product-source-link{color:#583bc6;font-weight:750;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.product-spec-section{margin:24px 0}
+.product-spec-section h2{font-size:1.18rem;margin:0 0 12px;color:#252c47}
+.product-spec-section .product-details-specs{margin:0}
+.product-details-spec{position:relative;padding:14px;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+.product-details-spec dt{padding-right:12px}
+.product-details-spec dd{line-height:1.35;margin:2px 0 0}
+.product-field-source{display:inline-block;align-self:flex-end;color:#6152a7;font-size:.75rem;font-weight:600;margin-top:4px}
+.product-other-heading{font-size:1.1rem;margin-top:22px}
+.product-details-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr)}
+.product-details-panel{min-width:0;overflow-wrap:anywhere}
+@media(max-width:800px){.product-details-grid{grid-template-columns:1fr}}
+@media(max-width:420px){.product-details-specs{grid-template-columns:1fr}.product-details-panel{padding:16px}.product-source-banner{padding:13px}}
