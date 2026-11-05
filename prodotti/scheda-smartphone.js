@@ -9,6 +9,19 @@ const content=document.getElementById("detail-content");
 const title=document.getElementById("detail-name");
 const subtitle=document.getElementById("detail-subtitle");
 if(!content||!title||!subtitle)return;
+/* Torna alla pagina visitata sul sito (catalogo, Finder o scelta della variante).
+   Quando si arriva da fuori o si apre la scheda direttamente, usa il catalogo. */
+const previous=document.referrer;
+let internalPrevious=false;
+try{const url=new URL(previous);internalPrevious=url.origin===location.origin&&history.length>1;}catch(_){}
+document.querySelectorAll("[data-smartphone-back]").forEach(control=>{
+ control.addEventListener("click",event=>{
+  if(!internalPrevious)return; // il normale href è il fallback affidabile
+  event.preventDefault();
+  history.back();
+ });
+});
+
 const params=new URLSearchParams(window.location.search);
 const wanted=(params.get("modello")||"").toLocaleLowerCase("it");
 const requestedFamily=params.get("famiglia")||"";
