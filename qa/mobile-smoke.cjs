@@ -1,4 +1,5 @@
 "use strict";
+// Esegui controllo responsive dopo la correzione del breakpoint nav a 920px.
 const {chromium}=require("playwright");
 const assert=require("node:assert/strict");
 const {spawn}=require("node:child_process");
