@@ -34,23 +34,6 @@ window.SCELTOSMART_FAMIGLIE=[
     "credit": "YouGet"
   },
   {
-    "id": "iphone16",
-    "brand": "Apple",
-    "title": "iPhone 16",
-    "os": "iOS",
-    "models": [
-      "iPhone 16",
-      "iPhone 16e",
-      "iPhone 16 Plus",
-      "iPhone 16 Pro",
-      "iPhone 16 Pro Max"
-    ],
-    "desc": "Gamma Apple precedente, con taglie standard, Plus e varianti Pro.",
-    "source": "https://support.apple.com/it-it/docs/iphone",
-    "img": "https://www.teknikproffset.no/img/bilder/artiklar/zoom/C81510_1.jpg?m=1727144034",
-    "credit": "Teknikproffset"
-  },
-  {
     "id": "iphoneair",
     "brand": "Apple",
     "title": "iPhone Air",
