@@ -46,7 +46,8 @@ const has=v=>v!==null&&v!==undefined&&v!=="";
 const num=n=>Number(n).toLocaleString("it-IT");
 const unit=(n,s)=>has(n)?num(n)+" "+s:null;
 const inch=n=>has(n)?String(n).replace(".",",")+"″":null;
-const page="scheda-smartphone.html?modello=";
+const page="schede/";
+const slug=x=>String(x).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/\+/g,"-plus").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 function photo(f){
  const wrap=create("div","product-details-visual");const src=safeUrl(f?.img);
  if(!src){wrap.append(create("span","photo-fallback","📱 Immagine non disponibile"));return wrap;}
@@ -57,7 +58,7 @@ function photo(f){
 }
 function picker(f,active){
  const wrap=create("nav","product-version-picker");wrap.setAttribute("aria-label","Altre versioni di "+f.title);
- f.models.forEach(n=>{const a=link(page+encodeURIComponent(n),n+" ↗");if(n===active)a.setAttribute("aria-current","page");wrap.append(a)});
+ f.models.forEach(n=>{const a=link(page+slug(n)+".html",n+" ↗");if(n===active)a.setAttribute("aria-current","page");wrap.append(a)});
  return wrap;
 }
 function noModel(message){const box=create("div","product-details-panel");box.append(create("p","product-details-note",message),link("smartphone.html","Torna al catalogo ↗","btn"));content.replaceChildren(box);}
