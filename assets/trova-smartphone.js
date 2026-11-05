@@ -20,7 +20,7 @@
   const slug=x=>String(x).toLocaleLowerCase("it").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/\+/g,"-plus").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
   const readable=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,".");
   const values=()=>({
-    os:form.querySelector('input[name="os"]:checked')?.value||"Android",
+    os:form.querySelector('input[name="os"]:checked')?.value||"any",
     use:form.querySelector('input[name="use"]:checked')?.value||"daily",
     size:form.querySelector('input[name="size"]:checked')?.value||"any"
   });
@@ -108,7 +108,7 @@
   }
   form.addEventListener("change",refresh);
   if(reset)reset.addEventListener("click",function(){
-    form.querySelector('input[name="os"][value="Android"]').checked=true;
+    form.querySelector('input[name="os"][value="any"]').checked=true;
     form.querySelector('input[name="use"][value="daily"]').checked=true;
     form.querySelector('input[name="size"][value="any"]').checked=true;
     refresh();
