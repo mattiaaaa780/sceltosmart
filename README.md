@@ -27,7 +27,8 @@ Per i test mobile serve Node.js e Playwright (`qa/mobile-smoke.cjs`). L'audit no
 
 1. Controllare la **versione esatta** e la relativa pagina ufficiale.
 2. Aggiornare `prodotti/specifiche-verificate.js` evitando valori dedotti da altre varianti.
-3. Aggiornare la corrispondente pagina in `prodotti/schede/` (è HTML statico, non si aggiorna automaticamente dal file JS).
-4. Verificare tutti i link e l'esito dei workflow prima del merge/pubblicazione.
+3. Sincronizzare le 71 schede HTML statiche con `node scripts/sync_schede.cjs` (sostituisce i blocchi tecnici quando i dati dell’archivio cambiano).
+4. Eseguire `node scripts/sync_schede.cjs --check` e `python3 scripts/site_audit.py`; i workflow GitHub Actions controllano automaticamente sia i collegamenti sia l’allineamento tra dati e schede.
+5. Verificare tutti i link e l'esito dei workflow prima della pubblicazione.
 
 Per i punti ancora da completare prima del lancio pubblico, consultare [qa/VERIFICHE-LANCIO.md](qa/VERIFICHE-LANCIO.md). Le immagini esterne necessitano di autorizzazioni o licenze d'uso verificate.
