@@ -1,25 +1,46 @@
-/* Schede per modello: solo informazioni supportate da pagine ufficiali; valori non presenti non stimati. */
+/* SceltoSmart — fonti ufficiali per le singole varianti; revisione 2026-11-05.
+   I campi assenti non sono inferiti da modelli simili. I dati tecnici
+   si riferiscono alle configurazioni/mercati riportati nelle fonti collegate.
+   Le ore video Apple non vanno confrontate con capacità mAh Android.
+*/
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
     "screen": 6.3,
     "hz": 120,
     "weight": 211,
-    "storage": "256 GB, 512 GB, 1 TB, 2 TB"
+    "storage": "256 GB, 512 GB, 1 TB, 2 TB",
+    "video": 34,
+    "chip": "Apple A20 Pro",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 4,
+    "displayTech": "OLED Super Retina XDR",
+    "chargingInfo": "50% in circa 15 minuti con alimentatore idoneo",
+    "checkedAt": "2026-11-05"
   },
   "iPhone 18 Pro Max": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
     "screen": 6.9,
     "hz": 120,
     "weight": 249,
-    "storage": "256 GB, 512 GB, 1 TB, 2 TB"
+    "storage": "256 GB, 512 GB, 1 TB, 2 TB",
+    "video": 43,
+    "chip": "Apple A20 Pro",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 4,
+    "displayTech": "OLED Super Retina XDR",
+    "checkedAt": "2026-11-05"
   },
   "iPhone 17e": {
     "source": "https://support.apple.com/it-it/126470",
     "screen": 6.1,
     "chip": "Apple A19",
     "weight": 170,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "displayTech": "OLED Super Retina XDR",
+    "checkedAt": "2026-11-05"
   },
   "iPhone Air": {
     "source": "https://www.apple.com/it/iphone-air/specs/",
@@ -27,28 +48,55 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "Apple A19 Pro",
     "weight": 165,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "video": 27,
+    "displayTech": "OLED Super Retina XDR",
+    "checkedAt": "2026-11-05"
   },
   "iPhone Duo": {
     "source": "https://www.apple.com/it/iphone-duo/specs/",
     "screen": 7.6,
     "hz": 120,
     "weight": 254,
-    "storage": "256 GB, 512 GB, 1 TB, 2 TB"
+    "storage": "256 GB, 512 GB, 1 TB, 2 TB",
+    "chip": "Apple A20 Pro",
+    "video": 44,
+    "videoNote": "Fino a 44 ore sul display esterno, 31 ore sul display interno",
+    "displayTech": "OLED pieghevole",
+    "mainMp": 48,
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S26": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s26-ultra-s26-plus-and-s26/",
     "battery": 4300,
     "chip": "Exynos 2600",
     "weight": 167,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "screen": 6.3,
+    "hz": 120,
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 3,
+    "frontMp": 12,
+    "ram": "12 GB",
+    "displayTech": "Dynamic AMOLED 2X",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S26+": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s26-ultra-s26-plus-and-s26/",
     "battery": 4900,
     "chip": "Exynos 2600",
     "weight": 190,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "screen": 6.7,
+    "hz": 120,
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 3,
+    "frontMp": 12,
+    "ram": "12 GB",
+    "displayTech": "Dynamic AMOLED 2X",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S26 Ultra": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s26-ultra-s26-plus-and-s26/",
@@ -57,25 +105,40 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 5000,
     "chip": "Snapdragon 8 Elite Gen 5 per Galaxy",
     "weight": 214,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "mainMp": 200,
+    "ultrawide": true,
+    "tele": 5,
+    "frontMp": 12,
+    "ram": "12 GB o 16 GB, secondo configurazione",
+    "displayTech": "Dynamic AMOLED 2X",
+    "features": "S Pen, Privacy Display",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy Z Fold8": {
-    "source": "https://www.samsung.com/it/support/mobile-devices/what-is-the-difference-between-the-galaxy-z-fold-and-s-series/",
+    "source": "https://www.samsung.com/it/mobile-phone-buying-guide/galaxy-z-8-series-vs-galaxy-z-7-series/",
     "screen": 7.6,
     "hz": 120,
     "battery": 4800,
     "chip": "Snapdragon 8 Elite Gen 5 per Galaxy",
     "weight": 201,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "mainMp": 50,
+    "displayTech": "Dynamic AMOLED 2X pieghevole",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy Z Fold8 Ultra": {
-    "source": "https://www.samsung.com/it/support/mobile-devices/what-is-the-difference-between-the-galaxy-z-fold-and-s-series/",
+    "source": "https://www.samsung.com/it/mobile-phone-buying-guide/galaxy-z-8-series-vs-galaxy-z-7-series/",
     "screen": 8,
     "hz": 120,
     "battery": 5000,
     "chip": "Snapdragon 8 Elite Gen 5 per Galaxy",
     "weight": 215,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "mainMp": 200,
+    "displayTech": "Dynamic AMOLED 2X pieghevole",
+    "features": "Display esterno da 6,5″",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy Z Flip8": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-is-the-difference-between-the-galaxy-z-flip-models/",
@@ -84,7 +147,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 4300,
     "chip": "Exynos 2600",
     "weight": 180,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "mainMp": 50,
+    "frontMp": 10,
+    "ram": "12 GB",
+    "displayTech": "Dynamic AMOLED 2X pieghevole",
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 11": {
     "source": "https://store.google.com/it/product/pixel_11_specs?hl=it",
@@ -93,7 +161,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 4985,
     "chip": "Google Tensor G6",
     "weight": 197,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "ram": "12 GB",
+    "wireless": true,
+    "wirelessChargeW": 25,
+    "displayTech": "OLED Actua",
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 11 Pro": {
     "source": "https://store.google.com/it/product/pixel_11_pro_specs?hl=it",
@@ -102,7 +175,9 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 4850,
     "chip": "Google Tensor G6",
     "weight": 204,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "displayTech": "OLED Super Actua LTPO",
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 11 Pro XL": {
     "source": "https://store.google.com/it/product/pixel_11_pro_specs?hl=it",
@@ -111,7 +186,9 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 5115,
     "chip": "Google Tensor G6",
     "weight": 226,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "displayTech": "OLED Super Actua LTPO",
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 9a": {
     "source": "https://store.google.com/it/product/pixel_9a_specs?hl=it",
@@ -120,7 +197,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 5100,
     "chip": "Google Tensor G4",
     "weight": 186,
-    "storage": "128 GB, 256 GB"
+    "storage": "128 GB, 256 GB",
+    "mainMp": 48,
+    "ram": "8 GB",
+    "wireless": true,
+    "displayTech": "pOLED Actua",
+    "checkedAt": "2026-11-05"
   },
   "Xiaomi 17 Ultra": {
     "source": "https://www.mi.com/it/product/xiaomi-17-ultra/specs/",
@@ -128,7 +210,13 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "Snapdragon 8 Elite Gen 5",
     "weight": 218.4,
-    "storage": "512 GB, 1 TB"
+    "storage": "512 GB, 1 TB",
+    "ram": "16 GB",
+    "mainMp": 50,
+    "teleMp": 200,
+    "ultrawide": true,
+    "displayTech": "OLED HyperRGB",
+    "checkedAt": "2026-11-05"
   },
   "Xiaomi 17T": {
     "source": "https://www.mi.com/it/product/xiaomi-17t/specs/",
@@ -136,7 +224,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "MediaTek Dimensity 8500-Ultra",
     "weight": 200,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "battery": 6500,
+    "charge": 67,
+    "ram": "12 GB",
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Xiaomi 17T Pro": {
     "source": "https://www.mi.com/it/product/xiaomi-17t-pro/specs/",
@@ -145,13 +238,24 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 7000,
     "chip": "MediaTek Dimensity 9500",
     "weight": 219,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "ram": "12 GB",
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 17": {
     "source": "https://www.mi.com/it/product/redmi-note-17/specs/",
     "battery": 7700,
     "chip": "Snapdragon 6s 4G Gen 2",
-    "storage": "128 GB, 256 GB"
+    "storage": "128 GB, 256 GB",
+    "screen": 6.99,
+    "hz": 120,
+    "weight": 224,
+    "charge": 45,
+    "mainMp": 50,
+    "frontMp": 16,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 17 5G": {
     "source": "https://www.mi.com/it/product/redmi-note-17-5g/specs/",
@@ -160,7 +264,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 7700,
     "chip": "Snapdragon 4 Gen 4",
     "weight": 225,
-    "storage": "128 GB, 256 GB"
+    "storage": "128 GB, 256 GB",
+    "charge": 45,
+    "mainMp": 50,
+    "frontMp": 16,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 17 Pro 5G": {
     "source": "https://www.mi.com/it/product/redmi-note-17-pro-5g/specs/",
@@ -169,7 +278,13 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 8340,
     "chip": "Snapdragon 6s Gen 4",
     "weight": 223,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "charge": 67,
+    "mainMp": 50,
+    "ultrawide": true,
+    "frontMp": 16,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 17 Pro Max 5G": {
     "source": "https://www.mi.com/it/product/redmi-note-17-pro-max-5g/specs/",
@@ -178,7 +293,13 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 9210,
     "chip": "Snapdragon 6 Gen 5",
     "weight": 225.1,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "charge": 100,
+    "mainMp": 50,
+    "ultrawide": true,
+    "frontMp": 32,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 15": {
     "source": "https://www.mi.com/it/product/redmi-note-15/specs/",
@@ -186,7 +307,13 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "MediaTek Helio G100-Ultra",
     "weight": 183.7,
-    "storage": "128 GB, 256 GB"
+    "storage": "128 GB, 256 GB",
+    "battery": 6500,
+    "charge": 33,
+    "mainMp": 108,
+    "frontMp": 20,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 15 5G": {
     "source": "https://www.mi.com/it/product/redmi-note-15-5g/specs/",
@@ -195,7 +322,13 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 5520,
     "chip": "Snapdragon 6 Gen 3",
     "weight": 178,
-    "storage": "128 GB, 256 GB, 512 GB"
+    "storage": "128 GB, 256 GB, 512 GB",
+    "charge": 45,
+    "mainMp": 108,
+    "ultrawide": true,
+    "frontMp": 20,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 15 Pro": {
     "source": "https://www.mi.com/it/product/redmi-note-15-pro/specs/",
@@ -203,7 +336,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "MediaTek Helio G200-Ultra",
     "weight": 195,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "battery": 6500,
+    "charge": 45,
+    "mainMp": 200,
+    "ultrawide": true,
+    "frontMp": 32,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 15 Pro 5G": {
     "source": "https://www.mi.com/it/product/redmi-note-15-pro-5g/specs/",
@@ -211,7 +351,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "MediaTek Dimensity 7400-Ultra",
     "weight": 210,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "battery": 6580,
+    "charge": 45,
+    "mainMp": 200,
+    "ultrawide": true,
+    "frontMp": 20,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Redmi Note 15 Pro+ 5G": {
     "source": "https://www.mi.com/it/product/redmi-note-15-pro-plus-5g/specs/",
@@ -219,7 +366,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "Snapdragon 7s Gen 4",
     "weight": 207.1,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "battery": 6500,
+    "charge": 100,
+    "mainMp": 200,
+    "ultrawide": true,
+    "frontMp": 32,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "POCO F9 Pro": {
     "source": "https://www.mi.com/it/product/poco-f9-pro/specs/",
@@ -228,14 +382,23 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 6330,
     "chip": "Snapdragon 8 Elite Gen 5 V Series",
     "weight": 206,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "POCO F9 Ultra": {
-    "source": "https://www.mi.com/it/product/poco-f9-ultra/",
+    "source": "https://www.mi.com/it/product/poco-f9-ultra/specs/",
     "screen": 6.9,
     "hz": 185,
     "battery": 8050,
-    "chip": "Snapdragon 8 Elite Gen 5"
+    "chip": "Snapdragon 8 Elite Gen 5",
+    "charge": 100,
+    "mainMp": 200,
+    "tele": 5,
+    "wireless": true,
+    "wirelessChargeW": 50,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "POCO X8": {
     "source": "https://www.mi.com/it/product/poco-x8/specs/",
@@ -243,7 +406,11 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "Snapdragon 6s Gen 4",
     "weight": 223,
-    "storage": "256 GB"
+    "storage": "256 GB",
+    "battery": 8340,
+    "charge": 67,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "POCO X8 Pro": {
     "source": "https://www.mi.com/it/product/poco-x8-pro/specs/",
@@ -251,7 +418,11 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "MediaTek Dimensity 8500-Ultra",
     "weight": 201.47,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "battery": 6500,
+    "charge": 100,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "POCO X8 Pro Max": {
     "source": "https://www.mi.com/it/product/poco-x8-pro-max/specs/",
@@ -260,11 +431,16 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 8500,
     "chip": "MediaTek Dimensity 9500s",
     "weight": 218,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "charge": 100,
+    "ram": "12 GB",
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Nothing Phone (4a)": {
     "source": "https://it.nothing.tech/products/phone-4a",
-    "storage": "128 GB"
+    "storage": "256 GB",
+    "checkedAt": "2026-11-05"
   },
   "Nothing Phone (4a) Pro": {
     "source": "https://it.nothing.tech/products/phone-4a-pro",
@@ -275,44 +451,70 @@ window.SCELTOSMART_SPECIFICHE = {
     "mainMp": 50,
     "tele": 3.5,
     "charge": 50,
-    "updates": 3
+    "updates": 3,
+    "checkedAt": "2026-11-05"
   },
   "Nothing Phone (3a)": {
-    "source": "https://it.nothing.tech/products/phone-3a",
+    "source": "https://checkout-eu.nothing.tech/pages/phone-3a-pro",
     "storage": "128 GB",
-    "chip": "Snapdragon 7s Gen 3"
+    "chip": "Snapdragon 7s Gen 3",
+    "screen": 6.77,
+    "hz": 120,
+    "battery": 5000,
+    "mainMp": 50,
+    "tele": 2,
+    "charge": 50,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Nothing Phone (3a) Pro": {
-    "source": "https://it.nothing.tech/products/phone-3a-pro",
+    "source": "https://checkout-eu.nothing.tech/pages/phone-3a-pro",
     "storage": "256 GB",
     "screen": 6.77,
     "hz": 120,
     "battery": 5000,
     "chip": "Snapdragon 7s Gen 3",
-    "charge": 50
+    "charge": 50,
+    "mainMp": 50,
+    "tele": 3,
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "Nothing Phone (3a) Lite": {
     "source": "https://it.nothing.tech/products/phone-3a-lite",
     "battery": 5000,
-    "storage": "128 GB"
+    "storage": "128 GB",
+    "checkedAt": "2026-11-05"
   },
   "CMF Phone 2 Pro": {
-    "source": "https://it.nothing.tech/products/cmf-phone-2-pro",
+    "source": "https://checkout-eu.nothing.tech/pages/cmf-phone-2-pro",
     "battery": 5000,
-    "storage": "128 GB"
+    "storage": "128 GB, 256 GB",
+    "screen": 6.77,
+    "hz": 120,
+    "chip": "MediaTek Dimensity 7300 Pro 5G",
+    "mainMp": 50,
+    "tele": 2,
+    "charge": 33,
+    "weight": 185,
+    "ram": "8 GB",
+    "displayTech": "AMOLED",
+    "checkedAt": "2026-11-05"
   },
   "OnePlus Nord 5": {
     "source": "https://www.oneplus.com/it/nord-5",
     "hz": 144,
     "battery": 5200,
-    "chip": "Snapdragon 8s Gen 3"
+    "chip": "Snapdragon 8s Gen 3",
+    "checkedAt": "2026-11-05"
   },
   "OnePlus Nord CE5": {
     "source": "https://www.oneplus.com/it/nord-ce5",
     "screen": 6.77,
     "hz": 120,
     "battery": 5200,
-    "chip": "MediaTek Dimensity 8350 Apex"
+    "chip": "MediaTek Dimensity 8350 Apex",
+    "checkedAt": "2026-11-05"
   },
   "OPPO Find X9 Ultra": {
     "source": "https://www.oppo.com/it/smartphones/series-find-x/find-x9-ultra/specs/",
@@ -321,7 +523,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 7050,
     "chip": "Snapdragon 8 Elite Gen 5",
     "weight": 235,
-    "storage": "512 GB"
+    "storage": "512 GB",
+    "ram": "12 GB",
+    "mainMp": 200,
+    "teleMp": 200,
+    "frontMp": 50,
+    "displayTech": "AMOLED",
+    "resolution": "3168 × 1440",
+    "checkedAt": "2026-11-05"
   },
   "HONOR Magic8 Pro": {
     "source": "https://www.honor.com/it/phones/honor-magic8-pro/spec/",
@@ -329,7 +538,8 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 6270,
     "chip": "Snapdragon 8 Elite Gen 5",
     "weight": 219,
-    "storage": "512 GB"
+    "storage": "512 GB",
+    "checkedAt": "2026-11-05"
   },
   "HONOR Magic8 Lite": {
     "source": "https://www.honor.com/it/phones/honor-magic8-lite/spec/",
@@ -337,41 +547,62 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 7500,
     "chip": "Snapdragon 6 Gen 4",
     "weight": 189,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "checkedAt": "2026-11-05"
   },
   "Motorola Razr 70": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192566/~/specifiche--motorola-razr-70",
     "hz": 120,
     "battery": 4800,
     "chip": "MediaTek Dimensity 7450X",
-    "weight": 188
+    "weight": 188,
+    "charge": 30,
+    "checkedAt": "2026-11-05"
   },
   "Motorola Razr 70 Plus": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192565/~/specifiche--motorola-razr-70-plus",
     "hz": 165,
     "battery": 4500,
     "chip": "Snapdragon 8s Gen 3",
-    "weight": 189
+    "weight": 189,
+    "charge": 45,
+    "checkedAt": "2026-11-05"
   },
   "Motorola Razr 70 Ultra": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192564",
     "screen": 6.96,
     "hz": 165,
     "battery": 5000,
-    "chip": "Snapdragon 8 Elite"
+    "chip": "Snapdragon 8 Elite",
+    "charge": 68,
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S26 FE": {
-    "source": "https://www.samsung.com/it/smartphones/galaxy-s26/buy/",
+    "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s26-fe-blueberry-128gb-sm-s741bzvdeub/",
     "screen": 6.7,
-    "storage": "128 GB, 256 GB"
+    "storage": "128 GB, 256 GB",
+    "hz": 120,
+    "weight": 193,
+    "battery": 4900,
+    "chip": "Exynos 2500",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 3,
+    "frontMp": 12,
+    "ram": "8 GB",
+    "displayTech": "Dynamic AMOLED 2X",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S25+": {
-    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s25-series-and-a-series/",
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
     "screen": 6.7,
     "hz": 120,
     "battery": 4900,
     "mainMp": 50,
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "chip": "Snapdragon 8 Elite per Galaxy",
+    "displayTech": "Dynamic AMOLED 2X",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S25 FE": {
     "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s25-fe-icyblue-256gb-sm-s731blbgeue/",
@@ -379,7 +610,9 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "chip": "Exynos 2400",
     "weight": 190,
-    "mainMp": 50
+    "mainMp": 50,
+    "displayTech": "Dynamic AMOLED 2X",
+    "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S25 Edge": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
@@ -389,7 +622,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "chip": "Snapdragon 8 Elite per Galaxy",
     "weight": 163,
     "mainMp": 200,
-    "storage": "256 GB, 512 GB"
+    "storage": "256 GB, 512 GB",
+    "ultrawide": true,
+    "tele": 0,
+    "displayTech": "Dynamic AMOLED 2X",
+    "features": "Spessore di 5,8 mm",
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 11 Pro Fold": {
     "source": "https://store.google.com/product/pixel_11_pro_fold_specs?hl=en-US",
@@ -398,7 +636,9 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 4806,
     "chip": "Google Tensor G6",
     "storage": "256 GB, 512 GB, 1 TB",
-    "mainMp": 48
+    "mainMp": 48,
+    "displayTech": "OLED pieghevole",
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 10 Pro Fold": {
     "source": "https://store.google.com/product/pixel_10_pro_fold_specs?hl=en-US",
@@ -406,29 +646,55 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "battery": 5015,
     "chip": "Google Tensor G5",
-    "storage": "256 GB, 512 GB, 1 TB"
+    "storage": "256 GB, 512 GB, 1 TB",
+    "displayTech": "OLED pieghevole",
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 9": {
-    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro",
-    "battery": 4700
+    "source": "https://store.google.com/us/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9&toggler1=Pixel+9+Pro&toggler2=Pixel+9a",
+    "battery": 4700,
+    "screen": 6.3,
+    "hz": 120,
+    "chip": "Google Tensor G4",
+    "mainMp": 50,
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 9 Pro": {
-    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro"
+    "source": "https://store.google.com/us/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9&toggler1=Pixel+9+Pro&toggler2=Pixel+9a",
+    "screen": 6.3,
+    "hz": 120,
+    "battery": 4700,
+    "chip": "Google Tensor G4",
+    "mainMp": 50,
+    "tele": 5,
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 9 Pro XL": {
-    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US"
+    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+XL&toggler1=Pixel+9+Pro",
+    "screen": 6.8,
+    "hz": 120,
+    "battery": 5060,
+    "chip": "Google Tensor G4",
+    "mainMp": 50,
+    "tele": 5,
+    "checkedAt": "2026-11-05"
   },
   "Google Pixel 9 Pro Fold": {
-    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro",
+    "source": "https://store.google.com/us/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro+XL&toggler2=Pixel+9+Pro",
     "screen": 8,
     "hz": 120,
-    "battery": 4650
+    "battery": 4650,
+    "chip": "Google Tensor G4",
+    "displayTech": "OLED pieghevole",
+    "checkedAt": "2026-11-05"
   },
   "OnePlus 15": {
     "source": "https://www.oneplus.com/it/15",
     "hz": 165,
     "battery": 7300,
-    "charge": 120
+    "charge": 120,
+    "chip": "Snapdragon 8 Elite Gen 5",
+    "checkedAt": "2026-11-05"
   },
   "OnePlus 15R": {
     "source": "https://www.oneplus.com/it/15r",
@@ -437,6 +703,207 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 7400,
     "chip": "Snapdragon 8 Gen 5",
     "charge": 80,
-    "mainMp": 50
+    "mainMp": 50,
+    "checkedAt": "2026-11-05"
+  },
+  "Google Pixel 10a": {
+    "screen": 6.3,
+    "hz": 120,
+    "battery": 5100,
+    "weight": 183,
+    "updates": 7,
+    "chip": "Google Tensor G4",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 0,
+    "wireless": true,
+    "source": "https://store.google.com/it/product/pixel_10a_specs?hl=it",
+    "displayTech": "pOLED Actua",
+    "checkedAt": "2026-11-05"
+  },
+  "Samsung Galaxy A57 5G": {
+    "screen": 6.7,
+    "hz": 120,
+    "battery": 5000,
+    "weight": 179,
+    "updates": 6,
+    "chip": "Processore octa-core",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 0,
+    "charge": 45,
+    "wireless": false,
+    "source": "https://www.samsung.com/it/smartphones/galaxy-a/galaxy-a57-5g-awesome-navy-128gb-sm-a576bdbbeue/"
+  },
+  "Samsung Galaxy A37 5G": {
+    "screen": 6.7,
+    "hz": 120,
+    "battery": 5000,
+    "weight": 196,
+    "updates": 6,
+    "chip": "Processore octa-core",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 0,
+    "charge": 45,
+    "wireless": false,
+    "source": "https://www.samsung.com/it/smartphones/galaxy-a/galaxy-a37-5g-awesome-graygreen-256gb-sm-a376bdggeue/"
+  },
+  "Google Pixel 10": {
+    "screen": 6.3,
+    "hz": 120,
+    "battery": 4970,
+    "weight": 204,
+    "updates": 7,
+    "chip": "Google Tensor G5",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 5,
+    "wireless": true,
+    "source": "https://store.google.com/it/product/pixel_10_specs?hl=it",
+    "storage": "128 GB, 256 GB",
+    "ram": "12 GB",
+    "wirelessChargeW": 15,
+    "displayTech": "OLED Actua",
+    "checkedAt": "2026-11-05"
+  },
+  "Motorola Edge 70": {
+    "screen": 6.67,
+    "hz": 120,
+    "battery": 4800,
+    "weight": 159,
+    "chip": "Snapdragon 7 Gen 4",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 0,
+    "charge": 68,
+    "wireless": true,
+    "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/189761/~/specifiche--motorola-edge-70",
+    "wirelessChargeW": 15,
+    "ram": "12 GB",
+    "storage": "512 GB",
+    "checkedAt": "2026-11-05"
+  },
+  "Xiaomi 17": {
+    "screen": 6.3,
+    "hz": 120,
+    "battery": 6330,
+    "weight": 191,
+    "chip": "Snapdragon 8 Elite Gen 5",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 2.6,
+    "charge": 100,
+    "wireless": true,
+    "source": "https://www.mi.com/it/product/xiaomi-17/specs/",
+    "storage": "256 GB, 512 GB",
+    "ram": "12 GB",
+    "displayTech": "OLED CrystalRes",
+    "checkedAt": "2026-11-05"
+  },
+  "Samsung Galaxy S25": {
+    "screen": 6.2,
+    "hz": 120,
+    "battery": 4000,
+    "updates": 7,
+    "chip": "Snapdragon 8 Elite per Galaxy",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 3,
+    "wireless": true,
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
+    "displayTech": "Dynamic AMOLED 2X",
+    "checkedAt": "2026-11-05"
+  },
+  "Samsung Galaxy S25 Ultra": {
+    "screen": 6.9,
+    "hz": 120,
+    "battery": 5000,
+    "updates": 7,
+    "chip": "Snapdragon 8 Elite per Galaxy",
+    "mainMp": 200,
+    "ultrawide": true,
+    "tele": 5,
+    "wireless": true,
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
+    "displayTech": "Dynamic AMOLED 2X",
+    "checkedAt": "2026-11-05"
+  },
+  "Google Pixel 10 Pro": {
+    "screen": 6.3,
+    "hz": 120,
+    "battery": 4870,
+    "weight": 207,
+    "updates": 7,
+    "chip": "Google Tensor G5",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 5,
+    "wireless": true,
+    "source": "https://store.google.com/it/product/pixel_10_pro_specs?hl=it",
+    "wirelessChargeW": 15,
+    "displayTech": "OLED Super Actua LTPO",
+    "checkedAt": "2026-11-05"
+  },
+  "Google Pixel 10 Pro XL": {
+    "screen": 6.8,
+    "hz": 120,
+    "battery": 5200,
+    "weight": 232,
+    "updates": 7,
+    "chip": "Google Tensor G5",
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 5,
+    "wireless": true,
+    "source": "https://store.google.com/it/product/pixel_10_pro_specs?hl=it",
+    "wirelessChargeW": 25,
+    "displayTech": "OLED Super Actua LTPO",
+    "checkedAt": "2026-11-05"
+  },
+  "iPhone 17": {
+    "screen": 6.3,
+    "hz": 120,
+    "video": 30,
+    "weight": 177,
+    "chip": "Apple A19",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 0,
+    "wireless": true,
+    "source": "https://www.apple.com/it/iphone-17/specs/",
+    "storage": "256 GB, 512 GB",
+    "displayTech": "OLED Super Retina XDR",
+    "checkedAt": "2026-11-05"
+  },
+  "iPhone 17 Pro": {
+    "screen": 6.3,
+    "hz": 120,
+    "video": 31,
+    "weight": 204,
+    "chip": "Apple A19 Pro",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 4,
+    "wireless": true,
+    "source": "https://support.apple.com/it-it/125090",
+    "storage": "256 GB, 512 GB, 1 TB",
+    "displayTech": "OLED Super Retina XDR",
+    "checkedAt": "2026-11-05"
+  },
+  "iPhone 17 Pro Max": {
+    "screen": 6.9,
+    "hz": 120,
+    "video": 39,
+    "weight": 233,
+    "chip": "Apple A19 Pro",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 4,
+    "wireless": true,
+    "source": "https://support.apple.com/it-it/125091",
+    "storage": "256 GB, 512 GB, 1 TB, 2 TB",
+    "displayTech": "OLED Super Retina XDR",
+    "checkedAt": "2026-11-05"
   }
 };
