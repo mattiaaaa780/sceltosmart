@@ -7,7 +7,7 @@
 - **71 schede HTML statiche**, una per variante, nella directory `prodotti/schede/`. I link del catalogo e dell'assistente puntano alle singole schede.
 - **88 URL nella sitemap XML e testuale**, con URL specifici per le 71 versioni; `robots.txt` segnala la sitemap.
 - Titoli, meta description, canonical, Open Graph e dati strutturati di navigazione; nessun prezzo, rating, recensione o disponibilità inventati.
-- **Controlli automatici GitHub Actions**: `scripts/site_audit.py` verifica link locali, metadati, sitemap, dati e copertura dei modelli; `qa/mobile-smoke.cjs` usa Playwright sui principali percorsi a 390, 768 e 1365 px.
+- **Controlli automatici GitHub Actions**: `scripts/site_audit.py` verifica link locali, metadati, sitemap, dati e copertura dei modelli; `scripts/sync_schede.cjs --check` controlla la coerenza tra archivio e 71 schede statiche; `qa/mobile-smoke.cjs` usa Playwright sui principali percorsi a 390, 768 e 1365 px.
 - Immagini dei cataloghi con dimensioni stabilite, `loading="lazy"` fuori dallo schermo, priorità per le prime visibili e grafica di riserva dove prevista.
 - Il Finder calcola le proposte nel browser senza inviare le preferenze a un nostro server. I link commerciali riportano l'attributo `rel="sponsored"` nei collegamenti verificati.
 
@@ -74,7 +74,7 @@ Tutti i domini vanno esaminati per condizioni d'uso, disponibilità e implicazio
 
 ## Procedura di mantenimento
 
-- Per aggiornare una caratteristica: verificare la pagina ufficiale del produttore e modificare l'archivio `prodotti/specifiche-verificate.js`; aggiornare la relativa scheda HTML statica.
+- Per aggiornare una caratteristica: verificare la pagina ufficiale del produttore, modificare `prodotti/specifiche-verificate.js` ed eseguire `node scripts/sync_schede.cjs` per sincronizzare le 71 schede statiche; `node scripts/sync_schede.cjs --check` verifica le differenze.
 - Per aggiungere un modello: aggiornare famiglia e dati, creare la nuova scheda statica, aggiungere il suo URL alla sitemap XML/testuale, aggiornare catalogo e test.
 - Prima di pubblicare: controllare esito verde dei workflow **SceltoSmart - controllo siti e link** e **Audit mobile SceltoSmart**. Un test superato non sostituisce l'ispezione reale del sito.
 
