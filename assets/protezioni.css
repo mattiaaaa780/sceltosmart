@@ -52,3 +52,6 @@
 @media(max-width:970px){.protection-page .protection-search-controls{grid-template-columns:1fr 1fr}.protection-page .protection-search-controls button{grid-column:1/-1}.protection-page .protection-device-list{gap:13px}.protection-page .protection-device-head{grid-template-columns:83px 1fr;padding:16px}.protection-page .protection-device-head img{height:87px}}
 @media(max-width:700px){.protection-page .protections-hero{border-radius:21px;padding:26px 22px}.protection-page .protection-filters{padding:17px}.protection-page .protection-search-controls{grid-template-columns:1fr}.protection-page .protection-search-controls button{grid-column:auto}.protection-page .protection-device-list{grid-template-columns:1fr}.protection-page .protection-device-picks{padding:15px}.protection-page .protection-device-head{grid-template-columns:98px 1fr}.protection-page .protection-brand-buttons{display:grid;grid-template-columns:repeat(2,1fr)}.protection-page .protection-brand-buttons button{padding:10px 8px}}
 @media(prefers-reduced-motion:reduce){.protection-page *{scroll-behavior:auto}}
+
+.protection-page .protection-img-fallback{display:grid;place-items:center;width:100%;height:90px;font-size:49px}
+.protection-page .protection-device-head a{color:#6043c3;font-weight:800}
