@@ -33,3 +33,7 @@
 .product-version-picker a[aria-current="page"]{background:#e9e2ff;border-color:#9c86ef}
 .finder-product-art-link{display:block;text-decoration:none;border-radius:15px}
 .finder-product-art-link:focus-visible{outline:3px solid #7350d8;outline-offset:3px}
+
+.variant-name-link{color:inherit;text-decoration:underline;text-decoration-color:#c8b9ed;text-underline-offset:3px}
+.variant-name-link:hover,.variant-name-link:focus-visible{color:#6845c9;text-decoration-color:currentColor}
+.spec-unverified{color:#7e8190;font-size:.91em;font-weight:500!important}
