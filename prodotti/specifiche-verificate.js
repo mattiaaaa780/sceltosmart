@@ -1,6 +1,5 @@
-/* Valori specifici del modello verificati su pagine dei produttori, novembre 2026.
-   I campi assenti NON sono stimati. Non applicare informazioni di una variante alle altre. */
-window.SCELTOSMART_SPECIFICHE= {
+/* Specifiche verificate per modello da pagine ufficiali, novembre 2026. I valori assenti restano non documentati. */
+window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
     "screen": 6.3,
@@ -347,5 +346,74 @@ window.SCELTOSMART_SPECIFICHE= {
     "hz": 165,
     "battery": 5000,
     "chip": "Snapdragon 8 Elite"
+  },
+  "Samsung Galaxy S26 FE": {
+    "source": "https://www.samsung.com/it/smartphones/galaxy-s26/buy/",
+    "screen": 6.7,
+    "storage": "128 GB, 256 GB"
+  },
+  "Samsung Galaxy S25+": {
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s25-series-and-a-series/",
+    "screen": 6.7,
+    "hz": 120
+  },
+  "Samsung Galaxy S25 FE": {
+    "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s25-fe-icyblue-256gb-sm-s731blbgeue/",
+    "screen": 6.7,
+    "hz": 120,
+    "chip": "Exynos 2400",
+    "weight": 190,
+    "mainMp": 50
+  },
+  "Samsung Galaxy S25 Edge": {
+    "source": "https://www.samsung.com/it/smartphones/galaxy-s25-edge/"
+  },
+  "Google Pixel 11 Pro Fold": {
+    "source": "https://store.google.com/product/pixel_11_pro_fold_specs?hl=en-US",
+    "screen": 8,
+    "hz": 120,
+    "battery": 4806,
+    "chip": "Google Tensor G6",
+    "storage": "256 GB, 512 GB, 1 TB",
+    "mainMp": 48
+  },
+  "Google Pixel 10 Pro Fold": {
+    "source": "https://store.google.com/product/pixel_10_pro_fold_specs?hl=en-US",
+    "screen": 8,
+    "hz": 120,
+    "battery": 5015,
+    "chip": "Google Tensor G5",
+    "storage": "256 GB, 512 GB, 1 TB"
+  },
+  "Google Pixel 9": {
+    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro",
+    "battery": 4700
+  },
+  "Google Pixel 9 Pro": {
+    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro"
+  },
+  "Google Pixel 9 Pro XL": {
+    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US"
+  },
+  "Google Pixel 9 Pro Fold": {
+    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro",
+    "screen": 8,
+    "hz": 120,
+    "battery": 4650
+  },
+  "OnePlus 15": {
+    "source": "https://www.oneplus.com/it/15",
+    "hz": 165,
+    "battery": 7300,
+    "charge": 120
+  },
+  "OnePlus 15R": {
+    "source": "https://www.oneplus.com/it/15r",
+    "screen": 6.83,
+    "hz": 165,
+    "battery": 7400,
+    "chip": "Snapdragon 8 Gen 5",
+    "charge": 80,
+    "mainMp": 50
   }
 };
