@@ -31,7 +31,6 @@
   const feedback = document.getElementById("search-feedback");
   const root = form.dataset.root || "";
   const matches = [
-    {keys:["confronti","confronto","confrontare","comparazione","versus"," vs "],url:"confronti/index.html"},
     {keys:["pixel","google pixel","galaxy","samsung","iphone","apple","xiaomi","redmi","nothing","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html"},
     {keys:["cuffie","auricolari","airpods","buds","sony","jbl","anker","batteria","power bank","caricatore","accessori"],url:"prodotti/accessori.html"},
     {keys:["guida","guide","consigli"],url:"guide/index.html"}
