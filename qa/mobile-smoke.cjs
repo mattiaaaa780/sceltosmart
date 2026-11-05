@@ -30,6 +30,7 @@ let browser;
    if(file==="index.html"){
      assert.equal(await page.locator(".home-product").count(),4);
      const img=page.locator('.home-product[href*="#xiaomi17"] img');
+     await img.scrollIntoViewIfNeeded();
      await page.waitForFunction(()=>{const e=document.querySelector('.home-product[href*="#xiaomi17"] img');return !!e&&e.complete&&e.naturalWidth>0;},null,{timeout:10000});
      assert.match(await img.getAttribute("src"),/xiaomi17-riserva\.svg$/);
      if(width===390){
@@ -49,6 +50,7 @@ let browser;
    }
    if(file==="prodotti/smartphone.html"){
      assert.equal(await page.locator(".family-card").count(),28);
+     await page.locator("#xiaomi17 .family-image img").scrollIntoViewIfNeeded();
      await page.waitForFunction(()=>{const e=document.querySelector("#xiaomi17 .family-image img");return !!e&&e.complete&&e.naturalWidth>0;},null,{timeout:10000});
      assert.match(await page.locator("#xiaomi17 .family-image img").getAttribute("src"),/xiaomi17-riserva\.svg$/);
      if(width===390)await page.screenshot({path:"qa-results/catalogo-mobile.png",fullPage:true});
