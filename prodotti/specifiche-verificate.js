@@ -1,8 +1,6 @@
-/* SceltoSmart — fonti ufficiali per le singole varianti; revisione 2026-11-05.
-   I campi assenti non sono inferiti da modelli simili. I dati tecnici
-   si riferiscono alle configurazioni/mercati riportati nelle fonti collegate.
-   Le ore video Apple non vanno confrontate con capacità mAh Android.
-*/
+/* Specifiche dichiarate nelle schede ufficiali dei singoli produttori, controllo 2026-11-05.
+   Un campo assente significa che il valore non è presente nel riepilogo verificato; non dedurre dati da modelli affini.
+   Controllare regione e configurazione sul sito della fonte ufficiale prima dell'acquisto. */
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
@@ -216,7 +214,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "teleMp": 200,
     "ultrawide": true,
     "displayTech": "OLED HyperRGB",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "battery": 6000,
+    "charge": 90,
+    "wireless": true,
+    "wirelessChargeW": 50,
+    "frontMp": 50
   },
   "Xiaomi 17T": {
     "source": "https://www.mi.com/it/product/xiaomi-17t/specs/",
@@ -241,7 +244,10 @@ window.SCELTOSMART_SPECIFICHE = {
     "storage": "256 GB, 512 GB, 1 TB",
     "ram": "12 GB",
     "displayTech": "AMOLED",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "charge": 100,
+    "wireless": true,
+    "wirelessChargeW": 50
   },
   "Redmi Note 17": {
     "source": "https://www.mi.com/it/product/redmi-note-17/specs/",
@@ -384,7 +390,12 @@ window.SCELTOSMART_SPECIFICHE = {
     "weight": 206,
     "storage": "256 GB, 512 GB",
     "displayTech": "AMOLED",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "charge": 100,
+    "wireless": true,
+    "wirelessChargeW": 50,
+    "mainMp": 200,
+    "frontMp": 32
   },
   "POCO F9 Ultra": {
     "source": "https://www.mi.com/it/product/poco-f9-ultra/specs/",
