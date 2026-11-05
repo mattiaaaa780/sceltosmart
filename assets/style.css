@@ -65,3 +65,41 @@
 .variant-actions>a:hover{filter:brightness(.95)}.variant-pending{display:inline-block;font-size:11px;color:#777e92;border:1px dashed #bfc5d8;border-radius:9px;padding:6px 8px}
 .family-card[hidden]{display:none!important}.photo-fallback{font-size:74px;opacity:.55}.catalog-empty[hidden]{display:none!important}
 @media(max-width:780px){.variant-item{align-items:flex-start;flex-direction:column}.variant-actions{justify-content:flex-start}.family-card .family-image{min-height:185px}.family-card .family-image img{height:180px;max-height:180px}}
+
+
+/* Guide editoriali SceltoSmart: layout coerente con schede e cataloghi */
+.guide-hero{position:relative;overflow:hidden;margin:18px 0 32px;padding:clamp(26px,4.7vw,48px);border:1px solid #dad3f4;border-radius:26px;background:radial-gradient(circle at 92% 8%,#dbd3ff 0%,transparent 43%),linear-gradient(125deg,#fff 10%,#f4f0ff 100%)}
+.guide-hero:after{content:"";pointer-events:none;position:absolute;right:-70px;bottom:-145px;width:240px;height:240px;border:30px solid #b7a8f438;border-radius:50%}
+.guide-hero .guide-hero-inner{position:relative;z-index:1;max-width:810px}
+.guide-hero h1{font-size:clamp(2.25rem,4.7vw,3.85rem);margin:14px 0 16px}
+.guide-hero p{font-size:clamp(1rem,1.5vw,1.14rem);max-width:720px;color:#59617e;margin:0}
+.guide-hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0 0}
+.guide-pills{display:flex;flex-wrap:wrap;gap:8px;margin:19px 0 0}
+.guide-pills span{padding:6px 11px;background:#fff;color:#58448b;border:1px solid #e5ddfd;border-radius:999px;font-size:12px;font-weight:750}
+.guide-layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:24px;align-items:start}
+.guide-article{display:grid;gap:17px;min-width:0}
+.guide-section-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3.5vw,32px);box-shadow:0 5px 18px #17194a09;scroll-margin-top:100px}
+.guide-section-head{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.guide-section-number{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border-radius:13px;background:var(--violet-light);color:var(--violet-dark);font-size:14px;font-weight:900}
+.guide-section-head h2{font-size:clamp(1.35rem,2.5vw,1.72rem);line-height:1.22;margin:0}
+.guide-section-card>p{font-size:15px;line-height:1.8;color:#4e5670;margin:0}
+.guide-section-card p+p{margin-top:10px}
+.guide-checklist{background:linear-gradient(130deg,#f5f1ff,#ffffff);border-color:#d9d0ff}
+.guide-checklist .check-list{margin:5px 0 0}.guide-checklist .check-list li{font-size:15px}
+.guide-side{display:grid;gap:16px;position:sticky;top:97px}
+.guide-side-card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px}
+.guide-side-title{font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#6040bc;margin:0 0 13px}
+.guide-toc{display:grid;gap:5px}.guide-toc a{display:block;border-radius:10px;text-decoration:none;padding:8px 10px;font-size:13px;line-height:1.45;color:#4b526c}.guide-toc a:hover,.guide-toc a:focus-visible{background:var(--violet-light);color:var(--violet-dark)}
+.guide-sidebar-text{font-size:13px;color:var(--muted);line-height:1.65;margin:0 0 15px}
+.guide-side .btn{width:100%;white-space:normal}
+.guide-note{background:#f5f2ff;border:1px solid #ddd5ff;border-radius:18px;padding:19px 22px;color:#50476d;font-size:14px;line-height:1.7}
+.guide-note strong{color:#43319b}
+.guide-cta{margin:5px 0 0;padding:clamp(24px,4vw,37px);border-radius:22px;background:linear-gradient(125deg,#222045,#45328b);color:white;overflow:hidden}
+.guide-cta .kicker{color:#cbb9ff}.guide-cta h2{font-size:clamp(1.55rem,3vw,2.1rem);margin:13px 0 12px}
+.guide-cta p{color:#d6d3e9;font-size:15px;max-width:580px}
+.guide-cta-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.guide-cta .btn{flex-shrink:0}
+.guide-related{padding:34px 0 10px}.guide-related h2{font-size:clamp(1.55rem,2.8vw,2rem);margin:5px 0 19px}
+.guide-related .card h3{margin:13px 0 9px}.guide-related .card p{margin-bottom:17px}
+@media(max-width:850px){.guide-layout{grid-template-columns:1fr}.guide-side{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.guide-side-card{min-width:0}}
+@media(max-width:560px){.guide-hero{margin-top:12px;padding:24px 20px;border-radius:20px}.guide-hero-actions .btn{width:100%}.guide-pills span{font-size:11px}.guide-side{grid-template-columns:1fr}.guide-section-head{align-items:flex-start}.guide-section-number{width:40px;height:40px;flex-basis:40px}.guide-section-card{padding:21px}.guide-cta-actions .btn{width:100%}}
