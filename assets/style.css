@@ -109,3 +109,12 @@
 .section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):visited,
 .section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):hover,
 .section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):focus-visible{color:#fff}
+
+/* Invito alla scelta di cover e vetri nel catalogo smartphone */
+.family-protection-promo{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:17px 19px;background:linear-gradient(110deg,#f1efff,#f8faff);border:1px solid #dcd5f5;border-radius:16px;margin:21px 0}
+.family-protection-promo>span{font-size:28px;display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:white}
+.family-protection-promo>div{flex:1 1 220px}
+.family-protection-promo strong{font-size:14px;color:#383165}
+.family-protection-promo p{margin:4px 0 0;color:#77718e;font-size:12px}
+.family-protection-promo .btn{flex-shrink:0}
+@media(max-width:580px){.family-protection-promo{padding:16px;gap:10px}.family-protection-promo .btn{width:100%}}
