@@ -208,3 +208,10 @@
 .home-revamp .home-category--accessories.home-image-fallback::after{content:"🎧"}
 .home-revamp .home-product-media.home-image-fallback::after{content:"📱"}
 .home-revamp .home-accessory-img.home-image-fallback::after{content:"🎧";font-size:47px}
+
+/* Scorciatoie accessori dalla home verso le sei categorie filtrate */
+.home-revamp .home-accessory-shortcuts{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:23px}
+.home-revamp .home-accessory-shortcuts>span{font-size:13px;font-weight:800;color:#777d91;margin-right:4px}
+.home-revamp .home-accessory-shortcuts a{display:inline-flex;align-items:center;padding:9px 13px;min-height:39px;border-radius:99px;border:1px solid #dedaf2;background:#fff;color:#5c42b4;font-size:12px;font-weight:800;text-decoration:none;transition:background .18s,border-color .18s}
+.home-revamp .home-accessory-shortcuts a:hover{background:#ede9ff;border-color:#ac9cef}
+@media(max-width:600px){.home-revamp .home-accessory-shortcuts{gap:7px}.home-revamp .home-accessory-shortcuts>span{width:100%}.home-revamp .home-accessory-shortcuts a{padding:8px 11px;font-size:11px}}
