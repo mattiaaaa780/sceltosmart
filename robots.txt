@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mattiaaaa780.github.io/sceltosmart/sitemap.xml
