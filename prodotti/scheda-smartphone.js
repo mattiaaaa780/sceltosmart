@@ -80,43 +80,50 @@ banner.append(create("p",null,"Caratteristiche per la versione selezionata; alcu
 if(source){const a=link(source,"Consulta la fonte ufficiale ↗","product-source-link",true);banner.append(a);}
 if(model.checkedAt)banner.append(create("small",null,"Archivio controllato: "+model.checkedAt.split("-").reverse().join("/")));
 panel.append(banner);
-let provided=0,missing=0;
+let provided=0;
 function section(heading,items){
+ const values=items.filter(([,value])=>has(value));
+ if(!values.length)return;
  const block=create("section","product-spec-section"),h=create("h2",null,heading),grid=create("dl","product-details-specs");
  block.append(h);
- items.forEach(([label,value])=>{
-  const item=create("div","product-details-spec"),dt=create("dt",null,label),dd=create("dd",null,has(value)?value:"Non specificato nel riepilogo");
-  if(!has(value)){dd.classList.add("spec-unverified");missing++;}else{provided++;if(source){const s=link(source,"Fonte ↗","product-field-source",true);s.setAttribute("aria-label","Fonte ufficiale per "+label);item.append(s);}}
-  item.prepend(dt,dd);grid.append(item);
+ values.forEach(([label,value])=>{
+  const item=create("div","product-details-spec"),dt=create("dt",null,label),dd=create("dd",null,value);
+  provided++;
+  item.append(dt,dd);
+  if(source){const a=link(source,"Fonte ↗","product-field-source",true);a.setAttribute("aria-label","Apri la fonte ufficiale per "+label);item.append(a);}
+  grid.append(item);
  });
  block.append(grid);panel.append(block);
 }
 section("Display e design",[
  ["Schermo",inch(model.screen)],["Tecnologia del display",model.displayTech],
  ["Risoluzione",model.resolution],["Frequenza massima",unit(model.hz,"Hz")],
- ["Peso dichiarato",unit(model.weight,"g")],["Resistenza a polvere e acqua",model.ipRating],
+ ["Peso dichiarato",unit(model.weight,"g")],["Resistenza a polvere e acqua",model.ipRating],["Display esterno",model.coverDisplay],
  ["Caratteristiche speciali",model.features]
 ]);
 section("Processore e memoria",[
  ["Sistema operativo",family.os],["Chip / processore",model.chip],
- ["RAM",model.ram],["Memoria interna",model.storage],["Aggiornamenti dichiarati",unit(model.updates,"anni")]
+ ["RAM",model.ram],["Memoria interna",model.storage],["Supporto software",model.updatesInfo||unit(model.updates,"anni")]
 ]);
 section("Fotocamere",[
  ["Fotocamera principale",unit(model.mainMp,"MP")],
  ["Ultragrandangolo",model.ultrawide===true?"Presente":model.ultrawide===false?"Non presente":null],
  ["Teleobiettivo",model.tele>0?num(model.tele)+"× ottico":model.tele===0?"Non presente":null],
  ["Sensore teleobiettivo",unit(model.teleMp,"MP")],
- ["Fotocamera frontale",unit(model.frontMp,"MP")]
+ ["Fotocamera frontale",unit(model.frontMp,"MP")],["Video",model.videoRecording]
 ]);
 section("Batteria e ricarica",[
  ["Capacità tipica dichiarata",unit(model.battery,"mAh")],
- ["Riproduzione video Apple",model.videoNote||unit(model.video,"ore (fino a)")],
+ ["Autonomia video dichiarata",model.videoNote||(model.video?("Fino a "+num(model.video)+" ore"):null)],
  ["Ricarica cablata",unit(model.charge,"W")],
  ["Ricarica wireless",model.wireless===true?"Supportata":model.wireless===false?"Non supportata":null],
  ["Potenza ricarica wireless",unit(model.wirelessChargeW,"W")],
  ["Altre indicazioni sulla ricarica",model.chargingInfo]
 ]);
-panel.append(create("p","product-details-note",provided+" campi compilati da dati tecnici disponibili; "+missing+" non riportati nel riepilogo SceltoSmart. Per l'elenco integrale e le note per paese, controlla sempre la pagina originale del produttore. I valori mancanti non sono stimati."));
+section("Connettività",[
+ ["Wi‑Fi",model.wifi],["Bluetooth",model.bluetooth],["NFC",model.nfc],["Porta USB",model.usb],["SIM / eSIM",model.sim]
+]);
+panel.append(create("p","product-details-note","Questa scheda raccoglie "+provided+" caratteristiche documentate. Le voci prive di dati attendibili non vengono mostrate: per l'elenco integrale, le note per mercato e le configurazioni, consulta il sito ufficiale."));
 const actions=create("div","product-details-actions");
 if(source)actions.append(link(source,"Scheda tecnica del produttore ↗","btn btn-soft",true));
 const key=fullName==="Google Pixel 10a"?"pixel10a":fullName==="Samsung Galaxy A57 5G"?"galaxyA57":fullName.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/\+/g,"-plus").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
