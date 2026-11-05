@@ -83,3 +83,19 @@
   if(type)type.addEventListener("change",update);
   update();
 })();
+
+/* Fallback grafico: se una foto ospitata da terzi non è disponibile,
+   la scheda resta leggibile e navigabile. */
+(function () {
+  const pics=document.querySelectorAll(".home-revamp .home-stage img, .home-revamp .home-category img, .home-revamp .home-product-media img, .home-revamp .home-accessory-img img");
+  pics.forEach(function(img){
+    const mark=function(){
+      const container=img.parentElement;
+      if(!container)return;
+      img.style.display="none";
+      container.classList.add("home-image-fallback");
+    };
+    if(img.complete&&!img.naturalWidth)mark();
+    else img.addEventListener("error",mark,{once:true});
+  });
+})();
