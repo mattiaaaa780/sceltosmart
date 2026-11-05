@@ -1,5 +1,5 @@
-/* SceltoSmart — caratteristiche documentate modello per modello; controllo 5 novembre 2026.
-   Non estendere valori da una versione all'altra. Le note del produttore prevalgono.
+/* Dati ufficiali delle versioni smartphone presenti nel catalogo SceltoSmart.
+   Valori dipendenti da mercato/configurazione da confrontare con le fonti indicate.
 */
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
@@ -710,15 +710,23 @@ window.SCELTOSMART_SPECIFICHE = {
     "checkedAt": "2026-11-05"
   },
   "Samsung Galaxy S25+": {
-    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s25-ultra-s25-plus-and-s25/",
     "screen": 6.7,
     "hz": 120,
     "battery": 4900,
     "mainMp": 50,
-    "storage": "256 GB, 512 GB, 1 TB",
+    "storage": "256 GB, 512 GB",
     "chip": "Snapdragon 8 Elite per Galaxy",
     "displayTech": "Dynamic AMOLED 2X",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "resolution": "3120 × 1440",
+    "ram": "12 GB",
+    "ultrawide": true,
+    "tele": 3,
+    "frontMp": 12,
+    "wireless": true,
+    "updatesInfo": "7 anni di aggiornamenti di sistema e sicurezza",
+    "ipRating": "IP68"
   },
   "Samsung Galaxy S25 FE": {
     "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s25-fe-icyblue-256gb-sm-s731blbgeue/",
@@ -785,42 +793,94 @@ window.SCELTOSMART_SPECIFICHE = {
     "checkedAt": "2026-11-05"
   },
   "Google Pixel 9": {
-    "source": "https://store.google.com/us/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9&toggler1=Pixel+9+Pro&toggler2=Pixel+9a",
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
     "battery": 4700,
     "screen": 6.3,
     "hz": 120,
     "chip": "Google Tensor G4",
     "mainMp": 50,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "OLED Actua",
+    "resolution": "1080 × 2424",
+    "weight": 198,
+    "ram": "12 GB",
+    "storage": "128 GB, 256 GB",
+    "ultrawide": true,
+    "frontMp": 10.5,
+    "wireless": true,
+    "wirelessChargeW": 15,
+    "charge": 27,
+    "updates": 7,
+    "videoRecording": "4K fino a 60 fps"
   },
   "Google Pixel 9 Pro": {
-    "source": "https://store.google.com/us/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9&toggler1=Pixel+9+Pro&toggler2=Pixel+9a",
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
     "screen": 6.3,
     "hz": 120,
     "battery": 4700,
     "chip": "Google Tensor G4",
     "mainMp": 50,
     "tele": 5,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "OLED LTPO Super Actua",
+    "resolution": "1280 × 2856",
+    "weight": 199,
+    "ram": "16 GB",
+    "storage": "128 GB, 256 GB, 512 GB, 1 TB",
+    "ultrawide": true,
+    "teleMp": 48,
+    "frontMp": 42,
+    "wireless": true,
+    "wirelessChargeW": 21,
+    "charge": 27,
+    "updates": 7,
+    "videoRecording": "4K fino a 60 fps; 8K con Video Boost"
   },
   "Google Pixel 9 Pro XL": {
-    "source": "https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+XL&toggler1=Pixel+9+Pro",
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
     "screen": 6.8,
     "hz": 120,
     "battery": 5060,
     "chip": "Google Tensor G4",
     "mainMp": 50,
     "tele": 5,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "OLED LTPO Super Actua",
+    "resolution": "1344 × 2992",
+    "weight": 221,
+    "ram": "16 GB",
+    "storage": "128 GB, 256 GB, 512 GB, 1 TB",
+    "ultrawide": true,
+    "teleMp": 48,
+    "frontMp": 42,
+    "wireless": true,
+    "wirelessChargeW": 23,
+    "charge": 37,
+    "updates": 7,
+    "videoRecording": "4K fino a 60 fps; 8K con Video Boost"
   },
   "Google Pixel 9 Pro Fold": {
-    "source": "https://store.google.com/us/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+Fold&toggler1=Pixel+9+Pro+XL&toggler2=Pixel+9+Pro",
+    "source": "https://support.google.com/pixelphone/answer/7158570?hl=it",
     "screen": 8,
     "hz": 120,
     "battery": 4650,
     "chip": "Google Tensor G4",
-    "displayTech": "OLED pieghevole",
-    "checkedAt": "2026-11-05"
+    "displayTech": "OLED LTPO Super Actua Flex",
+    "checkedAt": "2026-11-05",
+    "resolution": "2076 × 2152",
+    "coverDisplay": "6,3″ OLED Actua, 1080 × 2424",
+    "weight": 257,
+    "ram": "16 GB",
+    "storage": "256 GB, 512 GB",
+    "mainMp": 48,
+    "ultrawide": true,
+    "tele": 5,
+    "teleMp": 10.8,
+    "frontMp": 10,
+    "wireless": true,
+    "updates": 7,
+    "ipRating": "IPX8",
+    "videoRecording": "4K fino a 60 fps"
   },
   "OnePlus 15": {
     "source": "https://www.oneplus.com/it/15",
@@ -958,9 +1018,15 @@ window.SCELTOSMART_SPECIFICHE = {
     "ultrawide": true,
     "tele": 3,
     "wireless": true,
-    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s25-ultra-s25-plus-and-s25/",
     "displayTech": "Dynamic AMOLED 2X",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "resolution": "2340 × 1080",
+    "ram": "12 GB",
+    "storage": "128 GB, 256 GB, 512 GB",
+    "frontMp": 12,
+    "updatesInfo": "7 anni di aggiornamenti di sistema e sicurezza",
+    "ipRating": "IP68"
   },
   "Samsung Galaxy S25 Ultra": {
     "screen": 6.9,
@@ -972,9 +1038,17 @@ window.SCELTOSMART_SPECIFICHE = {
     "ultrawide": true,
     "tele": 5,
     "wireless": true,
-    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
+    "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-differences-between-the-galaxy-s25-ultra-s25-plus-and-s25/",
     "displayTech": "Dynamic AMOLED 2X",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "resolution": "3120 × 1440",
+    "ram": "12 GB",
+    "storage": "256 GB, 512 GB, 1 TB",
+    "teleMp": 50,
+    "frontMp": 12,
+    "updatesInfo": "7 anni di aggiornamenti di sistema e sicurezza",
+    "ipRating": "IP68",
+    "features": "S Pen; teleobiettivi con zoom ottico 3× e 5×"
   },
   "Google Pixel 10 Pro": {
     "screen": 6.3,
