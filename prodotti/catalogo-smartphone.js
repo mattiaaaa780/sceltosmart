@@ -73,8 +73,15 @@
     }
   });
   root.querySelectorAll(".family-image img").forEach(img=>{
+    if(img.closest("#xiaomi17")&&!img.dataset.fallbackImage)
+      img.dataset.fallbackImage="../assets/xiaomi17-riserva.svg";
     const fallback=()=>{
       if(img.dataset.fallbackShown==="true")return;
+      if(img.dataset.fallbackImage&&img.dataset.fallbackTried!=="true"){
+        img.dataset.fallbackTried="true";
+        img.src=img.dataset.fallbackImage;
+        return;
+      }
       img.dataset.fallbackShown="true";
       img.hidden=true;
       const placeholder=document.createElement("span");
@@ -84,8 +91,8 @@
       placeholder.textContent="📱";
       img.parentElement.append(placeholder);
     };
+    img.addEventListener("error",fallback);
     if(img.complete&&!img.naturalWidth)fallback();
-    else img.addEventListener("error",fallback,{once:true});
   });
   const cards=[...root.querySelectorAll(".family-card")];
   const normalize=s=>String(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
