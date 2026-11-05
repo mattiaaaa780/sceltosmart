@@ -358,33 +358,15 @@ window.SCELTOSMART_FAMIGLIE=[
   {
     "id": "oppofindx9",
     "brand": "OPPO",
-    "title": "OPPO Find X9",
+    "title": "OPPO Find X9 Ultra",
     "os": "Android",
     "models": [
-      "OPPO Find X9",
-      "OPPO Find X9 Pro",
       "OPPO Find X9 Ultra"
     ],
-    "desc": "Serie OPPO Find X9, compresa la versione Ultra.",
+    "desc": "Unico modello OPPO presente nel catalogo: Find X9 Ultra, con link Amazon alla versione indicata.",
     "source": "https://www.oppo.com/it/smartphones/",
     "img": "https://shop.urbanrepublic.com.my/cdn/shop/files/OPPOFindx9Ultra.002.jpg?v=1776666335&width=1445",
     "credit": "Urban Republic"
-  },
-  {
-    "id": "opporeno16",
-    "brand": "OPPO",
-    "title": "OPPO Reno16",
-    "os": "Android",
-    "models": [
-      "OPPO Reno16 5G",
-      "OPPO Reno16 Pro 5G",
-      "OPPO Reno16 F 5G",
-      "OPPO Reno16 FS 5G"
-    ],
-    "desc": "Linea Reno16 in versioni standard, Pro, F e FS.",
-    "source": "https://www.oppo.com/it/smartphones/",
-    "img": "https://jmau.imgix.net/media/catalog/product/1/-/1-oppo_reno16_pro_5g_starlight-black_front-back-logo-hero_ttyaya2i0li55vai.png",
-    "credit": "Joyce Mayne"
   },
   {
     "id": "honormagic8",
@@ -419,10 +401,11 @@ window.SCELTOSMART_FAMIGLIE=[
     "title": "Motorola Razr 70",
     "os": "Android",
     "models": [
+      "Motorola Razr 70",
       "Motorola Razr 70 Plus",
       "Motorola Razr 70 Ultra"
     ],
-    "desc": "Due pieghevoli Razr 70: Plus e Ultra.",
+    "desc": "Famiglia Razr 70 con modello standard, Plus e Ultra. Verifica la versione esatta prima di acquistare.",
     "source": "https://www.motorola.com/it/it/family/moto-razr",
     "img": "https://api.technopolis.bg/medias/Product-details-main-510652.jpg?context=bWFzdGVyfHJvb3R8MTkyNzQ2fGltYWdlL2pwZWd8YUROaEwyZzBNUzgyTWpZMk9EZ3pNRGd6TkRjeE9DOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDgxTVRBMk5USXVhbkJufGQwOTRlZWY0NDhjYjA5NjgyYmQ1MGNmZTQ4YzhlOTg2ZDFjZDg5M2IxMTliMTRkMGRiNjIwNDFiMWQwOTk2OWU",
     "credit": "Technopolis"
