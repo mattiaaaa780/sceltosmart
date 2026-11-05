@@ -198,3 +198,13 @@
 .home-revamp .home-bottom-cta .btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){.home-revamp .home-category,.home-revamp .home-product,.home-revamp .home-accessory,.home-revamp .home-guide{transition:none}}
+
+/* Se un'immagine esterna fallisce, mostra una grafica locale anziché l'icona rotta. */
+.home-revamp .home-image-fallback::after{content:"✦";display:grid;place-items:center;font-size:63px;font-weight:800;line-height:1;color:#a69ad0;text-shadow:0 5px 24px #28255c14}
+.home-revamp .home-showcase-main.home-image-fallback{justify-content:space-between}
+.home-revamp .home-showcase-small.home-image-fallback::after{content:"🎧";font-size:58px}
+.home-revamp .home-showcase-main.home-image-fallback::after{content:"📱";font-size:110px}
+.home-revamp .home-category.home-image-fallback::after{content:"📱";position:absolute;right:10%;top:28%;font-size:95px;opacity:.55}
+.home-revamp .home-category--accessories.home-image-fallback::after{content:"🎧"}
+.home-revamp .home-product-media.home-image-fallback::after{content:"📱"}
+.home-revamp .home-accessory-img.home-image-fallback::after{content:"🎧";font-size:47px}
