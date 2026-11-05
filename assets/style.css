@@ -109,3 +109,28 @@
 .section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):visited,
 .section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):hover,
 .section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):focus-visible{color:#fff}
+
+
+/* Confronti smartphone SceltoSmart — layout editoriale e mobile */
+.compare-index-list{display:grid;gap:17px}
+.compare-index-card{display:grid;grid-template-columns:195px minmax(0,1fr);background:#fff;border:1px solid var(--line);border-radius:21px;box-shadow:var(--shadow);overflow:hidden}
+.compare-index-visual{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;min-height:195px;padding:20px;text-align:center;background:linear-gradient(150deg,#2d2458,#7654da);color:white}
+.compare-index-card:nth-child(2) .compare-index-visual{background:linear-gradient(145deg,#193951,#407f9a)}
+.compare-index-card:nth-child(3) .compare-index-visual{background:linear-gradient(145deg,#32295a,#9873c8)}
+.compare-visual-icon{font-size:52px;line-height:1}.compare-visual-label{font-size:12px;font-weight:750;letter-spacing:.08em}
+.compare-index-body{padding:25px 29px}.compare-index-body h2{font-size:clamp(1.3rem,2.4vw,1.85rem);margin:12px 0 10px}
+.compare-index-body p{color:var(--muted);font-size:14px;max-width:780px}.compare-index-body .btn{margin-top:5px}
+.compare-model-grid{align-items:stretch}.compare-model{background:white;border:1px solid var(--line);border-radius:22px;padding:clamp(19px,3vw,29px);display:flex;flex-direction:column;gap:11px;min-width:0;box-shadow:var(--shadow)}
+.compare-model-top{display:flex;gap:12px;align-items:center}.compare-phone-icon{display:grid;place-items:center;background:#f1ecff;border-radius:13px;width:45px;height:45px;font-size:23px}
+.compare-model h2{margin:4px 0 0;font-size:clamp(1.35rem,2.5vw,1.9rem)}
+.compare-model p{color:#5d667d;font-size:14px;line-height:1.65;margin:0}
+.compare-model .compare-fact{display:inline-block;background:#f4f1ff;color:#49358e;border-radius:10px;padding:10px 12px;font-weight:750;font-size:13px;margin-top:4px}
+.compare-model-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:8px}
+.compare-model-actions .btn{font-size:12px;padding:11px 14px}
+.compare-model .compare-status{font-size:12px;color:#7a8092}
+.compare-sources{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 28px}
+.compare-sources ul{margin:0 0 10px;padding-left:22px}.compare-sources li{margin-bottom:8px}.compare-sources a{color:var(--violet-dark);font-weight:750}
+.compare-sources p{font-size:13px;color:var(--muted);margin:0}
+.compare-index-card .btn:hover,.compare-model-actions .btn:hover{transform:translateY(-1px)}
+.compare-model-actions a.btn-green,.compare-model-actions a.btn-green:visited{color:#122d26}
+@media(max-width:680px){.compare-index-card{grid-template-columns:1fr}.compare-index-visual{min-height:106px;flex-direction:row;gap:16px}.compare-visual-icon{font-size:37px}.compare-index-body{padding:22px}.compare-model-actions{flex-direction:column}.compare-model-actions .btn{width:100%}.compare-sources{padding:20px}}
