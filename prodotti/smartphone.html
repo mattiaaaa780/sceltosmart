@@ -8,7 +8,7 @@
       const url=new URL(raw);
       const host=url.hostname.toLowerCase();
       const direct=(host==='amazon.it'||host==='www.amazon.it')&&Boolean(url.searchParams.get('tag'));
-      const officialShort=(host==='amzn.to'||host==='amzn.eu');
+      const officialShort=(host==='amzn.to'||host==='amzn.eu'||host==='link.amazon');
       if(url.protocol!=='https:'||(!direct&&!officialShort))return;
       const a=document.createElement('a');
       a.href=url.href;a.target='_blank';a.rel='sponsored noopener noreferrer';
