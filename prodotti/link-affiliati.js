@@ -3,5 +3,5 @@
 // I pulsanti appaiono automaticamente soltanto quando i link sono configurati.
 window.SCELTOSMART_LINK_AMAZON = {
   pixel10a: "https://link.amazon/B0aDRaCdS",
-  galaxyA57: ""
+  galaxyA57: "https://link.amazon/B0jjUp2WH"
 };
