@@ -46,7 +46,7 @@
     }
     const match = matches.find(item => item.keys.some(key => query.includes(key) || key.includes(query) && query.length >= 3));
     if (match) {
-      const searched=match.protect?query.replace(/\b(cover|vetri|vetro|temperato|protezione|schermo|pellicola|custodia|case|per|di|del|della|il|la)\b/gi," ").replace(/\s+/g," ").trim():input.value.trim();
+      const searched=match.protect?query.replace(/\b(cover|vetri|vetro|temperato|protezione|schermo|pellicola|custodia|case|spigen|per|di|del|della|il|la)\b/gi," ").replace(/\s+/g," ").trim():input.value.trim();
       window.location.href=root+match.url+(match.filter&&searched?"?q="+encodeURIComponent(searched):"");
     }
     else {
