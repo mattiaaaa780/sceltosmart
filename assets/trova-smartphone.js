@@ -74,12 +74,12 @@
     const note=(size!=="any")?'<span class="finder-match-note">Dimensione richiesta: '+(size==="small"?"compatta":"grande")+'</span>':"";
     return '<article class="finder-result">'+
        '<div class="finder-result-head">'+
-       '<div class="finder-product-art" data-brand="'+safe(p.brand)+'" aria-hidden="true"><div class="finder-phone-back"><div class="finder-lenses"><i></i><i></i><i></i></div><span></span></div></div>'+
+       '<a class="finder-product-art-link" href="prodotti/scheda-smartphone.html?modello='+encodeURIComponent(p.name)+'" aria-label="Apri la scheda di '+safe(p.name)+'"><div class="finder-product-art" data-brand="'+safe(p.brand)+'" aria-hidden="true"><div class="finder-phone-back"><div class="finder-lenses"><i></i><i></i><i></i></div><span></span></div></div></a>'+
        '<div class="finder-result-title"><div class="finder-result-eyebrow">SUGGERIMENTO '+(i+1)+' · '+safe(p.brand)+' · '+safe(p.os)+'</div><h3>'+safe(p.name)+'</h3><p>'+safe(p.note)+'</p>'+note+'</div></div>'+
        '<div class="finder-facts"><span><b>'+safe(screen)+'″</b> Display</span><span><b>'+safe(p.hz)+' Hz</b> Frequenza massima</span><span><b>'+safe(battery)+'</b> Batteria</span></div>'+
        '<div class="finder-why"><strong>Perché può fare al caso tuo</strong><ul>'+explain+'</ul></div>'+
        '<div class="finder-highlights">'+highlights+'</div>'+
-       '<div class="finder-card-links"><a class="finder-card-main" href="'+safe(catalog)+'">Apri nel catalogo ↗</a>'+
+       '<div class="finder-card-links"><a class="finder-card-main" href="prodotti/scheda-smartphone.html?modello='+encodeURIComponent(p.name)+'">Scheda completa ↗</a>'+
        (sourceOK?'<a href="'+safe(p.source)+'" target="_blank" rel="noopener noreferrer">Specifiche ufficiali ↗</a>':"")+accessories+'</div>'+
        '</article>';
   }
