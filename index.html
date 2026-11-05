@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SceltoSmart: offerte, tecnologia e confronti per scegliere meglio.">
+<title>SceltoSmart - Scegli intelligente</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f6f7fb;color:#172033}
+header{background:#111827;color:white;padding:20px 7%;
+display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:25px;font-weight:800;color:#a78bfa}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{background:linear-gradient(120deg,#17172d,#7546db);
+color:white;padding:75px 8%;text-align:center}
+.hero h1{font-size:clamp(32px,6vw,55px);margin-bottom:18px}
+.hero p{color:#ddd6fe;font-size:17px;margin-bottom:25px}
+.search{padding:15px;width:min(500px,90%);border:0;
+border-radius:10px;font-size:16px}
+main{max-width:1150px;margin:45px auto;padding:0 20px}
+h2{margin-bottom:20px}
+.categories{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:35px}
+.categories button{border:0;padding:12px 18px;border-radius:25px;
+background:white;cursor:pointer;font-weight:bold}
+.categories button.active{background:#7546db;color:white}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;border-radius:16px;padding:20px;
+box-shadow:0 4px 18px #0000000b}
+.product-icon{font-size:55px;background:#f2edff;
+border-radius:12px;padding:20px;text-align:center}
+.card h3{margin:17px 0 9px}
+.card p{color:#667085;font-size:14px;line-height:1.5}
+.tag{display:inline-block;background:#e9e1ff;color:#7546db;
+padding:6px 10px;border-radius:20px;font-size:12px;margin-top:12px}
+.card a{display:block;background:#7546db;color:white;
+padding:12px;text-align:center;border-radius:9px;
+text-decoration:none;margin-top:17px}
+footer{margin-top:60px;background:#111827;color:#ddd;
+padding:35px 8%;text-align:center;line-height:2}
+footer a{color:#c4b5fd}
+.notice{font-size:12px;color:#667085;margin:15px 0}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">⚡ SceltoSmart</div>
+ <nav>
+  <a href="#">Home</a>
+  <a href="#offerte">Offerte</a>
+  <a href="#guide">Guide</a>
+ </nav>
+</header>
+
+<section class="hero">
+ <h1>Compra meglio.<br>Scegli intelligente.</h1>
+ <p>Scopri tecnologia, occasioni e prodotti selezionati.</p>
+ <input class="search" id="search"
+ placeholder="Cerca un prodotto..." aria-label="Cerca prodotti">
+</section>
+
+<main>
+ <h2>Esplora le categorie</h2>
+ <div class="categories">
+  <button class="active" data-cat="Tutti">Tutti</button>
+  <button data-cat="Smartphone">Smartphone</button>
+  <button data-cat="Informatica">Informatica</button>
+  <button data-cat="Accessori">Accessori</button>
+  <button data-cat="Casa">Casa smart</button>
+ </div>
+
+ <section id="offerte">
+  <h2>🔥 Prodotti da scoprire</h2>
+  <p class="notice">Anteprima: prodotti dimostrativi, non offerte reali.</p>
+  <div class="products" id="products"></div>
+ </section>
+
+ <section id="guide" style="margin-top:55px">
+  <h2>Guide per scegliere meglio</h2>
+  <p>Presto troverai confronti, recensioni e consigli
+  per acquistare tecnologia senza sprecare denaro.</p>
+ </section>
+</main>
+
+<footer>
+ <h2>SceltoSmart ⚡</h2>
+ <p>La tecnologia giusta, al prezzo giusto.</p>
+ <p>Contatti · Privacy · Cookie · Trasparenza affiliazioni</p>
+ <p>© 2026 SceltoSmart</p>
+</footer>
+
+<script>
+const items=[
+ {name:"Smartphone di ultima generazione",cat:"Smartphone",
+ icon:"📱",desc:"Scopri caratteristiche e confronti tra smartphone."},
+ {name:"Notebook per lavorare",cat:"Informatica",
+ icon:"💻",desc:"Trova il computer adatto alle tue esigenze."},
+ {name:"Cuffie wireless",cat:"Accessori",
+ icon:"🎧",desc:"Confronta comfort, autonomia e qualità audio."},
+ {name:"Dispositivi smart home",cat:"Casa",
+ icon:"🏠",desc:"Rendi la tua casa più intelligente."},
+ {name:"Accessori tecnologici",cat:"Accessori",
+ icon:"⌚",desc:"Scopri accessori utili per tutti i giorni."},
+ {name:"Tablet per studio e lavoro",cat:"Informatica",
+ icon:"📲",desc:"Confronta tablet per ogni esigenza."}
+];
+
+let category="Tutti";
+const container=document.getElementById("products");
+
+function render(){
+ const query=document.getElementById("search").value.toLowerCase();
+ const filtered=items.filter(p=>
+  (category==="Tutti"||p.cat===category)&&
+  (p.name.toLowerCase().includes(query)||
+   p.desc.toLowerCase().includes(query))
+ );
+ container.innerHTML=filtered.map(p=>`
+  <article class="card">
+   <div class="product-icon">${p.icon}</div>
+   <span class="tag">${p.cat}</span>
+   <h3>${p.name}</h3>
+   <p>${p.desc}</p>
+   <a href="#guide">Scopri di più</a>
+  </article>
+ `).join("")||"<p>Nessun prodotto trovato.</p>";
+}
+document.querySelectorAll(".categories button").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  category=btn.dataset.cat;
+  document.querySelectorAll(".categories button")
+   .forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  render();
+ });
+});
+document.getElementById("search").addEventListener("input",render);
+render();
+</script>
+</body>
+</html>
