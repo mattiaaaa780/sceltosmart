@@ -1,0 +1,24 @@
+/* SceltoSmart — ricerca avanzata e schede prodotto. */
+.catalog-toolbar{display:flex;flex-wrap:wrap;align-items:end;gap:12px}
+.catalog-toolbar label{flex:1 1 154px;min-width:0}
+.catalog-toolbar input,.catalog-toolbar select{width:100%;max-width:100%;min-height:44px}
+.catalog-toolbar #family-reset{min-height:44px;flex:0 0 auto}
+.catalog-toolbar .catalog-count{flex:1 1 100%;display:block}
+.variant-item[hidden],.family-card[hidden]{display:none!important}
+.variant-details{display:inline-flex;align-items:center;border-radius:9px;padding:8px 11px;font-weight:750;color:#6040d2;background:#f0eaff;text-decoration:none}
+.variant-details:hover,.variant-details:focus-visible{background:#ded3ff}
+.product-details-hero{padding:35px 0 22px}
+.product-details-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:26px;align-items:start}
+.product-details-visual,.product-details-panel{background:#fff;border:1px solid #e9e8f2;border-radius:20px;padding:24px}
+.product-details-visual{display:grid;place-items:center;min-height:350px}
+.product-details-visual img{width:100%;max-width:320px;height:320px;object-fit:contain}
+.product-details-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.product-details-spec{border-radius:12px;background:#f6f5fc;padding:12px;min-width:0}
+.product-details-spec dt{font-size:13px;color:#62697c}
+.product-details-spec dd{margin:4px 0 0;font-weight:700;overflow-wrap:anywhere}
+.product-details-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.product-details-actions a{min-height:44px;display:inline-flex;align-items:center}
+.product-details-note{margin:18px 0;padding:14px 16px;background:#f7f6fd;border-radius:12px}
+.product-details-checklist{padding-left:20px}
+@media(max-width:700px){.product-details-grid{grid-template-columns:1fr}.product-details-visual{min-height:230px}.product-details-visual img{height:230px}.catalog-toolbar label{flex:1 1 135px}.product-details-specs{grid-template-columns:1fr 1fr}}
+@media(max-width:390px){.product-details-specs{grid-template-columns:1fr}}
