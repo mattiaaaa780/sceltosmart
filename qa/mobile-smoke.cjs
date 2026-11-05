@@ -35,7 +35,7 @@ let browser;
      assert.equal(await page.locator(".home-product").count(),4);
      const img=page.locator('.home-product[href*="famiglia=xiaomi17"] img');
      await img.scrollIntoViewIfNeeded();
-     await page.waitForFunction(()=>{const e=document.querySelector('.home-product[href*="#xiaomi17"] img');return !!e&&e.complete&&e.naturalWidth>0;},null,{timeout:10000});
+     await page.waitForFunction(()=>{const e=document.querySelector('.home-product[href*="famiglia=xiaomi17"] img');return !!e&&e.complete&&e.naturalWidth>0;},null,{timeout:10000});
      assert.match(await img.getAttribute("src"),/xiaomi17-riserva\.svg$/);
      if(width===390){
        const menu=page.locator("[data-nav-toggle]");
