@@ -71,3 +71,8 @@
 .accessories-page .accessory-protection-banner p{font-size:13px;color:#636b84;margin:0;line-height:1.65}
 .accessories-page .accessory-protection-banner .btn{flex-shrink:0}
 @media(max-width:620px){.accessories-page .accessory-protection-banner{padding:18px;gap:12px}.accessories-page .accessory-protection-banner .btn{width:100%}}
+
+/* La categoria Protezioni è un collegamento all'elenco completo, non un filtro di due prodotti. */
+.accessories-page a.accessory-category-link,.accessories-page a.accessory-category-link:visited{color:#252643;text-decoration:none}
+.accessories-page a.accessory-category-link:hover,.accessories-page a.accessory-category-link:focus-visible{background:#f0ebff;border-color:#a391eb;color:#382b85}
+.accessories-page a.accessory-category-link .accessory-category-total{background:#e1d8ff}
