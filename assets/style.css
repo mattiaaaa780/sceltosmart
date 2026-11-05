@@ -47,3 +47,21 @@
 .catalog-feature:hover{border-color:#c0b3f8;box-shadow:var(--shadow)}
 @media(max-width:690px){.catalog-row{grid-template-columns:130px minmax(0,1fr)}.catalog-picture{padding:10px;min-height:170px}.catalog-picture img{height:144px}.catalog-copy{padding:15px}.catalog-meta{gap:5px}.catalog-meta span{font-size:11px;padding:4px 7px}.catalog-actions{gap:8px}.catalog-actions .btn,.catalog-actions .amazon-slot a{width:100%}.catalog-count{margin-left:0}}
 @media(max-width:470px){.catalog-row{grid-template-columns:1fr}.catalog-picture{border-right:0;border-bottom:1px solid var(--line)}.catalog-picture img{height:185px;max-height:185px;width:70%}.catalog-toolbar label{width:100%}.catalog-toolbar input,.catalog-toolbar select{width:100%}.catalog-feature{grid-template-columns:93px 1fr}.catalog-feature img{width:93px;height:100px}}
+
+/* Famiglie smartphone e singole versioni */
+.family-catalog-intro{max-width:760px}.family-summary{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0}
+.family-summary span{display:inline-flex;padding:7px 13px;border-radius:99px;background:#eeebff;font-size:13px;font-weight:750;color:#5744ab}
+.family-card .family-image{min-height:252px}.family-card .family-image img{max-height:225px;height:225px}
+.family-tags{display:flex;gap:8px;flex-wrap:wrap}.family-card .catalog-copy{padding-bottom:20px}
+.family-variants{margin:14px 0 7px;border:1px solid #e4e2f2;border-radius:13px;overflow:hidden;background:#fcfbff}
+.family-variants summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;cursor:pointer;padding:12px 14px;color:#5036ad;font-weight:800;font-size:13px}
+.family-variants summary::-webkit-details-marker{display:none}.family-variants[open] summary{border-bottom:1px solid #e4e2f2;background:#f3efff}
+.variant-list{margin:0;padding:0;list-style:none}
+.variant-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px 14px;border-bottom:1px solid #eeecf6;scroll-margin-top:140px}
+.variant-item:last-child{border-bottom:0}.variant-name{display:grid;gap:3px}.variant-name strong{font-size:13px;color:#252341}.variant-name small{font-size:11px;color:#747b8f}
+.variant-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:end;align-items:center}
+.variant-actions>a{display:inline-block;padding:8px 10px;border-radius:9px;text-decoration:none;background:#eee9ff;color:#4d329d;font-size:12px;font-weight:800}
+.variant-actions>a.variant-amazon{background:#a4ebcc;color:#14342a}
+.variant-actions>a:hover{filter:brightness(.95)}.variant-pending{display:inline-block;font-size:11px;color:#777e92;border:1px dashed #bfc5d8;border-radius:9px;padding:6px 8px}
+.family-card[hidden]{display:none!important}.photo-fallback{font-size:74px;opacity:.55}.catalog-empty[hidden]{display:none!important}
+@media(max-width:780px){.variant-item{align-items:flex-start;flex-direction:column}.variant-actions{justify-content:flex-start}.family-card .family-image{min-height:185px}.family-card .family-image img{height:180px;max-height:180px}}
