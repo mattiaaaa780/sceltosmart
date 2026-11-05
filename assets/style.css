@@ -118,3 +118,13 @@
 .family-protection-promo p{margin:4px 0 0;color:#77718e;font-size:12px}
 .family-protection-promo .btn{flex-shrink:0}
 @media(max-width:580px){.family-protection-promo{padding:16px;gap:10px}.family-protection-promo .btn{width:100%}}
+
+/* Invito Trova smartphone dentro il catalogo principale */
+.family-finder-promo{display:flex;gap:15px;align-items:center;flex-wrap:wrap;border-radius:17px;padding:21px;background:linear-gradient(120deg,#24234c,#43317c);border:1px solid #494076;margin:20px 0;color:#fff}
+.family-finder-promo>span{display:grid;place-items:center;font-size:30px;width:51px;height:51px;border:1px solid #ffffff3b;background:#ffffff18;border-radius:14px}
+.family-finder-promo>div{flex:1 1 240px}
+.family-finder-promo strong{font-size:15px;color:#fff}
+.family-finder-promo p{font-size:12px;color:#dedbf2;margin:5px 0 0;line-height:1.6}
+.family-finder-promo .btn{background:#bbf5d6;color:#183c33;border-color:transparent;flex-shrink:0}
+.family-finder-promo .btn:hover{background:#9be7c2;color:#183c33}
+@media(max-width:580px){.family-finder-promo{padding:18px}.family-finder-promo .btn{width:100%}}
