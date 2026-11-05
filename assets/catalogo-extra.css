@@ -37,3 +37,62 @@
 .variant-name-link{color:inherit;text-decoration:underline;text-decoration-color:#c8b9ed;text-underline-offset:3px}
 .variant-name-link:hover,.variant-name-link:focus-visible{color:#6845c9;text-decoration-color:currentColor}
 .spec-unverified{color:#7e8190;font-size:.91em;font-weight:500!important}
+
+/* Layout catalogo smartphone: niente sovrapposizioni tra "Cerca modello", "Marca" e gli altri filtri. */
+.catalog-toolbar {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:end;
+  column-gap:16px;
+  row-gap:15px;
+  width:100%;
+  min-width:0;
+  margin:22px 0 26px;
+}
+.catalog-toolbar label {
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  font-size:13px;
+  font-weight:750;
+  line-height:1.4;
+}
+.catalog-toolbar label input,
+.catalog-toolbar label select {
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  min-width:0 !important;
+  max-width:100%;
+  height:48px;
+  padding:10px 12px;
+  font-size:15px;
+  line-height:1.25;
+  text-overflow:ellipsis;
+  background:#fff;
+}
+.catalog-toolbar #family-reset {
+  justify-self:start;
+  margin:0;
+  min-height:46px;
+  max-width:100%;
+}
+.catalog-toolbar .catalog-count {
+  grid-column:1/-1;
+  margin:0;
+  width:100%;
+  text-align:left;
+  overflow-wrap:anywhere;
+}
+@media(max-width:950px){
+ .catalog-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:570px){
+ .catalog-toolbar{grid-template-columns:minmax(0,1fr);row-gap:12px}
+ .catalog-toolbar label{width:100%;min-width:0}
+ .catalog-toolbar #family-reset{justify-self:stretch;width:100%}
+ .catalog-toolbar .catalog-count{grid-column:auto}
+}
