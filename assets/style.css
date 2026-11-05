@@ -128,3 +128,9 @@
 .family-finder-promo .btn{background:#bbf5d6;color:#183c33;border-color:transparent;flex-shrink:0}
 .family-finder-promo .btn:hover{background:#9be7c2;color:#183c33}
 @media(max-width:580px){.family-finder-promo{padding:18px}.family-finder-promo .btn{width:100%}}
+
+/* Recapito accessibile nel footer anche su schermi piccoli. */
+.footer-contact{font-size:13px;line-height:1.6;margin:18px 0 0;color:#b4b9d2;overflow-wrap:anywhere}
+.footer-contact a{color:#dfd3ff;text-decoration:underline;text-underline-offset:3px}
+.footer-contact a:hover{color:#fff}
+.footer-contact a:focus-visible{outline:2px solid #c6b4ff;outline-offset:3px}
