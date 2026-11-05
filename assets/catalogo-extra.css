@@ -115,3 +115,11 @@
 .product-details-panel{min-width:0;overflow-wrap:anywhere}
 @media(max-width:800px){.product-details-grid{grid-template-columns:1fr}}
 @media(max-width:420px){.product-details-specs{grid-template-columns:1fr}.product-details-panel{padding:16px}.product-source-banner{padding:13px}}
+
+/* Pulsanti di ritorno nelle schede smartphone: sempre visibili e accessibili. */
+.product-backbar{display:flex;align-items:center;justify-content:flex-start;margin:18px 0 2px}
+.product-backbar--bottom{margin:26px 0 16px}
+.product-back-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border:1px solid #ddd5f5;border-radius:12px;background:#f6f2ff;color:#5738b0;font-size:14px;font-weight:750;text-decoration:none;transition:background-color .15s ease,border-color .15s ease}
+.product-back-link:hover{background:#e9e1ff;border-color:#b4a0ef}
+.product-back-link:focus-visible{outline:3px solid #7552db;outline-offset:3px}
+@media(max-width:480px){.product-backbar{margin-top:12px}.product-backbar--bottom{margin-top:22px}.product-back-link{width:100%;box-sizing:border-box}}
