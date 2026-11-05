@@ -31,6 +31,7 @@
   const feedback = document.getElementById("search-feedback");
   const root = form.dataset.root || "";
   const matches = [
+    {keys:["cover","vetri","vetro temperato","protezione schermo","pellicola","case per","custodia per"],url:"prodotti/protezioni.html",filter:true,protect:true},
     {keys:["airpods","buds","wh-1000","jbl","anker","cuffie","auricolari","power bank","powerbank","caricatore","caricabatterie","custodia","accessori","spigen","airtag","smarttag","halolock","esr","ulanzi","ugreen","maggo","qi2","vetro","vetro temperato","cavo","treppiede","supporto auto","localizzatore"],url:"prodotti/accessori.html",filter:true},
     {keys:["pixel","google","galaxy","samsung","iphone","apple","xiaomi","redmi","poco","nothing","motorola","honor","oppo","oneplus","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html",filter:true},
     {keys:["guida","guide","consigli"],url:"guide/index.html",filter:false}
@@ -44,7 +45,10 @@
       return;
     }
     const match = matches.find(item => item.keys.some(key => query.includes(key) || key.includes(query) && query.length >= 3));
-    if (match) window.location.href = root + match.url + (match.filter ? "?q=" + encodeURIComponent(input.value.trim()) : "");
+    if (match) {
+      const searched=match.protect?query.replace(/\\b(cover|vetri|vetro|temperato|protezione|schermo|pellicola|custodia|case|per|di|del|della|il|la)\\b/gi," ").replace(/\\s+/g," ").trim():input.value.trim();
+      window.location.href=root+match.url+(match.filter&&searched?"?q="+encodeURIComponent(searched):"");
+    }
     else {
       if (feedback) feedback.textContent = "Nessun risultato preciso: guarda tutte le guide e le categorie.";
       const target = document.getElementById("categorie");
