@@ -146,7 +146,16 @@
       img.style.display="none";
       container.classList.add("home-image-fallback");
     };
-    if(img.complete&&!img.naturalWidth)mark();
-    else img.addEventListener("error",mark,{once:true});
+    const recover=function(){
+      const reserve=img.dataset.fallbackImage;
+      if(reserve&&img.dataset.fallbackTried!=="true"){
+        img.dataset.fallbackTried="true";
+        img.src=reserve;
+        return;
+      }
+      mark();
+    };
+    img.addEventListener("error",recover);
+    if(img.complete&&!img.naturalWidth)recover();
   });
 })();
