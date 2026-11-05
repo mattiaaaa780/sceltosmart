@@ -103,3 +103,9 @@
 .guide-related .card h3{margin:13px 0 9px}.guide-related .card p{margin-bottom:17px}
 @media(max-width:850px){.guide-layout{grid-template-columns:1fr}.guide-side{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.guide-side-card{min-width:0}}
 @media(max-width:560px){.guide-hero{margin-top:12px;padding:24px 20px;border-radius:20px}.guide-hero-actions .btn{width:100%}.guide-pills span{font-size:11px}.guide-side{grid-template-columns:1fr}.guide-section-head{align-items:flex-start}.guide-section-number{width:40px;height:40px;flex-basis:40px}.guide-section-card{padding:21px}.guide-cta-actions .btn{width:100%}}
+
+/* Contrasto del pulsante principale nelle intestazioni delle sezioni: .section-head a non deve sovrascrivere il bianco dei pulsanti viola. */
+.section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green),
+.section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):visited,
+.section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):hover,
+.section-head a.btn:not(.btn-soft):not(.btn-light):not(.btn-green):focus-visible{color:#fff}
