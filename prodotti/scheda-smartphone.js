@@ -22,6 +22,18 @@ document.querySelectorAll("[data-smartphone-back]").forEach(control=>{
  });
 });
 
+/* Controllo "Torna su": visibile solo quando serve, con fallback all'ancora. */
+const scrollTopControl=document.querySelector("[data-product-scroll-top]");
+if(scrollTopControl){
+ const updateScrollControl=()=>{scrollTopControl.hidden=window.scrollY<420;};
+ scrollTopControl.addEventListener("click",event=>{
+   event.preventDefault();
+   const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+   window.scrollTo({top:0,behavior:reduceMotion?"instant":"smooth"});
+ });
+ window.addEventListener("scroll",updateScrollControl,{passive:true});
+ updateScrollControl();
+}
 const params=new URLSearchParams(window.location.search);
 const wanted=(params.get("modello")||"").toLocaleLowerCase("it");
 const requestedFamily=params.get("famiglia")||"";
