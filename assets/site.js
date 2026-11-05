@@ -31,9 +31,9 @@
   const feedback = document.getElementById("search-feedback");
   const root = form.dataset.root || "";
   const matches = [
-    {keys:["pixel","google pixel","galaxy","samsung","iphone","apple","xiaomi","redmi","nothing","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html"},
-    {keys:["cuffie","auricolari","airpods","buds","sony","jbl","anker","batteria","power bank","caricatore","accessori"],url:"prodotti/accessori.html"},
-    {keys:["guida","guide","consigli"],url:"guide/index.html"}
+    {keys:["airpods","buds","wh-1000","jbl","anker","cuffie","auricolari","power bank","powerbank","caricatore","caricabatterie","custodia","accessori"],url:"prodotti/accessori.html",filter:true},
+    {keys:["pixel","google","galaxy","samsung","iphone","apple","xiaomi","redmi","poco","nothing","motorola","honor","oppo","oneplus","telefono","smartphone","cellulare"],url:"prodotti/smartphone.html",filter:true},
+    {keys:["guida","guide","consigli"],url:"guide/index.html",filter:false}
   ];
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -44,7 +44,7 @@
       return;
     }
     const match = matches.find(item => item.keys.some(key => query.includes(key) || key.includes(query) && query.length >= 3));
-    if (match) window.location.href = root + match.url;
+    if (match) window.location.href = root + match.url + (match.filter ? "?q=" + encodeURIComponent(input.value.trim()) : "");
     else {
       if (feedback) feedback.textContent = "Nessun risultato preciso: guarda tutte le guide e le categorie.";
       const target = document.getElementById("categorie");
@@ -75,7 +75,11 @@
     if(counter)counter.textContent=visible+" prodotti mostrati";
     if(empty)empty.style.display=visible?"none":"block";
   }
-  if(search)search.addEventListener("input",update);
+  if(search){
+    const initial=new URLSearchParams(window.location.search).get("q");
+    if(initial)search.value=initial.slice(0,120);
+    search.addEventListener("input",update);
+  }
   if(type)type.addEventListener("change",update);
   update();
 })();
