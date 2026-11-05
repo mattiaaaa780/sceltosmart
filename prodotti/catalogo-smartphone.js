@@ -34,6 +34,7 @@
     }catch(e){/* ignora URL errati */}
     return null;
   }
+  const modelPage=s=>"schede/"+String(s).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/\+/g,"-plus").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+".html";
   const sourceUrl=s=>{try{const u=new URL(s);return u.protocol==="https:"?u.href:"";}catch(e){return""}};
   const brands=[...new Set(families.map(f=>f.brand))].sort((a,b)=>a.localeCompare(b,"it"));
   brands.forEach(value=>{
@@ -126,7 +127,7 @@
     const a=document.createElement("a");
     a.className="variant-details";
     a.textContent="Scheda tecnica ↗";
-    a.href="scheda-smartphone.html?modello="+encodeURIComponent(item.dataset.variant||"");
+    a.href=modelPage(item.dataset.variant||"");
     actions.prepend(a);
     const strong=item.querySelector(".variant-name strong");
     if(strong){const nameLink=document.createElement("a");nameLink.href=a.href;nameLink.className="variant-name-link";nameLink.textContent=strong.textContent;strong.replaceChildren(nameLink);}
