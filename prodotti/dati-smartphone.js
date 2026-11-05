@@ -206,8 +206,8 @@ window.SCELTOSMART_FAMIGLIE=[
     ],
     "desc": "Linea Xiaomi con variante Ultra orientata alla fotografia.",
     "source": "https://www.mi.com/it/event/xiaomi-17-series/",
-    "img": "https://res.plaisio.gr/c_limit%2Cf_auto%2Cw_2048%2Cq_75/d_Shared%3ANotFound%3Aproduct-notfound.jpg/Shared/Product/Images/5076048.jpg",
-    "credit": "Plaisio"
+    "img": "https://i02.appmifile.com/15_item_sa/10/02/2026/0c0eeb900dcf2b95ff5a722cc930dfc9.png?q=85&thumb=1",
+    "credit": "Xiaomi"
   },
   {
     "id": "xiaomi17t",
