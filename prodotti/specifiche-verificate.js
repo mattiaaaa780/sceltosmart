@@ -1,5 +1,6 @@
-/* Schede SceltoSmart — collegamenti e dati dai produttori, aggiornati il 2026-11-05.
-   I campi assenti restano non compilati: controllare sempre versione e area di vendita. */
+/* Schede SceltoSmart — dati tecnici e URL dei produttori; aggiornamenti mirati 2026-11-05.
+   Campo assente = non confermato per la variante; evitare confronti mAh vs ore video.
+   Le specifiche e la disponibilità possono cambiare per mercato e configurazione. */
 window.SCELTOSMART_SPECIFICHE = {
   "iPhone 18 Pro": {
     "source": "https://www.apple.com/it/iphone-18-pro/specs/",
@@ -202,7 +203,7 @@ window.SCELTOSMART_SPECIFICHE = {
     "checkedAt": "2026-11-05"
   },
   "Xiaomi 17 Ultra": {
-    "source": "https://www.mi.com/it/product/xiaomi-17-ultra/specs/",
+    "source": "https://www.mi.com/it/support/faq/details/KA-1030013/",
     "screen": 6.9,
     "hz": 120,
     "chip": "Snapdragon 8 Elite Gen 5",
@@ -218,7 +219,10 @@ window.SCELTOSMART_SPECIFICHE = {
     "charge": 90,
     "wireless": true,
     "wirelessChargeW": 50,
-    "frontMp": 50
+    "frontMp": 50,
+    "tele": 3.2,
+    "ipRating": "IP68",
+    "features": "Teleobiettivo Leica con zoom ottico variabile 3,2–4,3×; ripresa 8K a 30 fps"
   },
   "Xiaomi 17T": {
     "source": "https://www.mi.com/it/product/xiaomi-17t/specs/",
@@ -449,9 +453,21 @@ window.SCELTOSMART_SPECIFICHE = {
   },
   "Nothing Phone (4a)": {
     "source": "https://it.nothing.tech/products/phone-4a",
-    "storage": "256 GB",
+    "storage": "128 GB, 256 GB",
     "checkedAt": "2026-11-05",
-    "ram": "8 GB"
+    "ram": "8 GB",
+    "screen": 6.78,
+    "displayTech": "AMOLED flessibile",
+    "hz": 120,
+    "chip": "Snapdragon 7s Gen 4",
+    "mainMp": 50,
+    "frontMp": 32,
+    "ultrawide": true,
+    "tele": 3.5,
+    "battery": 5080,
+    "charge": 50,
+    "ipRating": "IP64",
+    "features": "Teleobiettivo a periscopio 3,5×; Glyph Interface"
   },
   "Nothing Phone (4a) Pro": {
     "source": "https://it.nothing.tech/products/phone-4a-pro",
@@ -464,7 +480,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "charge": 50,
     "updates": 3,
     "checkedAt": "2026-11-05",
-    "ram": "8 GB"
+    "ram": "8 GB",
+    "displayTech": "AMOLED flessibile 1,5K",
+    "chip": "Snapdragon 7 Gen 4",
+    "teleMp": 50,
+    "frontMp": 32,
+    "ultrawide": true,
+    "ipRating": "IP65",
+    "features": "Glyph Matrix; scocca in alluminio; Gorilla Glass 7i"
   },
   "Nothing Phone (3a)": {
     "source": "https://it.nothing.tech/products/phone-3a",
@@ -498,7 +521,17 @@ window.SCELTOSMART_SPECIFICHE = {
     "source": "https://it.nothing.tech/products/phone-3a-lite",
     "battery": 5000,
     "storage": "128 GB",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "screen": 6.77,
+    "displayTech": "AMOLED",
+    "hz": 120,
+    "chip": "Processore octa-core a 4 nm (modello non indicato nella fonte consultata)",
+    "mainMp": 50,
+    "frontMp": 16,
+    "ultrawide": true,
+    "charge": 33,
+    "ipRating": "IP54",
+    "ram": "8 GB"
   },
   "CMF Phone 2 Pro": {
     "source": "https://checkout-eu.nothing.tech/pages/cmf-phone-2-pro",
@@ -520,7 +553,15 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 144,
     "battery": 5200,
     "chip": "Snapdragon 8s Gen 3",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "AMOLED 1,5K",
+    "resolution": "2800 × 1272",
+    "mainMp": 50,
+    "frontMp": 50,
+    "ultrawide": true,
+    "charge": 80,
+    "updates": 6,
+    "features": "4 aggiornamenti Android; 6 anni di patch di sicurezza"
   },
   "OnePlus Nord CE5": {
     "source": "https://www.oneplus.com/it/nord-ce5",
@@ -528,7 +569,14 @@ window.SCELTOSMART_SPECIFICHE = {
     "hz": 120,
     "battery": 5200,
     "chip": "MediaTek Dimensity 8350 Apex",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "AMOLED",
+    "ram": "8 GB",
+    "mainMp": 50,
+    "ultrawide": true,
+    "charge": 80,
+    "updates": 6,
+    "features": "4 aggiornamenti Android; 6 anni di patch di sicurezza"
   },
   "OPPO Find X9 Ultra": {
     "source": "https://www.oppo.com/it/smartphones/series-find-x/find-x9-ultra/specs/",
@@ -553,7 +601,21 @@ window.SCELTOSMART_SPECIFICHE = {
     "chip": "Snapdragon 8 Elite Gen 5",
     "weight": 219,
     "storage": "512 GB",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "OLED",
+    "resolution": "1256 × 2808",
+    "hz": 120,
+    "ram": "12 GB",
+    "charge": 100,
+    "wireless": true,
+    "wirelessChargeW": 80,
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 3.7,
+    "teleMp": 200,
+    "frontMp": 50,
+    "ipRating": "IP68, IP69 e IP69K",
+    "features": "Fotocamera frontale con rilevamento profondità 3D; Wi‑Fi 7; NFC"
   },
   "HONOR Magic8 Lite": {
     "source": "https://www.honor.com/it/phones/honor-magic8-lite/spec/",
@@ -562,7 +624,17 @@ window.SCELTOSMART_SPECIFICHE = {
     "chip": "Snapdragon 6 Gen 4",
     "weight": 189,
     "storage": "256 GB, 512 GB",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "AMOLED",
+    "resolution": "2640 × 1200",
+    "hz": 120,
+    "ram": "8 GB",
+    "charge": 66,
+    "mainMp": 108,
+    "ultrawide": true,
+    "frontMp": 16,
+    "ipRating": "IP66, IP68, IP69 e IP69K",
+    "features": "Wi‑Fi 6; Bluetooth 5.2; NFC; audio stereo"
   },
   "Motorola Razr 70": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192566/~/specifiche--motorola-razr-70",
@@ -571,7 +643,11 @@ window.SCELTOSMART_SPECIFICHE = {
     "chip": "MediaTek Dimensity 7450X",
     "weight": 188,
     "charge": 30,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "LTPO Extreme AMOLED pieghevole",
+    "wireless": true,
+    "wirelessChargeW": 15,
+    "features": "Android 16; audio stereo Dolby Atmos; NFC"
   },
   "Motorola Razr 70 Plus": {
     "source": "https://it-it.support.motorola.com/app/answers/detail/a_id/192565/~/specifiche--motorola-razr-70-plus",
@@ -589,7 +665,13 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 5000,
     "chip": "Snapdragon 8 Elite",
     "charge": 68,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "Extreme AMOLED pieghevole",
+    "resolution": "1224 × 2992",
+    "weight": 199,
+    "wireless": true,
+    "wirelessChargeW": 50,
+    "features": "Schermo esterno 4,0″, 1272 × 1080; Wi‑Fi 7; Android 16"
   },
   "Samsung Galaxy S26 FE": {
     "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s26-fe-blueberry-128gb-sm-s741bzvdeub/",
@@ -622,11 +704,22 @@ window.SCELTOSMART_SPECIFICHE = {
     "source": "https://www.samsung.com/it/smartphones/galaxy-s/galaxy-s25-fe-icyblue-256gb-sm-s731blbgeue/",
     "screen": 6.7,
     "hz": 120,
-    "chip": "Exynos 2400",
+    "chip": "Samsung Exynos 2400",
     "weight": 190,
     "mainMp": 50,
     "displayTech": "Dynamic AMOLED 2X",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "resolution": "1080 × 2340",
+    "battery": 4900,
+    "charge": 45,
+    "wireless": true,
+    "wirelessChargeW": 15,
+    "ram": "8 GB",
+    "ultrawide": true,
+    "tele": 3,
+    "frontMp": 12,
+    "ipRating": "IP68",
+    "features": "Bluetooth 5.4; Wi‑Fi 6E; NFC; Samsung DeX"
   },
   "Samsung Galaxy S25 Edge": {
     "source": "https://www.samsung.com/it/support/mobile-devices/what-are-the-features-of-the-galaxy-s25-edge/",
@@ -708,7 +801,16 @@ window.SCELTOSMART_SPECIFICHE = {
     "battery": 7300,
     "charge": 120,
     "chip": "Snapdragon 8 Elite Gen 5",
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "displayTech": "LTPO 1,5K",
+    "wireless": true,
+    "wirelessChargeW": 50,
+    "mainMp": 50,
+    "ultrawide": true,
+    "tele": 3.5,
+    "teleMp": 50,
+    "frontMp": 32,
+    "features": "Tripla fotocamera da 50 MP; registrazione Dolby Vision 4K 120 fps"
   },
   "OnePlus 15R": {
     "source": "https://www.oneplus.com/it/15r",
@@ -718,7 +820,9 @@ window.SCELTOSMART_SPECIFICHE = {
     "chip": "Snapdragon 8 Gen 5",
     "charge": 80,
     "mainMp": 50,
-    "checkedAt": "2026-11-05"
+    "checkedAt": "2026-11-05",
+    "frontMp": 32,
+    "ultrawide": true
   },
   "Google Pixel 10a": {
     "screen": 6.3,
