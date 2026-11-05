@@ -67,7 +67,7 @@
   const chips=[...document.querySelectorAll("[data-accessory-category]")];
   const groups=[...catalog.querySelectorAll("[data-accessory-group]")];
   const clear=document.querySelector("[data-accessory-clear]");
-  const normalize=s=>(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"");
+  const normalize=s=>(s||"").toLocaleLowerCase("it").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
   function update(){
     const q=normalize(search&&search.value.trim());
     const filter=type?type.value:"all";
