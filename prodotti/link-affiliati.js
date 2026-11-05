@@ -1,8 +1,6 @@
-/* Link Amazon generati dall'account Amazon Affiliati dell'editore.
-   Il link deve condurre esattamente al modello indicato. Non inventare codici o destinazioni.
-   Inserire URL SiteStripe nel valore vuoto della chiave corrispondente al modello.
-   Tutte le 81 varianti hanno un campo dedicato; le due affiliazioni attuali sono conservate.
-   La pubblicazione di un link affiliato dipende dalla compilazione del suo campo. */
+/* Link speciali Amazon dell'editore: aggiungere solo URL generati con SiteStripe.
+   Ogni variante dello smartphone ha una chiave distinta; non compilare il campo
+   finché non è verificata la destinazione esatta del modello. */
 window.SCELTOSMART_LINK_AMAZON = {
   "pixel10a": "https://link.amazon/B0aDRaCdS",
   "galaxyA57": "https://link.amazon/B0jjUp2WH",
@@ -20,9 +18,11 @@ window.SCELTOSMART_LINK_AMAZON = {
   "iphone-air": "",
   "iphone-duo": "",
   "samsung-galaxy-s26": "",
+  "samsung-galaxy-s26-plus": "",
   "samsung-galaxy-s26-ultra": "",
   "samsung-galaxy-s26-fe": "",
   "samsung-galaxy-s25": "",
+  "samsung-galaxy-s25-plus": "",
   "samsung-galaxy-s25-ultra": "",
   "samsung-galaxy-s25-fe": "",
   "samsung-galaxy-s25-edge": "",
@@ -55,6 +55,7 @@ window.SCELTOSMART_LINK_AMAZON = {
   "redmi-note-15-5g": "",
   "redmi-note-15-pro": "",
   "redmi-note-15-pro-5g": "",
+  "redmi-note-15-pro-plus-5g": "",
   "poco-f9-pro": "",
   "poco-f9-ultra": "",
   "poco-x8": "",
