@@ -15,7 +15,7 @@ I test browser automatici **bloccano le richieste alle immagini esterne** per re
 
 ## Attività che non si possono chiudere senza il titolare
 
-1. **Identità e contatto del titolare:** fornire i dati giuridicamente pertinenti e un indirizzo di contatto per Privacy e Contatti. Non compilare informazioni inventate.
+1. **Identità del titolare:** il recapito pubblico `contatti.sceltosmart@gmail.com` è stato inserito in Contatti, Privacy e footer. Mancano ancora i dati identificativi giuridicamente pertinenti del titolare, da riportare nell'informativa definitiva. Non compilare informazioni inventate.
 2. **Diritti delle fotografie:** determinare la licenza/permesso per ogni immagine non originale. La fonte e i crediti fotografici non costituiscono da soli autorizzazione al riutilizzo. Sostituire le immagini senza permesso con foto proprie, autorizzate o illustrazioni originali.
 3. **Cookie e richieste di terze parti:** verificare le richieste reali del browser, gli eventuali cookie e le condizioni dei fornitori prima del lancio; se compaiono tracciamenti non tecnici, impedirli prima del consenso e predisporre la gestione delle scelte. Non inserire un banner fittizio senza verifica.
 4. **Informativa privacy definitiva:** confermare titolare, basi giuridiche, destinatari, periodi di conservazione e trasferimenti. Richiedere una revisione professionale prima di dichiarare conformità al GDPR.
