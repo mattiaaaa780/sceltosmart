@@ -25,7 +25,10 @@ let browser;
    assert.equal(r.status(),200,"HTTP "+file);
    await page.waitForTimeout(240);
    const dims=await page.evaluate(()=>({w:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,h1:document.querySelectorAll("h1").length}));
-   if(dims.scroll>dims.w+2)throw Error(file+" overflow at "+width+"px: "+dims.scroll+" > "+dims.w);
+   if(dims.scroll>dims.w+2){
+     const off=await page.evaluate(()=>[...document.querySelectorAll("body *")].filter(e=>{const r=e.getBoundingClientRect();return r.right>innerWidth+3||r.left< -3}).slice(0,16).map(e=>{const r=e.getBoundingClientRect();return e.tagName.toLowerCase()+"#"+e.id+"."+String(e.className?.baseVal||e.className||"").slice(0,90)+"["+Math.round(r.left)+","+Math.round(r.right)+"]"}));
+     throw Error(file+" overflow at "+width+"px: "+dims.scroll+" > "+dims.w+" offenders: "+off.join(" | "));
+   }
    assert.equal(dims.h1,1,"H1 "+file);
    if(file==="index.html"){
      assert.equal(await page.locator(".home-product").count(),4);
