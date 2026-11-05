@@ -2,6 +2,8 @@
 
 SceltoSmart è un sito editoriale italiano, pubblicato con **GitHub Pages**, per orientarsi tra smartphone, accessori e guide d'acquisto senza presentare prezzi non verificati.
 
+**Contatti del progetto:** [contatti.sceltosmart@gmail.com](mailto:contatti.sceltosmart@gmail.com).
+
 ## Le sezioni
 
 - `index.html`: homepage e percorsi principali.
