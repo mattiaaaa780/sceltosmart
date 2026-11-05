@@ -5,13 +5,20 @@ on:
     paths:
       - '.github/workflows/audit-mobile.yml'
       - 'qa/mobile-smoke.cjs'
+      - 'index.html'
+      - 'trova-smartphone.html'
+      - 'prodotti/**'
+      - 'assets/*.css'
+      - 'assets/*.js'
+      - 'privacy.html'
+      - 'cookie.html'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   mobile-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -21,7 +28,7 @@ jobs:
         run: |
           npm install --no-save playwright
           npx playwright install --with-deps chromium
-      - name: Verifica homepage, Finder e cataloghi a varie larghezze
+      - name: Verifica homepage, Finder, cataloghi e schede a tre larghezze
         run: node qa/mobile-smoke.cjs
       - name: Salva schermate mobile
         if: always()
