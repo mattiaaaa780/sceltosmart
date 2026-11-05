@@ -123,3 +123,10 @@
 .product-back-link:hover{background:#e9e1ff;border-color:#b4a0ef}
 .product-back-link:focus-visible{outline:3px solid #7552db;outline-offset:3px}
 @media(max-width:480px){.product-backbar{margin-top:12px}.product-backbar--bottom{margin-top:22px}.product-back-link{width:100%;box-sizing:border-box}}
+
+/* Torna su: piccolo e accessibile, non copre i comandi delle schede. */
+.product-scroll-top{position:fixed;z-index:45;right:max(16px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:12px 16px;min-height:48px;border-radius:999px;background:#6242c5;color:#fff;border:1px solid #5736b5;box-shadow:0 8px 24px #17123133;text-decoration:none;font-size:14px;font-weight:750}
+.product-scroll-top[hidden]{display:none!important}
+.product-scroll-top:hover{background:#4e30b4;color:#fff}
+.product-scroll-top:focus-visible{outline:3px solid #ab94ff;outline-offset:4px}
+@media(max-width:520px){.product-scroll-top{bottom:max(12px,env(safe-area-inset-bottom));right:max(12px,env(safe-area-inset-right));padding:11px 14px;font-size:13px}}
