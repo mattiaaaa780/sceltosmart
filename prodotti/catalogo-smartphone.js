@@ -98,6 +98,8 @@
     counter.textContent=shown+" famiglie · "+versions+" versioni";
     empty.hidden=shown!==0;
   }
+  const initialQuery=new URLSearchParams(window.location.search).get("q");
+  if(initialQuery)search.value=initialQuery.slice(0,120);
   search.addEventListener("input",filter);
   brand.addEventListener("change",filter);
   os.addEventListener("change",filter);
