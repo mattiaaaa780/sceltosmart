@@ -55,9 +55,9 @@ window.SCELTOSMART_FAMIGLIE=[
       "iPhone Duo"
     ],
     "desc": "Il pieghevole della gamma Apple, con schermo interno ampliato.",
-    "source": "https://www.apple.com/it/iphone/",
-    "img": "https://files.foxtrot.com.ua/PhotoNew/img_0_60_13517_0_1_N5vi1P.jpg",
-    "credit": "Foxtrot"
+    "source": "https://www.apple.com/it/newsroom/2026/09/apple-unveils-iphone-duo/",
+    "img": "https://www.apple.com/newsroom/images/2026/09/apple-unveils-iphone-duo/article/Apple-iPhone-Duo-colors-260909_big.jpg.large.jpg",
+    "credit": "Apple"
   },
   {
     "id": "galaxys26",
@@ -252,9 +252,9 @@ window.SCELTOSMART_FAMIGLIE=[
       "Redmi Note 15 Pro+ 5G"
     ],
     "desc": "Cinque varianti Redmi Note 15 da confrontare.",
-    "source": "https://www.mi.com/it/event/redmi-note-15-series/",
-    "img": "https://mistore.dk/cdn/shop/files/P16_Blue.png?v=1768493939&width=1500",
-    "credit": "Mi Store Denmark"
+    "source": "https://www.mi.com/it/product/redmi-note-15/",
+    "img": "https://i02.appmifile.com/393_operator_sg/12/01/2026/d968d607d95796e7450512549c31562f.png",
+    "credit": "Xiaomi"
   },
   {
     "id": "pocof9",
