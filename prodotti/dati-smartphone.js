@@ -42,9 +42,9 @@ window.SCELTOSMART_FAMIGLIE=[
       "iPhone Air"
     ],
     "desc": "Modello Apple orientato alla sottigliezza del design.",
-    "source": "https://www.apple.com/it/iphone/",
-    "img": "https://www.gadcet.com/cdn/shop/files/61UJ1GWaWNL._AC_SL1500_1024x1024.jpg?v=1758990121",
-    "credit": "Gadcet"
+    "source": "https://www.apple.com/it/iphone-air/",
+    "img": "https://www.apple.com/v/iphone-air/j/images/overview/contrast/iphone_air__bpnodv7do9ua_large.jpg",
+    "credit": "Apple"
   },
   {
     "id": "iphoneduo",
