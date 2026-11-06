@@ -76,6 +76,26 @@
   root.querySelectorAll(".variant-item").forEach(item=>{
     const model=item.getAttribute("data-variant");
     const actions=item.querySelector(".variant-actions");
+    const modelMedia=(window.SCELTOSMART_IMMAGINI||{})[model];
+    const nameBox=item.querySelector(".variant-name");
+    if(nameBox&&!item.querySelector(".variant-main")){
+      const wrap=document.createElement("div");wrap.className="variant-main";
+      const thumb=document.createElement("span");thumb.className="variant-model-photo";
+      if(modelMedia&&sourceUrl(modelMedia.src)){
+        const image=document.createElement("img");
+        image.src=sourceUrl(modelMedia.src);
+        image.alt="Foto di "+model;
+        image.width=56;image.height=58;
+        image.loading="lazy";image.decoding="async";image.referrerPolicy="no-referrer";
+        const fail=()=>{thumb.replaceChildren(document.createTextNode("📱"));thumb.title="Foto specifica non disponibile";};
+        image.addEventListener("error",fail,{once:true});
+        if(image.complete&&!image.naturalWidth)fail();else thumb.append(image);
+      }else{
+        thumb.textContent="📱";thumb.title="Foto specifica ancora da verificare";
+      }
+      nameBox.replaceWith(wrap);
+      wrap.append(thumb,nameBox);
+    }
     if(!model||!actions)return;
     const producer=actions.querySelector('a[href]:not(.variant-amazon):not(.variant-details)');
     const exactSource=sourceUrl((verified[model]||{}).source);
