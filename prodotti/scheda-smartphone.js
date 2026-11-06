@@ -48,13 +48,29 @@ const unit=(n,s)=>has(n)?num(n)+" "+s:null;
 const inch=n=>has(n)?String(n).replace(".",",")+"″":null;
 const page="schede/";
 const slug=x=>String(x).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/\+/g,"-plus").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-function photo(f){
- const wrap=create("div","product-details-visual");const src=safeUrl(f?.img);
- if(!src){wrap.append(create("span","photo-fallback","📱 Immagine non disponibile"));return wrap;}
- const img=create("img");img.src=src;img.alt="Foto rappresentativa della famiglia "+f.title+"; le versioni possono differire";
+function photo(f,modelName){
+ const wrap=create("div","product-details-visual");
+ const media=window.SCELTOSMART_IMMAGINI||{};
+ const specific=modelName?media[modelName]:null;
+ // Soltanto la pagina di scelta della famiglia usa un'immagine generale.
+ const src=safeUrl(modelName?specific?.src:f?.img);
+ const caption=modelName?modelName:f.title;
+ if(!src){
+   wrap.append(create("span","photo-fallback","📱 Foto di "+caption+" in verifica"));
+   return wrap;
+ }
+ const img=create("img");
+ img.src=src;
+ img.alt=modelName?"Foto del modello "+modelName:"Immagine indicativa della famiglia "+f.title;
  img.loading="lazy";img.decoding="async";img.referrerPolicy="no-referrer";
- img.addEventListener("error",()=>{wrap.replaceChildren(create("span","photo-fallback","📱 Immagine non disponibile"));},{once:true});
- wrap.append(img);return wrap;
+ img.addEventListener("error",()=>{wrap.replaceChildren(create("span","photo-fallback","📱 Foto di "+caption+" non disponibile"));},{once:true});
+ wrap.append(img);
+ if(modelName&&specific?.credit&&specific?.source){
+   const credit=create("p","product-image-credit","Immagine: "+specific.credit+" · ");
+   const anchor=link(specific.source,"Fonte immagine ↗",null,true);
+   credit.append(anchor);wrap.append(credit);
+ }
+ return wrap;
 }
 function picker(f,active){
  const wrap=create("nav","product-version-picker");wrap.setAttribute("aria-label","Altre versioni di "+f.title);
@@ -67,7 +83,7 @@ if(!fullName){
  title.textContent=family.title;document.title=family.title+" — Modelli | SceltoSmart";
  subtitle.textContent="Scegli la versione esatta: fotocamere, dimensioni e batteria possono cambiare.";
  const panel=create("section","product-details-panel");panel.append(create("h2",null,"Quale versione vuoi consultare?"),picker(family));
- const layout=create("div","product-details-grid");layout.append(photo(family),panel);content.replaceChildren(layout);return;
+ const layout=create("div","product-details-grid");layout.append(photo(family,null),panel);content.replaceChildren(layout);return;
 }
 const base=finder.find(m=>m.name===fullName)||{};
 const model={...base,...(verified[fullName]||{})};
@@ -132,6 +148,6 @@ const amazon=safeUrl(links[key]);
 if(amazon){const u=new URL(amazon);if(["link.amazon","amzn.to","amzn.eu"].includes(u.hostname)||(["amazon.it","www.amazon.it"].includes(u.hostname)&&u.searchParams.has("tag"))){const a=link(amazon,"Vedi su Amazon ↗","btn btn-green",true);a.rel="sponsored noopener noreferrer";actions.append(a);}}
 panel.append(actions,create("h2","product-other-heading","Altre versioni della stessa famiglia"),picker(family,fullName));
 const warning=create("p","note-inline","I link Amazon possono essere affiliati. Nessun prezzo in tempo reale. L'immagine rappresenta la famiglia e potrebbe non mostrare esattamente questa versione; attribuire un'immagine alla fonte non sostituisce il permesso di riutilizzarla.");
-const layout=create("div","product-details-grid");layout.append(photo(family),panel);
+const layout=create("div","product-details-grid");layout.append(photo(family,fullName),panel);
 content.replaceChildren(layout,warning);
 })();
