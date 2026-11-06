@@ -44,10 +44,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "iPhone Air": {
-    "src": "https://www.gadcet.com/cdn/shop/files/61UJ1GWaWNL._AC_SL1500_1024x1024.jpg?v=1758990121",
-    "credit": "Gadcet",
-    "source": "https://www.apple.com/it/iphone/",
-    "status": "foto-catalogo-da-validare"
+    "src": "https://cache.cil.ahamo.com/products/iphone/iphone-air/APL85551/APL85551_L_01.jpg",
+    "credit": "ahamo / NTT Docomo",
+    "source": "https://ahamo.com/products/iphone/iphone-air/index.html",
+    "status": "modello-identificabile"
   },
   "iPhone Duo": {
     "src": "https://cdn.mos.cms.futurecdn.net/ENFN2u4hpSYiQYfbA6WbcL-1200-80.jpg",
@@ -68,10 +68,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Samsung Galaxy S26 Ultra": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.samsung.com/it/smartphones/galaxy-s26/",
-    "status": "da-verificare"
+    "src": "https://media.falabella.com/falabellaCO/152241154_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
+    "credit": "Falabella Colombia",
+    "source": "https://www.falabella.com.co/falabella-co/product/152241153/celular-samsung-galaxy-s26-ultra-5g-512gb-12-ram/152241154",
+    "status": "modello-identificabile"
   },
   "Samsung Galaxy S26 FE": {
     "src": "https://media.wired.com/photos/6aa35ccbdbebf6a8ca105923/master/w_1600%2Cc_limit/Samsung-Galaxy-S26-FE-1-SOURCE-Simon-Hill.jpg",
@@ -110,10 +110,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Samsung Galaxy Z Fold8": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.samsung.com/it/mobile-phone-buying-guide/galaxy-z-8-series-vs-galaxy-z-7-series/",
-    "status": "da-verificare"
+    "src": "https://shop.samsung.com/ie/images/products/30619/39368/2000x2000/H8Mid512.webp",
+    "credit": "Samsung Store Ireland",
+    "source": "https://shop.samsung.com/ie/galaxy-z-fold8-graphite-512gb",
+    "status": "modello-identificabile"
   },
   "Samsung Galaxy Z Fold8 Ultra": {
     "src": "https://cdn.idealo.com/folder/Product/212299/8/212299873/s2_produktbild_max/samsung-galaxy-z-fold8-ultra-256gb-violet-shadow.jpg",
@@ -122,10 +122,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Samsung Galaxy Z Flip8": {
-    "src": "https://media.currys.biz/i/currysprod/M10306687_black?%24l-large%24=&fmt=auto",
-    "credit": "Currys",
-    "source": "https://www.samsung.com/it/mobile-phone-buying-guide/galaxy-z-8-series-vs-galaxy-z-7-series/",
-    "status": "foto-catalogo-da-validare"
+    "src": "https://www.jbhifi.com.au/cdn/shop/files/903904-Product-0-I-639186392402802304.jpg?v=1783994586",
+    "credit": "JB Hi-Fi Australia",
+    "source": "https://www.jbhifi.com.au/products/samsung-galaxy-z-flip8-5g-512gb-graphite",
+    "status": "modello-identificabile"
   },
   "Samsung Galaxy A57 5G": {
     "src": "https://castore.uz/upload/iblock/5d6/dxgat7z3ltjprulrpvdy2ra781sjwcsw/smartfon-samsung-galaxy-a57-5g-sm-a576b-ds-128gb-dark-blue.jpg",
@@ -140,10 +140,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Google Pixel 11": {
-    "src": "",
-    "credit": "",
-    "source": "https://store.google.com/it/category/phones?hl=it",
-    "status": "da-verificare"
+    "src": "https://cdn.stls.store/cdn_thumbs_webp/500-500/gallery/02/03/4023454.jpeg.webp",
+    "credit": "STYLUS",
+    "source": "https://stls.store/google-pixel-11-256gb-obsidian-p1452894c11256.html",
+    "status": "modello-identificabile"
   },
   "Google Pixel 11 Pro": {
     "src": "https://www.techzomart.com/cdn/shop/files/google-pixel-11-pro-fog-cellmart.webp?v=1787924156&width=1946",
@@ -224,10 +224,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Xiaomi 17": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/event/xiaomi-17-series/",
-    "status": "da-verificare"
+    "src": "https://vendori.ge/images/detailed/402/04c0a5cc11a480f8fd8c37a58a72c464.png",
+    "credit": "Vendori",
+    "source": "https://vendori.ge/xiaomi-17-nfc-dual-sim-12gb-ram-512gb-5g-global-version-black.html",
+    "status": "modello-identificabile"
   },
   "Xiaomi 17 Ultra": {
     "src": "https://www.sharafstore.com/web/image/product.template/30653/image_1024?unique=bc34010",
@@ -236,10 +236,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Xiaomi 17T": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/",
-    "status": "da-verificare"
+    "src": "https://pointiraq.com/cdn/shop/files/ce5c696fe3bbdcb0c90a46e95e8bd43e.webp?v=1781180097",
+    "credit": "Point Iraq",
+    "source": "https://pointiraq.com/products/xiaomi-17t-12-512gb-violet",
+    "status": "modello-identificabile"
   },
   "Xiaomi 17T Pro": {
     "src": "https://www.proshop.nl/Images/915x900/3469675_b4e954284ae6.png",
@@ -248,10 +248,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Redmi Note 17": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/product-list/redmi-series/",
-    "status": "da-verificare"
+    "src": "https://www.powerplanetonline.com/cdnassets/products/109316/xiaomi-redmi-note-17-4g-purpura-celestial-vista-3_ad_l.webp",
+    "credit": "Powerplanet",
+    "source": "https://www.powerplanetonline.com/es/xiaomi-redmi-note-17-4g-4gb-128gb-purpura-celestial",
+    "status": "modello-identificabile"
   },
   "Redmi Note 17 5G": {
     "src": "https://dam.elcorteingles.es/producto/www-001057063429591-00.jpg",
@@ -260,10 +260,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Redmi Note 17 Pro 5G": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/product-list/redmi-series/",
-    "status": "da-verificare"
+    "src": "https://www.xiaomistore.pt/cdn/shop/files/redmi-note-pro-17-5g.png?v=1787843861&width=1200",
+    "credit": "Xiaomi Store Portugal",
+    "source": "https://www.xiaomistore.pt/products/smartphone-redmi-note-17-pro-5g",
+    "status": "modello-identificabile"
   },
   "Redmi Note 17 Pro Max 5G": {
     "src": "https://dam.elcorteingles.es/producto/www-001057063616478-00.jpg",
@@ -272,28 +272,28 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Redmi Note 15": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/event/redmi-note-15-series/",
-    "status": "da-verificare"
+    "src": "https://axelrodphones.ke/wp-content/uploads/2026/01/3265d4ec5e4788342ab4de2b160f60f8.webp",
+    "credit": "Axelrod Phones",
+    "source": "https://axelrodphones.ke/product/redmi-note-15-4g/",
+    "status": "modello-identificabile"
   },
   "Redmi Note 15 5G": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/event/redmi-note-15-series/",
-    "status": "da-verificare"
+    "src": "https://www.phonelectrics.com/cdn/shop/files/RedmiNote155G-6.jpg?v=1770253726&width=1200",
+    "credit": "Phonelectrics",
+    "source": "https://www.phonelectrics.com/products/redmi-note-15-5g-256gb-6gb",
+    "status": "modello-identificabile"
   },
   "Redmi Note 15 Pro": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/event/redmi-note-15-series/",
-    "status": "da-verificare"
+    "src": "https://media.falabella.com/falabellaCL/151560680_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
+    "credit": "Falabella Chile",
+    "source": "https://www.falabella.com/falabella-cl/product/151560679/smartphone-xiaomi-redmi-note-15-pro-4g-8gb-256gb-titanio/151560680",
+    "status": "modello-identificabile"
   },
   "Redmi Note 15 Pro 5G": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/event/redmi-note-15-series/",
-    "status": "da-verificare"
+    "src": "https://cdn.movertix.com/media/catalog/product/r/e/redmi-note-15-pro-5g-dual-sim-glacier-blue-256gb-and-8gb-ram_2.jpg",
+    "credit": "Movertix",
+    "source": "https://www.movertix.com/en/redmi-note-15-pro-5g-dual-sim-glacier-blue-512gb-and-12gb-ram.html",
+    "status": "modello-identificabile"
   },
   "Redmi Note 15 Pro+ 5G": {
     "src": "https://media.falabella.com/falabellaPE/151352853_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
@@ -302,10 +302,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "POCO F9 Pro": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/poco/",
-    "status": "da-verificare"
+    "src": "https://www.cdiscount.com/pdt2/6/2/6/1/700x700/aadoq53626/rw/smartphone-xiaomi-poco-f9-pro.jpg",
+    "credit": "Cdiscount",
+    "source": "https://www.cdiscount.com/telephonie/telephone-mobile/smartphone-xiaomi-poco-f9-pro/f-14404-aadoq53626.html",
+    "status": "modello-identificabile"
   },
   "POCO F9 Ultra": {
     "src": "https://a.allegroimg.com/original/1142e2/8f96abdd49be981b61caeb3d7e0a/POCO-F9-Ultra-16GB-512GB-Czarny",
@@ -314,10 +314,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "POCO X8": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/poco/",
-    "status": "da-verificare"
+    "src": "https://www.cdiscount.com/pdt2/3/1/6/1/700x700/aadms95316/rw/poco-x8-black-8g-ram-256g-rom.jpg",
+    "credit": "Cdiscount",
+    "source": "https://www.cdiscount.com/telephonie/telephone-mobile/poco-x8-black-8g-ram-256g-rom/f-14404-aadms95316.html",
+    "status": "modello-identificabile"
   },
   "POCO X8 Pro": {
     "src": "https://swiftronics.ca/cdn/shop/files/buy-xiaomi-poco-x8-pro-5g-12gb-512gb-mint-green-global-925.webp?v=1775924951&width=416",
@@ -326,10 +326,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "POCO X8 Pro Max": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.mi.com/it/poco/",
-    "status": "da-verificare"
+    "src": "https://i05.appmifile.com/628_item_es/12/03/2026/316784c8ff49b88caa24e7c4e940f68b.png?q=85&thumb=1",
+    "credit": "Xiaomi España",
+    "source": "https://www.mi.com/es/product/poco-x8-pro-max/buy/",
+    "status": "modello-identificabile"
   },
   "Nothing Phone (4a)": {
     "src": "https://cdn.mos.cms.futurecdn.net/v2/t%3A0%2Cl%3A1312%2Ccw%3A3376%2Cch%3A3376%2Cq%3A80%2Cw%3A2560/nYc6iV97JYHgnahb8TyrqZ.jpg",
@@ -356,16 +356,16 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Nothing Phone (3a) Lite": {
-    "src": "",
-    "credit": "",
-    "source": "https://it.nothing.tech/collections/phones",
-    "status": "da-verificare"
+    "src": "https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/NOT3AL128B_.jpg",
+    "credit": "Officeworks",
+    "source": "https://www.officeworks.com.au/shop/officeworks/p/nothing-3a-lite-128gb-black-not3al128b",
+    "status": "modello-identificabile"
   },
   "CMF Phone 2 Pro": {
-    "src": "https://img.drz.lazcdn.com/static/np/p/1a212e42212ab3dfd50094640be7bd2d.png_720x720q80.png",
-    "credit": "Daraz",
-    "source": "https://it.nothing.tech/collections/phones",
-    "status": "foto-catalogo-da-validare"
+    "src": "https://silkroom.odoo.com/web/image/product.product/26616/image_1920?unique=d5be4f6",
+    "credit": "Silkroom",
+    "source": "https://silkroom.odoo.com/shop/nothing-cmf-phone-2-pro-6600",
+    "status": "modello-identificabile"
   },
   "OnePlus 15": {
     "src": "https://i.ebayimg.com/images/g/2rIAAeSwyqlpKB-K/s-l1200.png",
@@ -386,16 +386,16 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "OnePlus Nord CE5": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.oneplus.com/it/nord-5",
-    "status": "da-verificare"
+    "src": "https://image01-in.oneplus.net/media/202507/03/0cdb4a07153d0c93b1aad297418c6524.png",
+    "credit": "OnePlus India",
+    "source": "https://www.oneplus.in/oneplus-nord-ce5",
+    "status": "modello-identificabile"
   },
   "OPPO Find X9 Ultra": {
     "src": "https://shop.urbanrepublic.com.my/cdn/shop/files/OPPOFindx9Ultra.002.jpg?v=1776666335&width=1445",
     "credit": "Urban Republic",
-    "source": "https://www.oppo.com/it/smartphones/",
-    "status": "foto-catalogo-da-validare"
+    "source": "https://shop.urbanrepublic.com.my/products/oppo-find-x9-ultra-1tb",
+    "status": "modello-identificabile"
   },
   "HONOR Magic8 Pro": {
     "src": "https://honorstore.cl/cdn/shop/files/HONOR-Magic8Pro_Black_800x800_0.png?v=1770239024&width=800",
@@ -410,22 +410,22 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Motorola Edge 70": {
-    "src": "https://i5.walmartimages.com/asr/af46994c-d8cd-4b37-a8d8-f3d7a8157e49.b6d2f8d920f4965ab282fd95f860cd5d.jpeg?odnBg=FFFFFF&odnHeight=612&odnWidth=612",
-    "credit": "Walmart",
-    "source": "https://www.motorola.com/it/it/",
-    "status": "foto-catalogo-da-validare"
+    "src": "https://cdn.beebom.com/mobile/motorola-edge-70-front-back-1.png",
+    "credit": "Beebom",
+    "source": "https://gadgets.beebom.com/mobile/motorola-edge-70",
+    "status": "modello-identificabile"
   },
   "Motorola Razr 70": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.motorola.com/it/it/family/moto-razr",
-    "status": "da-verificare"
+    "src": "https://lcdn.altex.ro/media/catalog/product/m/o/motorola_razr_70_green_03_bce67127.jpg",
+    "credit": "Altex",
+    "source": "https://altex.ro/telefon-motorola-razr-70-256gb-8gb-ram-dual-sim-sporting-green/cpd/PBB60007PL/",
+    "status": "modello-identificabile"
   },
   "Motorola Razr 70 Plus": {
-    "src": "",
-    "credit": "",
-    "source": "https://www.motorola.com/it/it/family/moto-razr",
-    "status": "da-verificare"
+    "src": "https://www.mhr.pt/files/products/1152897_1.jpg",
+    "credit": "MHR",
+    "source": "https://www.mhr.pt/p3-p-1152897-smartphone-motorola-razr-70-plus-pantone-mountain-view-pbcf0004se-pt",
+    "status": "modello-identificabile"
   },
   "Motorola Razr 70 Ultra": {
     "src": "https://fotografias-2.larazon.es/assets/2026/04/motorola-razr-70-ultra-basicpack-orient-blue-dyn-foldable-1-639130452495973668.png?width=640",

@@ -81,7 +81,7 @@
     if(nameBox&&!item.querySelector(".variant-main")){
       const wrap=document.createElement("div");wrap.className="variant-main";
       const thumb=document.createElement("span");thumb.className="variant-model-photo";
-      if(modelMedia&&sourceUrl(modelMedia.src)){
+      if(modelMedia&&["ufficiale-modello","modello-identificabile"].includes(modelMedia.status)&&sourceUrl(modelMedia.src)){
         const image=document.createElement("img");
         image.src=sourceUrl(modelMedia.src);
         image.alt="Foto di "+model;

@@ -53,7 +53,7 @@ function photo(f,modelName){
  const media=window.SCELTOSMART_IMMAGINI||{};
  const specific=modelName?media[modelName]:null;
  // Soltanto la pagina di scelta della famiglia usa un'immagine generale.
- const src=safeUrl(modelName?specific?.src:f?.img);
+ const src=safeUrl(modelName?(specific&&["ufficiale-modello","modello-identificabile"].includes(specific.status)?specific.src:""):f?.img);
  const caption=modelName?modelName:f.title;
  if(!src){
    wrap.append(create("span","photo-fallback","📱 Foto di "+caption+" in verifica"));
