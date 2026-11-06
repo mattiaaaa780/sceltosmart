@@ -179,3 +179,32 @@
     info.append(paragraph);
   });
 })();
+
+/* Audit novembre 2026: indicazione commerciale accanto ai link e immagini
+   delle schede HTML leggibili anche se l'host esterno non risponde. */
+(function(){
+  "use strict";
+  document.querySelectorAll('a[rel~="sponsored"]').forEach(function(anchor){
+    if(!/^https:\/\/(?:link\.amazon|amzn\.to|amzn\.eu|(?:www\.)?amazon\.it)\b/i.test(anchor.href))return;
+    if(/^Vedi su Amazon\b/i.test(anchor.textContent.trim())){
+      anchor.textContent="Vedi su Amazon · link affiliato ↗";
+      anchor.setAttribute("aria-label","Apri Amazon tramite un link affiliato");
+    }
+  });
+  document.querySelectorAll(".static-product-photo img").forEach(function(img){
+    var showPlaceholder=function(){
+      if(img.dataset.photoFailure==="shown")return;
+      img.dataset.photoFailure="shown";
+      img.hidden=true;
+      img.style.display="none";
+      var placeholder=document.createElement("span");
+      placeholder.className="photo-fallback";
+      placeholder.setAttribute("role","img");
+      placeholder.setAttribute("aria-label","Fotografia non disponibile");
+      placeholder.textContent="📱 Immagine non disponibile";
+      img.parentNode.insertBefore(placeholder,img.nextSibling);
+    };
+    img.addEventListener("error",showPlaceholder,{once:true});
+    if(img.complete&&img.naturalWidth===0)showPlaceholder();
+  });
+})();
