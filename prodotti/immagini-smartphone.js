@@ -50,10 +50,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "ufficiale-modello"
   },
   "iPhone Duo": {
-    "src": "https://cdn.mos.cms.futurecdn.net/ENFN2u4hpSYiQYfbA6WbcL-1200-80.jpg",
-    "credit": "Tom's Guide",
-    "source": "https://www.tomsguide.com/phones/iphones/iphone-duo-trade-offs",
-    "status": "modello-identificabile"
+    "src": "https://www.apple.com/newsroom/images/2026/09/apple-unveils-iphone-duo/article/Apple-iPhone-Duo-colors-260909_big.jpg.large.jpg",
+    "credit": "Apple",
+    "source": "https://www.apple.com/it/newsroom/2026/09/apple-unveils-iphone-duo/",
+    "status": "ufficiale-modello"
   },
   "Samsung Galaxy S26": {
     "src": "https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/S26256BL_.jpg",
@@ -272,10 +272,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Redmi Note 15": {
-    "src": "https://axelrodphones.ke/wp-content/uploads/2026/01/3265d4ec5e4788342ab4de2b160f60f8.webp",
-    "credit": "Axelrod Phones",
-    "source": "https://axelrodphones.ke/product/redmi-note-15-4g/",
-    "status": "modello-identificabile"
+    "src": "https://i02.appmifile.com/mi-com-product/fly-birds/redmi-note-15/pc/scroll_slider1.jpg",
+    "credit": "Xiaomi",
+    "source": "https://www.mi.com/it/product/redmi-note-15/",
+    "status": "ufficiale-modello"
   },
   "Redmi Note 15 5G": {
     "src": "https://www.phonelectrics.com/cdn/shop/files/RedmiNote155G-6.jpg?v=1770253726&width=1200",
