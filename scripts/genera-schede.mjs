@@ -44,3 +44,24 @@ for (const page of pages) {
 }
 console.log(`${pages.length} schede, ${modified} ${check ? "da aggiornare" : "aggiornate"}`);
 if (check && modified) process.exitCode = 1;
+
+/* Allinea le foto delle 36 schede protezioni con lo stesso archivio immagini. */
+const protectionPath=join(root,"prodotti/protezioni.html");
+const protectionCurrent=await readFile(protectionPath,"utf8");
+let protectionModels=0;
+const protectedHtml=protectionCurrent.replace(/<article class="protection-device"[^>]*\\bdata-model="([^"]+)"[^>]*>[\\s\\S]*?<\\/article>/g,(article,model)=>{
+  const img=data.SCELTOSMART_IMMAGINI[model];
+  if(!img||!["ufficiale-modello","modello-identificabile"].includes(img.status)||!img.src)
+    throw new Error("Foto non verificata per protezione: "+model);
+  const attr=value=>String(value).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+  let changed=article.replace(/(<div class="protection-device-head"><img src=")[^"]*"/,(_,prefix)=>prefix+attr(img.src)+'"');
+  changed=changed.replace(/(<div class="protection-device-head"><img[^>]* alt=")[^"]*"/,(_,prefix)=>prefix+attr("Foto del modello "+model)+'"');
+  changed=changed.replace("Foto rappresentativa della famiglia ·","Foto del modello ·");
+  protectionModels++;
+  return changed;
+});
+if(protectionModels!==36)throw new Error("Trovate "+protectionModels+" protezioni invece di 36");
+if(protectionCurrent!==protectedHtml){
+  modified++;
+  if(!check)await writeFile(protectionPath,protectedHtml,"utf8");
+}
