@@ -38,16 +38,16 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "iPhone 17 Pro Max": {
-    "src": "https://api.technopolis.bg/medias/Product-details-main-508647.jpg?context=bWFzdGVyfHJvb3R8MjMyODUyfGltYWdlL2pwZWd8YUdWa0wyZ3pNeTgwT1RRM09UUTJPVFUyTXprek5DOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDgxTURnMk5EY3VhbkJufDU0OGVjOTc1MmM4MTliMTU0N2U2MTM5NTNlZmExMWM1YjMwYTAzZmE2YjlkNGU3ZDlmZTRlNTc2ZTg1NzFjNTU",
-    "credit": "Technopolis",
-    "source": "https://www.technopolis.bg/en/Smartfoni-i-mobilni-telefoni/Smartfon-GSM--APPLE-IPHONE-17-PRO-MAX-DEEP-BLUE/p/508647",
-    "status": "modello-identificabile"
+    "src": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-max-finish-select-silver-202509?wid=800&hei=800&fmt=png-alpha",
+    "credit": "Apple",
+    "source": "https://www.apple.com/it/newsroom/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max-the-most-powerful-and-advanced-pro-models-ever/",
+    "status": "ufficiale-modello"
   },
   "iPhone Air": {
-    "src": "https://cache.cil.ahamo.com/products/iphone/iphone-air/APL85551/APL85551_L_01.jpg",
-    "credit": "ahamo / NTT Docomo",
-    "source": "https://ahamo.com/products/iphone/iphone-air/index.html",
-    "status": "modello-identificabile"
+    "src": "https://www.apple.com/v/iphone-air/j/images/overview/contrast/iphone_air__bpnodv7do9ua_large.jpg",
+    "credit": "Apple",
+    "source": "https://www.apple.com/it/iphone-air/",
+    "status": "ufficiale-modello"
   },
   "iPhone Duo": {
     "src": "https://cdn.mos.cms.futurecdn.net/ENFN2u4hpSYiQYfbA6WbcL-1200-80.jpg",
@@ -74,10 +74,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Samsung Galaxy S26 FE": {
-    "src": "https://media.wired.com/photos/6aa35ccbdbebf6a8ca105923/master/w_1600%2Cc_limit/Samsung-Galaxy-S26-FE-1-SOURCE-Simon-Hill.jpg",
-    "credit": "WIRED — Simon Hill",
-    "source": "https://www.wired.com/review/samsung-galaxy-s26-fe/",
-    "status": "modello-identificabile"
+    "src": "https://api.samsungmobilepress.com/file/E9DF48464442001FDCEF2EBAB4BB2890C7B5A0789FDE067CD9468C3E333ACDE4804804B9DD0DCBA8E8289902EEB644A2E4857289EFE1719E1E99C505EFF1010E2A312863E1B4681509930B9D6D87C18BC315A665ABCDA76CA2110F538D870D32E72C99793023F0DA98F9DA99D9B5D0B1A394B9282D65812670F3F31465EB1F6ECFC5A5DF57DE2BEDD7D751D7C6046A4E",
+    "credit": "Samsung Mobile Press",
+    "source": "https://www.samsungmobilepress.com/media-assets/galaxy-s26-fe",
+    "status": "ufficiale-modello"
   },
   "Samsung Galaxy S25": {
     "src": "https://www.pixelzones.com/cdn/shop/files/Samsung-Galaxy-S25-12GB-256GB-Screen-Warranty.jpg?v=1749666954",
