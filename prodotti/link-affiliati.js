@@ -28,7 +28,7 @@ window.SCELTOSMART_LINK_AMAZON = {
   "google-pixel-11": "https://link.amazon/B02OwIWxk",
   "google-pixel-11-pro": "https://link.amazon/B0562Imnn",
   "google-pixel-11-pro-xl": "https://link.amazon/B00QKbo0d",
-  "google-pixel-11-pro-fold": "",
+  "google-pixel-11-pro-fold": "https://link.amazon/B08SBoLbZ",
   "google-pixel-10": "",
   "google-pixel-10-pro": "https://link.amazon/B0gu6SEO1",
   "google-pixel-10-pro-xl": "",
