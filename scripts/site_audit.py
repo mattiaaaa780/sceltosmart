@@ -174,6 +174,23 @@ try:
             candidate /= "index.html"
         if not candidate.is_file():
             fail("URL sitemap senza file: " + link)
+    # La sitemap XML deve essere coerente con quella testuale e includere le 71 schede.
+    txt_urls = [line.strip() for line in (ROOT / "sitemap.txt").read_text(encoding="utf-8").splitlines() if line.strip()]
+    if txt_urls != urls:
+        fail("Sitemap testuale diversa dalla sitemap XML (URL o ordine)")
+    for name in models:
+        model_url = BASE + "/prodotti/schede/" + slug(name) + ".html"
+        if model_url not in urls:
+            fail("Scheda non presente nella sitemap: " + name)
+    # Le URL pubblicate nella sitemap non devono puntare a pagine noindex.
+    for link in urls:
+        raw = unquote(urlsplit(link).path[len("/sceltosmart/"):])
+        candidate = ROOT / raw
+        if candidate.is_dir() or not candidate.suffix:
+            candidate /= "index.html"
+        page = pages.get(candidate.resolve())
+        if page and page.noindex:
+            fail("Pagina noindex elencata nella sitemap: " + link)
 except Exception as exc:
     fail("Sitemap XML non valida: " + str(exc))
 
