@@ -11,7 +11,7 @@ mkdirSync("qa-results",{recursive:true});
 let browser;
 (async()=>{
  await new Promise(done=>setTimeout(done,1200));
- browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
+ browser=await chromium.launch({headless:true,executablePath:process.env.SCELTOSMART_CHROMIUM,args:["--no-sandbox"]});
  let checked=0;
  for(const width of [390,768,1365]){
   const page=await browser.newPage({viewport:{width,height:844}});
@@ -48,8 +48,32 @@ let browser;
      await page.waitForFunction(()=>document.querySelectorAll(".finder-result").length===3);
      const labels=await page.locator(".finder-result-eyebrow").allTextContents();
      assert(labels.some(x=>x.includes("Android"))&&labels.some(x=>x.includes("iOS")),"Mixed OS");
+     const toggles=page.locator("[data-finder-compare]");
+     const openCompare=page.getByRole("button",{name:"Vedi il confronto"});
+     await toggles.nth(0).click();
+     assert(await openCompare.isDisabled(),"Per il confronto servono due modelli");
+     await toggles.nth(1).click();
+     assert(await toggles.nth(2).isDisabled(),"Il confronto accetta al massimo due modelli");
+     await openCompare.click();
+     const comparison=page.getByRole("dialog",{name:"Confronta due smartphone"});
+     assert(await comparison.isVisible(),"Confronto visibile");
+     assert.equal(await comparison.getByRole("columnheader").count(),2);
+     assert.equal(await comparison.getByRole("link",{name:/Scheda completa di/}).count(),2);
+     assert(await comparison.getByText("La capacità in mAh", {exact:false}).isVisible(),"Unità batteria distinte");
+     const fits=await comparison.locator(".finder-compare-content").evaluate(el=>el.scrollWidth<=el.clientWidth+1);
+     assert(fits,"Confronto senza scroll orizzontale a "+width+"px");
+     if(width===390)await page.screenshot({path:"qa-results/confronto-mobile.png"});
+     await page.keyboard.press("Escape");
+     assert(await comparison.isHidden(),"Chiusura del confronto da tastiera");
+     assert(await openCompare.evaluate(el=>el===document.activeElement),"Il focus torna al comando di apertura");
      await page.locator('input[name="os"][value="iOS"]').check();
      assert((await page.locator(".finder-result-eyebrow").allTextContents()).every(x=>x.includes("iOS")),"iOS filter");
+     assert.equal(await toggles.and(page.locator('[aria-pressed="true"]')).count(),1,"Resta selezionato solo il modello ancora presente");
+     await page.locator('input[name="size"][value="large"]').check();
+     assert.equal(await toggles.count(),0,"Il confronto è disponibile con almeno due proposte");
+     assert(await openCompare.isHidden(),"Nessuna selezione residua con una sola proposta");
+     await page.locator("#finder-reset").click();
+     assert.equal(await toggles.count(),3,"Il ripristino torna alle proposte iniziali");
      if(width===390)await page.screenshot({path:"qa-results/finder-mobile.png",fullPage:true});
    }
    if(file==="prodotti/smartphone.html"){
@@ -79,10 +103,10 @@ let browser;
      assert((await page.locator(".product-details-spec").count())>=4,"Specifiche compilate");
      if(width===390&&file.endsWith("google-pixel-11.html")){
        await page.screenshot({path:"qa-results/scheda-mobile.png",fullPage:true});
-       await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
-       await page.waitForTimeout(150);
-       assert(await page.locator("[data-product-scroll-top]").isVisible(),"Pulsante Torna su");
-       await page.locator("[data-product-scroll-top]").click();
+       await page.evaluate(()=>window.scrollTo({top:document.body.scrollHeight,behavior:"instant"}));
+       const scrollTop=page.locator("[data-product-scroll-top]");
+       await scrollTop.waitFor({state:"visible"});
+       await scrollTop.click();
      }
    }
    if(file==="prodotti/accessori.html")assert.equal(await page.locator("[data-catalog-item]").count(),12);

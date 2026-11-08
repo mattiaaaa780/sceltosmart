@@ -12,6 +12,21 @@
 .finder-page .finder-hero p{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:#d9d9ee;margin:0;max-width:690px}
 .finder-page .finder-hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
 .finder-page .finder-hero-tags span{border:1px solid #ffffff2a;background:#ffffff0e;border-radius:99px;padding:7px 12px;color:#f2f2ff;font-size:12px;font-weight:700}
+.finder-page .finder-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: 20px;
+  padding: 8px 14px;
+  border: 1px solid #bdeedc66;
+  border-radius: 12px;
+  color: #bdeedc;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+}
+.finder-page .finder-jump:hover { background: #ffffff14; }
 .finder-page .finder-selection{margin:30px 0 31px;scroll-margin-top:95px}
 .finder-page .finder-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
 .finder-page .finder-section-heading h2{margin:0;font-size:clamp(1.45rem,2.8vw,1.95rem);letter-spacing:-.04em}
@@ -39,22 +54,27 @@
 .finder-page .finder-result{border:1px solid #e1e3ee;background:#fff;border-radius:21px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 9px 26px #1a1a4510;transition:transform .2s,box-shadow .2s}
 .finder-page .finder-result:hover{transform:translateY(-4px);box-shadow:0 19px 37px #24204819}
 .finder-page .finder-result-head{background:linear-gradient(145deg,#f8f5ff,#edeefc);padding:20px;display:grid;grid-template-rows:140px 1fr;gap:11px;flex:0 0 auto}
-.finder-page .finder-product-art{display:grid;place-items:center;height:140px;position:relative;overflow:hidden}
-.finder-page .finder-product-art::before{content:"";width:137px;height:137px;border-radius:50%;background:#ded5ff66;position:absolute;filter:blur(1px)}
-.finder-page .finder-product-art[data-brand="Samsung"]::before{background:#d7eaff}
-.finder-page .finder-product-art[data-brand="Google"]::before{background:#d6f5e7}
-.finder-page .finder-product-art[data-brand="Xiaomi"]::before{background:#ffdfbf}
-.finder-page .finder-product-art[data-brand="Motorola"]::before{background:#d7e3fa}
-.finder-page .finder-product-art[data-brand="Apple"]::before{background:#ede0e9}
-.finder-page .finder-phone-back{width:68px;height:126px;position:relative;border-radius:17px;background:linear-gradient(150deg,#fff,#cfb8f7);transform:rotate(-10deg);box-shadow:7px 11px 18px #33236528;border:3px solid #fff}
-.finder-page .finder-product-art[data-brand="Samsung"] .finder-phone-back{background:linear-gradient(155deg,#fff,#afcbeb)}
-.finder-page .finder-product-art[data-brand="Google"] .finder-phone-back{background:linear-gradient(155deg,#fff,#adcfbf)}
-.finder-page .finder-product-art[data-brand="Xiaomi"] .finder-phone-back{background:linear-gradient(155deg,#fff,#fbc38c)}
-.finder-page .finder-product-art[data-brand="Motorola"] .finder-phone-back{background:linear-gradient(155deg,#fff,#b9c6ec)}
-.finder-page .finder-product-art[data-brand="Apple"] .finder-phone-back{background:linear-gradient(155deg,#fff,#d7c7d1)}
-.finder-page .finder-lenses{display:flex;flex-direction:column;gap:5px;position:absolute;top:10px;left:10px}
-.finder-page .finder-lenses i{display:block;width:15px;height:15px;border-radius:50%;border:3px solid #f8f9ff;background:#3f4261;box-shadow:0 0 0 1px #6f729c50}
-.finder-page .finder-phone-back>span{position:absolute;bottom:20px;left:20px;width:26px;height:1px;background:#ffffff8b}
+.finder-page .finder-product-art {
+  display: grid;
+  place-items: center;
+  height: 140px;
+  padding: 7px;
+  border-radius: 14px;
+  background: #fff;
+  text-decoration: none;
+}
+.finder-page .finder-product-art img {
+  display: block;
+  width: 100%;
+  height: 126px;
+  object-fit: contain;
+}
+.finder-page .finder-photo-fallback {
+  color: #655d80;
+  font-size: 12px;
+  font-weight: 650;
+  text-align: center;
+}
 .finder-page .finder-result-eyebrow{font-size:10px;color:#6b58a9;letter-spacing:.09em;font-weight:900;margin-bottom:7px}
 .finder-page .finder-result-title h3{font-size:clamp(19px,2vw,23px);line-height:1.18;letter-spacing:-.035em;margin:0 0 11px;color:#2a2846}
 .finder-page .finder-result-title p{font-size:12px;line-height:1.64;color:#646b83;margin:0;min-height:79px}
@@ -72,8 +92,207 @@
 .finder-page .finder-card-links{display:flex;flex-wrap:wrap;gap:9px;padding:16px 19px 19px;border-top:1px solid #efedf5;align-items:center}
 .finder-page .finder-card-links a{font-size:12px;font-weight:800;color:#5b43a9;text-decoration:none;line-height:1.4}
 .finder-page .finder-card-links a:hover{text-decoration:underline}
-.finder-page .finder-card-links .finder-card-main,.finder-page .finder-card-links .finder-card-main:visited{display:inline-flex;align-items:center;justify-content:center;min-height:41px;padding:10px 12px;border-radius:10px;background:#5f43c1;color:#fff;width:100%;text-decoration:none}
+.finder-page .finder-card-links .finder-card-main,.finder-page .finder-card-links .finder-card-main:visited{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 12px;border-radius:10px;background:#5f43c1;color:#fff;flex:1;text-decoration:none;text-align:center}
 .finder-page .finder-card-links .finder-card-main:hover{background:#4b31a5}
+.finder-page .finder-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+.finder-page .finder-compare-hint {
+  margin: 16px 0 0;
+  color: #4e4668;
+  font-size: 14px;
+}
+.finder-page .finder-compare-hint strong { color: #50379e; }
+.finder-page .finder-compare-toggle,
+.finder-page .finder-compare-actions button,
+.finder-page .finder-compare-header button {
+  min-height: 44px;
+  padding: 7px 12px;
+  border: 1px solid #d8cff1;
+  border-radius: 10px;
+  background: #fff;
+  color: #50379e;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+.finder-page .finder-compare-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  scroll-margin-bottom: 118px;
+}
+.finder-page .finder-compare-toggle span::before { content: "+"; }
+.finder-page .finder-compare-toggle[aria-pressed="true"] {
+  border-color: #9f8be1;
+  background: #eee8ff;
+}
+.finder-page .finder-compare-toggle[aria-pressed="true"] span::before { content: "✓"; }
+.finder-page .finder-compare-toggle:hover:not(:disabled),
+.finder-page .finder-compare-actions button:hover:not(:disabled) {
+  border-color: #9f8be1;
+  background: #f4f0ff;
+}
+.finder-page .finder-compare-tray:not([hidden]) {
+  position: sticky;
+  z-index: 12;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  max-width: 650px;
+  margin: 0 auto 16px;
+  padding: 10px 12px;
+  border: 1px solid #cec0ef;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 30px #21134c29;
+}
+.finder-page .finder-compare-tray p {
+  flex: 1 1 220px;
+  margin: 0;
+  padding: 0 4px;
+  color: #30264f;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.finder-page .finder-compare-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+.finder-page #finder-compare-open:not(:disabled) {
+  border-color: #5f43c1;
+  background: #5f43c1;
+  color: #fff;
+}
+.finder-page #finder-compare-open:hover:not(:disabled) { background: #4b31a5; }
+.finder-page .finder-compare-toggle:disabled,
+.finder-page .finder-compare-actions button:disabled {
+  background: #f3f1f8;
+  color: #726984;
+  cursor: default;
+}
+.finder-page .finder-compare-dialog {
+  width: min(720px, calc(100% - 24px));
+  max-height: calc(100% - 24px);
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #d8cff1;
+  border-radius: 20px;
+  background: #fff;
+  color: #252746;
+  box-shadow: 0 20px 75px #20134350;
+}
+.finder-page .finder-compare-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+.finder-page .finder-compare-dialog::backdrop { background: #18112db3; }
+.finder-page .finder-compare-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: clamp(12px, 3vw, 22px);
+  background: linear-gradient(120deg, #21183f, #422775);
+  color: #fff;
+}
+.finder-page .finder-compare-header span { color: #dcd2ff; font-size: 12px; }
+.finder-page .finder-compare-header h2 {
+  margin: 3px 0 0;
+  color: #fff;
+  font-size: clamp(1.1rem, 4vw, 1.65rem);
+}
+.finder-page .finder-compare-header button { white-space: nowrap; }
+.finder-page .finder-compare-header button span { color: inherit; }
+.finder-page .finder-compare-content {
+  min-height: 0;
+  padding: 14px clamp(10px, 3vw, 22px) 18px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.finder-page .finder-compare-content p {
+  margin: 0 0 12px;
+  color: #554d69;
+  font-size: 13px;
+}
+.finder-page .finder-compare-content .finder-compare-note {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #f4f1fd;
+}
+.finder-page .finder-compare-content table {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border: 1px solid #e5dff2;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.finder-page .finder-compare-content :is(th, td) {
+  padding: 8px clamp(7px, 2vw, 15px);
+  overflow-wrap: anywhere;
+  text-align: left;
+  vertical-align: top;
+}
+.finder-page .finder-compare-content thead th {
+  background: #eee9ff;
+  color: #362462;
+  font-size: clamp(14px, 2.5vw, 17px);
+}
+.finder-page .finder-compare-content thead span {
+  display: block;
+  margin-bottom: 2px;
+  color: #624d91;
+  font-size: 11px;
+}
+.finder-page .finder-compare-content tbody th {
+  padding-top: 9px;
+  padding-bottom: 3px;
+  border-top: 1px solid #e5dff2;
+  background: #faf8ff;
+  color: #483675;
+  font-size: 12px;
+}
+.finder-page .finder-compare-content td + td,
+.finder-page .finder-compare-content thead th + th { border-left: 1px solid #e5dff2; }
+.finder-page .finder-compare-content tbody a {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  color: #50379e;
+  font-size: 12px;
+}
+.finder-page .finder-compare-content tfoot td { border-top: 1px solid #e5dff2; }
+.finder-page .finder-compare-content tfoot a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  color: #50379e;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: center;
+}
+.finder-page .finder-compare-content .finder-compare-sheet {
+  padding: 7px;
+  border-radius: 9px;
+  background: #5f43c1;
+  color: #fff;
+  text-decoration: none;
+}
+.finder-page .finder-compare-content .finder-compare-sheet:hover { background: #4b31a5; }
 .finder-page .finder-no-results{grid-column:1/-1;background:white;border:1px dashed #bdb2ee;border-radius:19px;padding:30px;color:#64677a;text-align:center}
 .finder-page .finder-no-results a{color:#5b42b2;font-weight:800}
 .finder-page .finder-disclaimer{padding:21px 24px;border-radius:18px;border:1px solid #dfddeb;background:#fff;color:#666b83;font-size:13px;line-height:1.8;margin-top:20px}
@@ -90,5 +309,5 @@
 @media(max-width:1060px){.finder-page .finder-questions{gap:10px}.finder-page .finder-question{padding:19px}.finder-page .finder-results{gap:12px}.finder-page .finder-result-head{padding:16px}.finder-page .finder-facts,.finder-page .finder-why{padding-left:16px;padding-right:16px}.finder-page .finder-highlights{padding-left:16px;padding-right:16px}}
 @media(max-width:830px){.finder-page .finder-questions{grid-template-columns:1fr 1fr}.finder-page .finder-question:last-child{grid-column:1/-1}.finder-page .finder-option-list{grid-template-columns:1fr}.finder-page .finder-results{grid-template-columns:repeat(2,minmax(0,1fr))}.finder-page .finder-result-title p{min-height:auto}}
 @media(max-width:620px){.finder-page .finder-hero{padding:30px 23px;border-radius:20px}.finder-page .finder-hero h1{font-size:clamp(2.5rem,10vw,3.2rem)}.finder-page .finder-selection{margin-top:24px}.finder-page .finder-questions{grid-template-columns:1fr;gap:12px}.finder-page .finder-question,.finder-page .finder-question:last-child{grid-column:auto;padding:20px}.finder-page .finder-section-heading{align-items:flex-start}.finder-page .finder-results{grid-template-columns:1fr}.finder-page .finder-result-head{grid-template-columns:110px minmax(0,1fr);grid-template-rows:auto;gap:13px;align-items:center;min-height:168px}.finder-page .finder-product-art{height:138px}.finder-page .finder-result-title p{min-height:0}.finder-page .finder-result-title h3{font-size:19px}.finder-page .finder-facts{padding:14px 16px}.finder-page .finder-why{padding:17px 16px 8px}.finder-page .finder-highlights{padding:7px 16px 13px}.finder-page .finder-final-cta{padding:23px;align-items:stretch}.finder-page .finder-final-cta .btn{width:100%}}
-@media(max-width:380px){.finder-page .finder-result-head{grid-template-columns:89px 1fr;padding:11px}.finder-page .finder-phone-back{width:60px;height:115px}.finder-page .finder-result-title h3{font-size:17px}.finder-page .finder-result-title p{font-size:11px}}
+@media(max-width:380px){.finder-page .finder-result-head{grid-template-columns:89px minmax(0,1fr);padding:11px}.finder-page .finder-result-title h3{font-size:17px}.finder-page .finder-result-title p{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.finder-page .finder-option,.finder-page .finder-result{transition:none}}

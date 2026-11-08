@@ -10,8 +10,20 @@ const m=(x,u)=>has(x)?String(x).replace(".",",")+u:"";
 const key=n=>n==="Google Pixel 10a"?"pixel10a":n==="Samsung Galaxy A57 5G"?"galaxyA57":slug(n);
 function section(title,rows,src){
   rows=rows.filter(([,v])=>has(v));if(!rows.length)return "";
-  const fields=rows.map(([k,v])=>`<div class="product-details-spec"><dt>${esc(k)}</dt><dd>${esc(v)}</dd>${src?`<a class="product-field-source" href="${esc(src)}" target="_blank" rel="noopener noreferrer" aria-label="Fonte ufficiale per ${esc(k)}">Fonte ↗</a>`:""}</div>`).join("");
+  const fields=rows.map(([k,v,fieldSource])=>{
+    const source=valid(fieldSource)||src;
+    return `<div class="product-details-spec"><dt>${esc(k)}</dt><dd>${esc(v)}</dd>${source?`<a class="product-field-source" href="${esc(source)}" target="_blank" rel="noopener noreferrer" aria-label="Fonte ufficiale per ${esc(k)}">Fonte ↗</a>`:""}</div>`;
+  }).join("");
   return `<section class="product-spec-section"><h2>${esc(title)}</h2><dl class="product-details-specs">${fields}</dl></section>`;
+}
+function specSections(f,s,src=valid(s.source)||valid(f.source)){
+  return [
+    section("Schermo e design",[["Diagonale",m(s.screen,"″")],["Tecnologia",s.displayTech],["Risoluzione",s.resolution],["Frequenza display",m(s.hz," Hz")],["Peso",m(s.weight," g")],["Resistenza acqua/polvere",s.ipRating],["Schermo esterno",s.coverDisplay],["Caratteristiche speciali",s.features]],src),
+    section("Prestazioni e memoria",[["Sistema operativo",f.os],["Processore",s.chip],["RAM",s.ram],["Memoria",s.storage],["Supporto software",s.updatesInfo||(has(s.updates)?m(s.updates," anni"):""),s.updatesSource]],src),
+    section("Fotocamere e video",[["Fotocamera principale",m(s.mainMp," MP")],["Ultragrandangolo",s.ultrawide===true?"Presente":s.ultrawide===false?"Non presente":""],["Teleobiettivo",s.tele>0?m(s.tele,"× ottico"):s.tele===0?"Non presente":""],["Sensore teleobiettivo",m(s.teleMp," MP")],["Fotocamera frontale",m(s.frontMp," MP")],["Video",s.videoRecording]],src),
+    section("Batteria e ricarica",[["Batteria tipica",m(s.battery," mAh")],["Autonomia video",s.videoNote||(s.video?m(s.video," ore dichiarate"):"")],["Ricarica cablata",m(s.charge," W")],["Wireless",s.wireless===true?"Supportata":s.wireless===false?"Non supportata":""],["Potenza wireless",m(s.wirelessChargeW," W")],["Indicazioni ricarica",s.chargingInfo]],src),
+    section("Connettività",[["Wi-Fi",s.wifi],["Bluetooth",s.bluetooth],["NFC",s.nfc],["USB",s.usb],["SIM / eSIM",s.sim]],src)
+  ].join("");
 }
 function render(n,f,s,amazon,image){
 const src=valid(s.source)||valid(f.source);
@@ -21,13 +33,6 @@ const imageMarkup=verifiedPhoto?`<img src="${esc(image.src)}" alt="Fotografia de
 const photoCaption=verifiedPhoto?`Foto: ${esc(image.credit||"Fonte esterna")}. ${valid(image.source)?`<a href="${esc(image.source)}" target="_blank" rel="noopener noreferrer">Origine immagine ↗</a>`:""} · L'attribuzione non sostituisce l'autorizzazione al riutilizzo.`:`Nessuna foto di altre versioni viene mostrata al posto di ${esc(n)}. <a href="${esc(src)}" target="_blank" rel="noopener noreferrer">Consulta il produttore ↗</a>`;
 const specInfo=[has(s.screen)?m(s.screen,"″"):"",s.chip||"",has(s.battery)?m(s.battery," mAh"):""].filter(Boolean);
 const desc=`Scheda tecnica ${n}${specInfo.length?": "+specInfo.join(", "):""}. Dati ufficiali disponibili e immagine specifica se verificata.`;
-const sections=[
- section("Schermo e design",[["Diagonale",m(s.screen,"″")],["Tecnologia",s.displayTech],["Risoluzione",s.resolution],["Frequenza display",m(s.hz," Hz")],["Peso",m(s.weight," g")],["Resistenza acqua/polvere",s.ipRating],["Schermo esterno",s.coverDisplay],["Caratteristiche speciali",s.features]],src),
- section("Prestazioni e memoria",[["Sistema operativo",f.os],["Processore",s.chip],["RAM",s.ram],["Memoria",s.storage],["Supporto software",s.updatesInfo||(has(s.updates)?m(s.updates," anni"):"")]],src),
- section("Fotocamere e video",[["Fotocamera principale",m(s.mainMp," MP")],["Ultragrandangolo",s.ultrawide===true?"Presente":s.ultrawide===false?"Non presente":""],["Teleobiettivo",s.tele>0?m(s.tele,"× ottico"):s.tele===0?"Non presente":""],["Sensore teleobiettivo",m(s.teleMp," MP")],["Fotocamera frontale",m(s.frontMp," MP")],["Video",s.videoRecording]],src),
- section("Batteria e ricarica",[["Batteria tipica",m(s.battery," mAh")],["Autonomia video",s.videoNote||(s.video?m(s.video," ore dichiarate"):"")],["Ricarica cablata",m(s.charge," W")],["Wireless",s.wireless===true?"Supportata":s.wireless===false?"Non supportata":""],["Potenza wireless",m(s.wirelessChargeW," W")],["Indicazioni ricarica",s.chargingInfo]],src),
- section("Connettività",[["Wi-Fi",s.wifi],["Bluetooth",s.bluetooth],["NFC",s.nfc],["USB",s.usb],["SIM / eSIM",s.sim]],src)
-].join("");
 const other=f.models.map(model=>`<a href="${slug(model)}.html"${model===n?' aria-current="page"':""}>${esc(model)} ↗</a>`).join("");
 const okAmazon=typeof amazon==="string"&&/^https:\/\/(?:link\.amazon|amzn\.to|amzn\.eu)\/[A-Za-z0-9]+/.test(amazon);
 const buy=okAmazon?`<a class="btn btn-green" href="${esc(amazon)}" target="_blank" rel="sponsored noopener noreferrer">Vedi su Amazon · link affiliato ↗</a>`:"";
@@ -57,7 +62,7 @@ return `<!doctype html>
 <figure class="product-details-visual static-product-photo">${imageMarkup}<figcaption>${photoCaption}</figcaption></figure>
 <div class="product-details-panel">
 <div class="product-source-banner"><strong>Dati tecnici con fonte del produttore</strong><p>Controlla sempre la configurazione e la disponibilità nel tuo mercato.</p><a class="product-source-link" href="${esc(src)}" target="_blank" rel="noopener noreferrer">Consulta la fonte ufficiale ↗</a>${s.checkedAt?`<small>Archivio controllato: ${esc(s.checkedAt.split("-").reverse().join("/"))}</small>`:""}</div>
-${sections}
+${specSections(f,s,src)}
 <p class="product-details-note">Le voci prive di informazioni documentate sono omesse. Dati e foto del modello sono gestiti da archivi centrali, non dalla foto della famiglia.</p>
 <div class="product-details-actions"><a href="${esc(src)}" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Produttore ↗</a>${buy}</div>
 <p class="note-inline">I link Amazon possono generare commissioni. Nessun prezzo è presentato come offerta in tempo reale. <a href="../../trasparenza.html">Trasparenza affiliazioni</a>.</p>
@@ -80,5 +85,5 @@ for(const f of families)for(const n of f.models){
 if(out.length!==71)throw new Error("Attese 71 schede, trovate "+out.length);
 return out;
 }
-return {all,render,slug,key};
+return {all,render,slug,key,specSections};
 })();

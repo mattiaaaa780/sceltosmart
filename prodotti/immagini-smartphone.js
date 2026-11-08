@@ -32,13 +32,15 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "iPhone 17 Pro": {
-    "src": "https://www.pbtech.co.nz/imgprod/M/P/MPHAPP817212.jpg?h=3366490703",
-    "credit": "PB Tech",
-    "source": "https://www.pbtech.co.nz/product/MPHAPP817212/Apple-iPhone-17-Pro---512GB---Deep-Blue",
-    "status": "modello-identificabile"
+    "src": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-deepblue-202509?wid=480&hei=480&fmt=png-alpha",
+    "thumbnail": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-deepblue-202509?wid=320&hei=320&fmt=png-alpha",
+    "credit": "Apple",
+    "source": "https://support.apple.com/it-it/125090",
+    "status": "ufficiale-modello"
   },
   "iPhone 17 Pro Max": {
     "src": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-max-finish-select-silver-202509?wid=800&hei=800&fmt=png-alpha",
+    "thumbnail": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-max-finish-select-silver-202509?wid=320&hei=320&fmt=png-alpha",
     "credit": "Apple",
     "source": "https://www.apple.com/it/newsroom/2025/09/apple-unveils-iphone-17-pro-and-iphone-17-pro-max-the-most-powerful-and-advanced-pro-models-ever/",
     "status": "ufficiale-modello"
@@ -93,6 +95,7 @@ window.SCELTOSMART_IMMAGINI = {
   },
   "Samsung Galaxy S25 Ultra": {
     "src": "https://vividgold.co.ke/cdn/shop/files/Samsung_Galaxy_S25_Ultra_Titanium_Grey.png?v=1739632884",
+    "thumbnail": "https://vividgold.co.ke/cdn/shop/files/Samsung_Galaxy_S25_Ultra_Titanium_Grey.png?v=1739632884&width=320",
     "credit": "Vivid Gold",
     "source": "https://www.samsung.com/it/smartphones/galaxy-s25/buy/",
     "status": "modello-identificabile"
@@ -224,10 +227,11 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Xiaomi 17": {
-    "src": "https://vendori.ge/images/detailed/402/04c0a5cc11a480f8fd8c37a58a72c464.png",
-    "credit": "Vendori",
-    "source": "https://vendori.ge/xiaomi-17-nfc-dual-sim-12gb-ram-512gb-5g-global-version-black.html",
-    "status": "modello-identificabile"
+    "src": "https://i02.appmifile.com/18_item_sa/10/02/2026/0370c3e9971d4d3e66662b9ee3772254.png?f=webp&thumb=1&w=480&q=85",
+    "thumbnail": "https://i02.appmifile.com/18_item_sa/10/02/2026/0370c3e9971d4d3e66662b9ee3772254.png?f=webp&thumb=1&w=320&q=85",
+    "credit": "Xiaomi",
+    "source": "https://www.mi.com/it/product/xiaomi-17/",
+    "status": "ufficiale-modello"
   },
   "Xiaomi 17 Ultra": {
     "src": "https://www.sharafstore.com/web/image/product.template/30653/image_1024?unique=bc34010",
@@ -410,9 +414,10 @@ window.SCELTOSMART_IMMAGINI = {
     "status": "modello-identificabile"
   },
   "Motorola Edge 70": {
-    "src": "https://cdn.beebom.com/mobile/motorola-edge-70-front-back-1.png",
-    "credit": "Beebom",
-    "source": "https://gadgets.beebom.com/mobile/motorola-edge-70",
+    "src": "https://elenovo.pl/37414-medium_default/motorola-edge-70-12-512gb-67-120hz-gadget-gray.jpg",
+    "thumbnail": "https://elenovo.pl/37414-home_default/motorola-edge-70-12-512gb-67-120hz-gadget-gray.jpg",
+    "credit": "eLenovo",
+    "source": "https://elenovo.pl/motorola-edge-70-12-512gb-67-120hz-gadget-gray",
     "status": "modello-identificabile"
   },
   "Motorola Razr 70": {

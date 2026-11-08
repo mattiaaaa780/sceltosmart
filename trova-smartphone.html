@@ -4,20 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#171632">
-<meta name="description" content="Trova il tuo smartphone con SceltoSmart: scegli Android o iPhone, priorità e dimensioni. Ricevi suggerimenti motivati con specifiche e fonti ufficiali, senza prezzi inventati.">
+<meta name="description" content="Trova il tuo smartphone con SceltoSmart. Scegli sistema, priorità e dimensioni, poi confronta due modelli con specifiche e fonti ufficiali.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="SceltoSmart">
 <meta property="og:title" content="Trova il tuo smartphone | Assistente SceltoSmart">
-<meta property="og:description" content="Un assistente semplice con suggerimenti motivati e schede tecniche ufficiali.">
+<meta property="og:description" content="Ricevi suggerimenti su misura e confronta due smartphone con specifiche e fonti ufficiali.">
 <meta property="og:url" content="https://mattiaaaa780.github.io/sceltosmart/trova-smartphone.html">
 <link rel="canonical" href="https://mattiaaaa780.github.io/sceltosmart/trova-smartphone.html">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="96x96" href="/sceltosmart/favicon.png">
 <link rel="stylesheet" href="assets/style.css?v=mobile-20261105">
-<link rel="stylesheet" href="assets/trova-smartphone.css?v=finder-20261105">
+<link rel="stylesheet" href="assets/trova-smartphone.css?v=confronto-20261108">
 <script src="assets/site.js?v=finder-20261105" defer></script>
-<script src="assets/trova-smartphone-data.js?v=finder-20261105" defer></script>
-<script src="assets/trova-smartphone.js?v=static-pages-20261105" defer></script>
+<script src="prodotti/immagini-smartphone.js?v=confronto-20261108" defer></script>
+<script src="assets/trova-smartphone-data.js?v=confronto-20261108" defer></script>
+<script src="assets/trova-smartphone.js?v=confronto-20261108" defer></script>
 <title>Trova il tuo smartphone | Assistente SceltoSmart</title>
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Trova il tuo smartphone | Assistente SceltoSmart"><meta name="twitter:description" content="Trova il tuo smartphone con SceltoSmart: scegli Android o iPhone, priorità e dimensioni. Ricevi suggerimenti motivati con specifiche e fonti ufficiali, senza prezzi inventati."></head>
 <body class="finder-page">
@@ -42,7 +43,8 @@
 <span class="finder-kicker"><span aria-hidden="true">✦</span> Assistente SceltoSmart</span>
 <h1>Il telefono giusto.<br><em>Per quello che conta a te.</em></h1>
 <p>Non serve essere esperti. Scegli il sistema, le tue priorità e le dimensioni: trovi fino a tre telefoni con caratteristiche verificate e spiegazioni chiare.</p>
-<div class="finder-hero-tags"><span>✓ Specifiche ufficiali</span><span>✓ Senza prezzi inventati</span><span>✓ Scelte modificabili</span><span>✓ Nessun dato inviato</span></div>
+<div class="finder-hero-tags"><span>✓ Specifiche ufficiali</span><span>✓ Confronto tra due modelli</span><span>✓ Preferenze elaborate sul dispositivo</span></div>
+<a class="finder-jump" href="#finder-results-title">Vedi i suggerimenti <span aria-hidden="true">↓</span></a>
 </div></section>
 
 <form id="finder-form" class="finder-selection" aria-label="Imposta le tue preferenze di smartphone" autocomplete="off">
@@ -53,8 +55,27 @@
 <fieldset class="finder-question"><legend><span>03 · Dimensioni</span><strong>Come lo vuoi in mano?</strong></legend><div class="finder-option-list"><label class="finder-option"><input type="radio" name="size" value="any" checked><span class="finder-option-label">Indifferente<small>Non escludere telefoni per dimensioni</small></span></label><label class="finder-option"><input type="radio" name="size" value="small"><span class="finder-option-label">Compatto<small>Display fino a 6,4 pollici</small></span></label><label class="finder-option"><input type="radio" name="size" value="large"><span class="finder-option-label">Schermo grande<small>Display da 6,65 pollici in su</small></span></label></div></fieldset>
 </div></form>
 <section class="finder-recommendations" aria-labelledby="finder-results-title">
-<div class="finder-dynamic-header"><div><span class="kicker">I suggerimenti per te</span><h2 id="finder-results-title">Da quali smartphone partire?</h2><p id="finder-summary" role="status" aria-live="polite">Calcolo delle proposte in base alle preferenze selezionate.</p></div><span id="finder-count" class="finder-count">13 modelli documentati</span></div>
+<div class="finder-dynamic-header"><div><span class="kicker">I suggerimenti per te</span><h2 id="finder-results-title" tabindex="-1">Da quali smartphone partire?</h2><p id="finder-summary" role="status" aria-live="polite">Calcolo delle proposte in base alle preferenze selezionate.</p></div><span id="finder-count" class="finder-count">13 modelli documentati</span></div>
+<p id="finder-compare-hint" class="finder-compare-hint" hidden><strong>Confronta due smartphone.</strong> Tocca «Confronta» su due proposte per vedere le specifiche affiancate.</p>
 <div id="finder-cards" class="finder-results"><div class="finder-no-results">I suggerimenti si caricano nel browser. Se non appaiono, apri il <a href="prodotti/smartphone.html">catalogo smartphone ↗</a>.</div></div>
+<div id="finder-compare-tray" class="finder-compare-tray" hidden>
+  <p id="finder-compare-status" role="status" aria-atomic="true"></p>
+  <div class="finder-compare-actions">
+    <button id="finder-compare-clear" type="button">Azzera</button>
+    <button id="finder-compare-open" type="button" aria-haspopup="dialog" aria-controls="finder-compare-dialog" disabled>Vedi il confronto</button>
+  </div>
+</div>
+<dialog id="finder-compare-dialog" class="finder-compare-dialog" aria-labelledby="finder-compare-title" aria-describedby="finder-compare-description">
+  <header class="finder-compare-header">
+    <div><span>SceltoSmart · Schede a confronto</span><h2 id="finder-compare-title">Confronta due smartphone</h2></div>
+    <form method="dialog"><button type="submit" autofocus>Chiudi <span aria-hidden="true">×</span></button></form>
+  </header>
+  <div class="finder-compare-content">
+    <p id="finder-compare-description">Specifiche dei produttori e link alle schede complete.</p>
+    <div id="finder-compare-table"></div>
+    <p id="finder-compare-note" class="finder-compare-note" hidden>La capacità in mAh e le ore di riproduzione video misurano aspetti diversi della batteria.</p>
+  </div>
+</dialog>
 <noscript><p class="notice">Per utilizzare l'assistente serve JavaScript. Puoi comunque esplorare tutti i telefoni nel <a href="prodotti/smartphone.html">catalogo smartphone</a>.</p></noscript>
 <div class="finder-disclaimer"><strong>Come interpretare i risultati:</strong> è una selezione editoriale di 13 modelli documentati, non tutti i 71 modelli del catalogo. L'ordine è orientativo in base alle tue preferenze e alle specifiche ufficiali, non rappresenta test sul campo o il miglior rapporto qualità/prezzo. I mAh indicano capacità, non durata effettiva: le ore di video dichiarate da Apple non sono direttamente confrontabili con i mAh Android. Controlla sempre versione, condizioni di vendita e prezzo sul sito del venditore.</div>
 <details class="finder-method" id="finder-method"><summary>Come scegliamo i suggerimenti? Vedi il metodo</summary><p>Il sistema operativo è un filtro. Anche la dimensione dello schermo viene filtrata se esprimi una preferenza. L'assistente ordina fino a tre telefoni usando queste caratteristiche dichiarate dal produttore:</p><ul>
