@@ -8,7 +8,6 @@ window.SCELTOSMART_LINK_AMAZON = {
   "iphone-18-pro-max": "https://link.amazon/B0bJ5c6YR",
   "iphone-17": "https://link.amazon/B0a9Iuvsp",
   "iphone-17e": "https://link.amazon/B04z6OTka",
-  "iphone-17-pro": "https://link.amazon/B0dlgTKRu",
   "iphone-17-pro-max": "https://link.amazon/B06g4OEy9",
   "iphone-air": "https://link.amazon/B013acDA2",
   "iphone-duo": "https://link.amazon/B0cPX20Tf",
