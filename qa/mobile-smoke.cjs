@@ -77,7 +77,7 @@ let browser;
      if(width===390)await page.screenshot({path:"qa-results/finder-mobile.png",fullPage:true});
    }
    if(file==="prodotti/smartphone.html"){
-     assert.equal(await page.locator(".family-card").count(),28);
+     assert.equal(await page.locator(".family-card").count(),23);
      await page.locator("#xiaomi17 .family-image img").scrollIntoViewIfNeeded();
      await page.waitForFunction(()=>{const e=document.querySelector("#xiaomi17 .family-image img");return !!e&&e.complete&&e.naturalWidth>0;},null,{timeout:10000});
      assert.match(await page.locator("#xiaomi17 .family-image img").getAttribute("src"),/xiaomi17-riserva\.svg$/);
@@ -85,7 +85,7 @@ let browser;
    }
 
    if(file==="prodotti/smartphone.html"){
-     assert.equal(await page.locator(".variant-details").count(),71,"71 schede cliccabili");
+     assert.equal(await page.locator(".variant-details").count(),53,"53 schede cliccabili");
      const missingLinks=await page.locator('.variant-details:not([href^="schede/"])').count();
      assert.equal(missingLinks,0,"Collegamenti alle pagine statiche");
      const controls=await page.evaluate(()=>[...document.querySelectorAll(".catalog-toolbar label")].map(x=>{const r=x.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom};}));
@@ -110,7 +110,7 @@ let browser;
      }
    }
    if(file==="prodotti/accessori.html")assert.equal(await page.locator("[data-catalog-item]").count(),12);
-   if(file==="prodotti/protezioni.html")assert.equal(await page.locator("[data-protection-device]").count(),36);
+   if(file==="prodotti/protezioni.html")assert.equal(await page.locator("[data-protection-device]").count(),31);
    if(errors.length)throw Error(file+" JS errors: "+errors.join(" | "));
    checked++;console.log("PASS "+width+"px "+file+", no overflow");
   }

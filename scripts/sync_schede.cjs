@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 "use strict";
-/* Aggiorna soltanto i blocchi di specifiche delle 71 schede statiche.
+/* Aggiorna soltanto i blocchi di specifiche delle 53 schede statiche.
    Legge l'archivio JS SceltoSmart. Nessuna richiesta di rete. 
    --check: verifica l'allineamento senza modificare file (per CI). */
 const fs=require("node:fs");

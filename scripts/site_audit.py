@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Audit statico SceltoSmart senza dipendenze esterne.
 
-Controlla link locali, metadati principali, sitemap, copertura delle 71 schede
+Controlla link locali, metadati principali, sitemap, copertura delle 53 schede
 e sintassi dei dati JS serializzati come JSON. Non misura velocita' reale
 ne' raggiungibilita' di siti o immagini ospitati da terzi.
 """
@@ -144,7 +144,7 @@ try:
     families = assigned_json("prodotti/dati-smartphone.js", "SCELTOSMART_FAMIGLIE")
     models = [name for family in families for name in family["models"]]
     documented = assigned_json("prodotti/specifiche-verificate.js", "SCELTOSMART_SPECIFICHE")
-    if len(models) != 71 or len(set(models)) != 71:
+    if len(models) != 53 or len(set(models)) != 71:
         fail(f"Numero di modelli inatteso: {len(models)}")
     if len({slug(m) for m in models}) != len(models):
         fail("Collisione fra URL di due modelli")
@@ -162,7 +162,7 @@ try:
     urls = [node.text for node in xml.findall(".//{*}loc")]
     if len(urls) != len(set(urls)):
         fail("URL duplicati nella sitemap XML")
-    if len(urls) < 88:
+    if len(urls) < 70:
         fail(f"Sitemap incompleta: solo {len(urls)} URL")
     for link in urls:
         if not link.startswith(BASE + "/"):
@@ -174,7 +174,7 @@ try:
             candidate /= "index.html"
         if not candidate.is_file():
             fail("URL sitemap senza file: " + link)
-    # La sitemap XML deve essere coerente con quella testuale e includere le 71 schede.
+    # La sitemap XML deve essere coerente con quella testuale e includere le 53 schede.
     txt_urls = [line.strip() for line in (ROOT / "sitemap.txt").read_text(encoding="utf-8").splitlines() if line.strip()]
     if txt_urls != urls:
         fail("Sitemap testuale diversa dalla sitemap XML (URL o ordine)")

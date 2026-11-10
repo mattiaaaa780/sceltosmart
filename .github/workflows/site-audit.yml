@@ -31,7 +31,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verifica file, link, sitemap e 71 schede
+      - name: Verifica file, link, sitemap e 53 schede
         run: python scripts/site_audit.py
       - name: Verifica sintassi JavaScript
         shell: bash
@@ -41,5 +41,5 @@ jobs:
             node --check "$file"
           done
           node --check scripts/sync_schede.cjs
-      - name: Verifica allineamento delle 71 schede
+      - name: Verifica allineamento delle 53 schede
         run: node scripts/sync_schede.cjs --check

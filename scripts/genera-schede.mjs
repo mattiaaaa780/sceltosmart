@@ -3,7 +3,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { runInNewContext } from "node:vm";
 
-/* Rigenerazione deterministica delle 71 schede.
+/* Rigenerazione deterministica delle 53 schede.
  * Uso: node scripts/genera-schede.mjs
  * Controllo senza scrivere: node scripts/genera-schede.mjs --check
  * Fonte unica: dati-smartphone.js, specifiche-verificate.js, link-affiliati.js,
@@ -43,7 +43,7 @@ for (const page of pages) {
   }
 }
 
-/* Allinea le foto delle 36 schede protezioni con lo stesso archivio immagini. */
+/* Allinea le foto delle 31 schede protezioni con lo stesso archivio immagini. */
 const protectionPath=join(root,"prodotti/protezioni.html");
 const protectionCurrent=await readFile(protectionPath,"utf8");
 let protectionModels=0;
@@ -58,7 +58,7 @@ const protectedHtml=protectionCurrent.replace(/<article class="protection-device
   protectionModels++;
   return changed;
 });
-if(protectionModels!==36)throw new Error("Trovate "+protectionModels+" protezioni invece di 36");
+if(protectionModels!==31)throw new Error("Trovate "+protectionModels+" protezioni invece di 31");
 if(protectionCurrent!==protectedHtml){
   modified++;
   if(!check)await writeFile(protectionPath,protectedHtml,"utf8");
