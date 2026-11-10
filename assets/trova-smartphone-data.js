@@ -1,5 +1,5 @@
 /* SceltoSmart — dati del Trova smartphone. Fonti ufficiali nei campi source.
-   Selezione editoriale limitata: NON rappresenta tutti i 71 modelli in catalogo.
+   Selezione editoriale limitata: NON rappresenta tutti i 53 modelli in catalogo.
    I punteggi vengono calcolati localmente senza dati personali o tracciamento.
    Manca volutamente il prezzo: non viene recuperato né stimato.
    battery è la capacità tipica in mAh (non equivale alla durata reale).
