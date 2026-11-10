@@ -6,7 +6,8 @@
  * La presenza di una fonte NON implica licenza di riutilizzo.
  * Aggiornare questo file e rigenerare: node scripts/genera-schede.mjs
  */
-window.SCELTOSMART_IMMAGINI = {
+window.SCELTOSMART_IMMAGINI =
+{
   "iPhone 18 Pro": {
     "src": "https://products.b-cdn.net/Images/net_MJRR4XA1.webp",
     "credit": "ITNest",
@@ -196,36 +197,6 @@ window.SCELTOSMART_IMMAGINI = {
     "source": "https://swiftronics.ca/products/google-pixel-10-pro-fold-factory-unlocked-5g",
     "status": "modello-identificabile"
   },
-  "Google Pixel 9": {
-    "src": "https://owp.klarna.com/product/640x640/3222291966/Google-Pixel-9-128GB-Wintergreen.jpg?ph=true",
-    "credit": "Klarna",
-    "source": "https://www.klarna.com/de/shopping/pl/cl1/3415525231/Handys/Google-Pixel-9-128GB-Wintergreen/",
-    "status": "modello-identificabile"
-  },
-  "Google Pixel 9a": {
-    "src": "https://www.buyitdirect.ie/Images/GA09566-GB_1_16222455_Supersize.jpg?v=14",
-    "credit": "Buy It Direct",
-    "source": "https://www.buyitdirect.ie/p/google-pixel-9a-obsidian-6.3-256gb-5g-unlocked-and-sim-free-smartphone-ga09565-gb",
-    "status": "modello-identificabile"
-  },
-  "Google Pixel 9 Pro": {
-    "src": "https://www.mascomintl.com/themes/images/mascom/Pixel%209%20Pro%20Porcelain%20Mascom.webp",
-    "credit": "Mascom",
-    "source": "https://www.mascomintl.com/Google-Pixel-9-Pro-512GB-16GB-50MP-6-3-4700mAh-5G-Dual-SIM-GR83Y-Android-14-Porcelain-Hazel-Rose-Quartz-Obsidian-uw0t9QTpUqcXX5Sl",
-    "status": "modello-identificabile"
-  },
-  "Google Pixel 9 Pro XL": {
-    "src": "https://www.techspot.com/images/products/2024/smartphones/org/2024-08-21-product-2-j_1100.webp",
-    "credit": "TechSpot",
-    "source": "https://www.techspot.com/products/smartphones/google-pixel-9-pro.295253/",
-    "status": "modello-identificabile"
-  },
-  "Google Pixel 9 Pro Fold": {
-    "src": "https://ibrat.ru/upload/cssinliner_webp/iblock/a0a/oo2524rd5ct049ti4nj2bcd44q5u98fc.webp",
-    "credit": "Ibrat",
-    "source": "https://ibrat.ru/catalog/smartfon-google-pixel-9-pro-fold-16-256-gb-porcelain/",
-    "status": "modello-identificabile"
-  },
   "Xiaomi 17": {
     "src": "https://i02.appmifile.com/18_item_sa/10/02/2026/0370c3e9971d4d3e66662b9ee3772254.png?f=webp&thumb=1&w=480&q=85",
     "thumbnail": "https://i02.appmifile.com/18_item_sa/10/02/2026/0370c3e9971d4d3e66662b9ee3772254.png?f=webp&thumb=1&w=320&q=85",
@@ -275,36 +246,6 @@ window.SCELTOSMART_IMMAGINI = {
     "source": "https://www.elcorteingles.es/electronica/A202084470-6939093011959-pr-movil-xiaomi-redmi-note-17-pro-max-5g-683-snapdragon-6-gen-5-negro-512-gb-8-gb-ram/",
     "status": "modello-identificabile"
   },
-  "Redmi Note 15": {
-    "src": "https://i02.appmifile.com/mi-com-product/fly-birds/redmi-note-15/pc/scroll_slider1.jpg",
-    "credit": "Xiaomi",
-    "source": "https://www.mi.com/it/product/redmi-note-15/",
-    "status": "ufficiale-modello"
-  },
-  "Redmi Note 15 5G": {
-    "src": "https://www.phonelectrics.com/cdn/shop/files/RedmiNote155G-6.jpg?v=1770253726&width=1200",
-    "credit": "Phonelectrics",
-    "source": "https://www.phonelectrics.com/products/redmi-note-15-5g-256gb-6gb",
-    "status": "modello-identificabile"
-  },
-  "Redmi Note 15 Pro": {
-    "src": "https://media.falabella.com/falabellaCL/151560680_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
-    "credit": "Falabella Chile",
-    "source": "https://www.falabella.com/falabella-cl/product/151560679/smartphone-xiaomi-redmi-note-15-pro-4g-8gb-256gb-titanio/151560680",
-    "status": "modello-identificabile"
-  },
-  "Redmi Note 15 Pro 5G": {
-    "src": "https://cdn.movertix.com/media/catalog/product/r/e/redmi-note-15-pro-5g-dual-sim-glacier-blue-256gb-and-8gb-ram_2.jpg",
-    "credit": "Movertix",
-    "source": "https://www.movertix.com/en/redmi-note-15-pro-5g-dual-sim-glacier-blue-512gb-and-12gb-ram.html",
-    "status": "modello-identificabile"
-  },
-  "Redmi Note 15 Pro+ 5G": {
-    "src": "https://media.falabella.com/falabellaPE/151352853_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
-    "credit": "Sodimac Perú",
-    "source": "https://www.sodimac.com.pe/sodimac-pe/articulo/151352852/xiaomi-redmi-note-15-pro-plus-5g-256gb-8gb-ram-glacier-blue/151352853",
-    "status": "modello-identificabile"
-  },
   "POCO F9 Pro": {
     "src": "https://www.cdiscount.com/pdt2/6/2/6/1/700x700/aadoq53626/rw/smartphone-xiaomi-poco-f9-pro.jpg",
     "credit": "Cdiscount",
@@ -333,42 +274,6 @@ window.SCELTOSMART_IMMAGINI = {
     "src": "https://i05.appmifile.com/628_item_es/12/03/2026/316784c8ff49b88caa24e7c4e940f68b.png?q=85&thumb=1",
     "credit": "Xiaomi España",
     "source": "https://www.mi.com/es/product/poco-x8-pro-max/buy/",
-    "status": "modello-identificabile"
-  },
-  "Nothing Phone (4a)": {
-    "src": "https://cdn.mos.cms.futurecdn.net/v2/t%3A0%2Cl%3A1312%2Ccw%3A3376%2Cch%3A3376%2Cq%3A80%2Cw%3A2560/nYc6iV97JYHgnahb8TyrqZ.jpg",
-    "credit": "Tom's Guide",
-    "source": "https://www.tomsguide.com/phones/android-phones/nothing-phone-4a-hands-on-review",
-    "status": "modello-identificabile"
-  },
-  "Nothing Phone (4a) Pro": {
-    "src": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/mobile/3/3/w/-original-imahh7x7gejesgvh.jpeg?q=90",
-    "credit": "Flipkart",
-    "source": "https://pricehistory.app/p/nothing-phone-4a-pro-silver-256-gb-YzdhRGSj",
-    "status": "modello-identificabile"
-  },
-  "Nothing Phone (3a)": {
-    "src": "https://med.greatecno.com/1482508-large_default/nothing-phone-3a-256gb-32-mp-front-camera-30x-ultra-zoom-50w-fast-charging-6-77-fhd-amoled-display-white.jpg",
-    "credit": "Greatecno",
-    "source": "https://greatecno.com/gb/mobile-phones/787606-nothing-phone-3a-256gb-32-mp-front-camera-30x-ultra-zoom-50w-fast-charging-6-77-fhd-amoled-display-white-6974434224407.html",
-    "status": "modello-identificabile"
-  },
-  "Nothing Phone (3a) Pro": {
-    "src": "https://cdn.cimri.io/image/1000x1000/nothing-phone-3a-pro-256gb-12gb-ram_979839331.jpg",
-    "credit": "Cimri",
-    "source": "https://it.nothing.tech/collections/phones",
-    "status": "modello-identificabile"
-  },
-  "Nothing Phone (3a) Lite": {
-    "src": "https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/NOT3AL128B_.jpg",
-    "credit": "Officeworks",
-    "source": "https://www.officeworks.com.au/shop/officeworks/p/nothing-3a-lite-128gb-black-not3al128b",
-    "status": "modello-identificabile"
-  },
-  "CMF Phone 2 Pro": {
-    "src": "https://silkroom.odoo.com/web/image/product.product/26616/image_1920?unique=d5be4f6",
-    "credit": "Silkroom",
-    "source": "https://silkroom.odoo.com/shop/nothing-cmf-phone-2-pro-6600",
     "status": "modello-identificabile"
   },
   "OnePlus 15": {
@@ -420,22 +325,10 @@ window.SCELTOSMART_IMMAGINI = {
     "source": "https://elenovo.pl/motorola-edge-70-12-512gb-67-120hz-gadget-gray",
     "status": "modello-identificabile"
   },
-  "Motorola Razr 70": {
-    "src": "https://lcdn.altex.ro/media/catalog/product/m/o/motorola_razr_70_green_03_bce67127.jpg",
-    "credit": "Altex",
-    "source": "https://altex.ro/telefon-motorola-razr-70-256gb-8gb-ram-dual-sim-sporting-green/cpd/PBB60007PL/",
-    "status": "modello-identificabile"
-  },
   "Motorola Razr 70 Plus": {
     "src": "https://www.mhr.pt/files/products/1152897_1.jpg",
     "credit": "MHR",
     "source": "https://www.mhr.pt/p3-p-1152897-smartphone-motorola-razr-70-plus-pantone-mountain-view-pbcf0004se-pt",
-    "status": "modello-identificabile"
-  },
-  "Motorola Razr 70 Ultra": {
-    "src": "https://fotografias-2.larazon.es/assets/2026/04/motorola-razr-70-ultra-basicpack-orient-blue-dyn-foldable-1-639130452495973668.png?width=640",
-    "credit": "La Razón",
-    "source": "https://www.larazon.es/tecnologia-consumo/motorola/razr-70-razr-70-plus-razr-70-ultra-son-oficiales-esto-es-todo-nos-ofrece-nueva-generacion-plegables-compactos-motorola_2026042969f1b1d11ba3656059a21ae5.html",
     "status": "modello-identificabile"
   }
 };

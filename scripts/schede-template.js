@@ -1,4 +1,4 @@
-/* SceltoSmart: template unificato delle 71 schede statiche. */
+/* SceltoSmart: template unificato delle schede statiche. */
 window.SCELTOSMART_STATIC_RENDER = (function factory(){
 "use strict";
 const origin="https://mattiaaaa780.github.io/sceltosmart/";
@@ -82,7 +82,7 @@ for(const f of families)for(const n of f.models){
  if(!(n in images))throw new Error("Foto non censita "+n);
  out.push({name:n,path:"prodotti/schede/"+slug(n)+".html",content:render(n,f,specs[n],links[key(n)],images[n])});
 }
-if(out.length!==71)throw new Error("Attese 71 schede, trovate "+out.length);
+if(out.length!==53)throw new Error("Attese 53 schede, trovate "+out.length);
 return out;
 }
 return {all,render,slug,key,specSections};

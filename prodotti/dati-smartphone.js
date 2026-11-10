@@ -2,7 +2,8 @@
    Foto rappresentative della famiglia; le varianti possono avere aspetto diverso.
    Le immagini provengono da fonti esterne e possono cambiare/non essere disponibili.
    URL ufficiali del produttore: nessun link affiliato viene generato automaticamente. */
-window.SCELTOSMART_FAMIGLIE=[
+window.SCELTOSMART_FAMIGLIE=
+[
   {
     "id": "iphone18pro",
     "brand": "Apple",
@@ -179,23 +180,6 @@ window.SCELTOSMART_FAMIGLIE=[
     "credit": "Officeworks"
   },
   {
-    "id": "pixel9",
-    "brand": "Google",
-    "title": "Pixel 9",
-    "os": "Android",
-    "models": [
-      "Google Pixel 9",
-      "Google Pixel 9a",
-      "Google Pixel 9 Pro",
-      "Google Pixel 9 Pro XL",
-      "Google Pixel 9 Pro Fold"
-    ],
-    "desc": "Versioni della serie Pixel 9, comprese a, Pro, XL e Fold.",
-    "source": "https://support.google.com/pixelphone/answer/15738422?hl=it-it",
-    "img": "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/8060928/610987106278297/539710/69ce3286Ec25e63f8/42b10752b5083d5e.png.webp",
-    "credit": "Joybuy"
-  },
-  {
     "id": "xiaomi17",
     "brand": "Xiaomi",
     "title": "Xiaomi 17",
@@ -240,23 +224,6 @@ window.SCELTOSMART_FAMIGLIE=[
     "credit": "El Corte Inglés"
   },
   {
-    "id": "redminote15",
-    "brand": "Redmi",
-    "title": "Redmi Note 15",
-    "os": "Android",
-    "models": [
-      "Redmi Note 15",
-      "Redmi Note 15 5G",
-      "Redmi Note 15 Pro",
-      "Redmi Note 15 Pro 5G",
-      "Redmi Note 15 Pro+ 5G"
-    ],
-    "desc": "Cinque varianti Redmi Note 15 da confrontare.",
-    "source": "https://www.mi.com/it/product/redmi-note-15/",
-    "img": "https://i02.appmifile.com/393_operator_sg/12/01/2026/d968d607d95796e7450512549c31562f.png",
-    "credit": "Xiaomi"
-  },
-  {
     "id": "pocof9",
     "brand": "POCO",
     "title": "POCO F9",
@@ -284,48 +251,6 @@ window.SCELTOSMART_FAMIGLIE=[
     "source": "https://www.mi.com/it/poco/",
     "img": "https://www.fons.gt/cdn/shop/files/5e577d09c2a7be3bdf9d2177584da574_563a6856-8967-402e-a94b-3cc5e40afbe3.png?v=1773266607",
     "credit": "FONS"
-  },
-  {
-    "id": "nothing4a",
-    "brand": "Nothing",
-    "title": "Nothing Phone (4a)",
-    "os": "Android",
-    "models": [
-      "Nothing Phone (4a)",
-      "Nothing Phone (4a) Pro"
-    ],
-    "desc": "Telefoni Nothing con design distintivo, anche in variante Pro.",
-    "source": "https://it.nothing.tech/collections/phones",
-    "img": "https://media.materiel.net/r900/products/MN0006328081.jpg",
-    "credit": "Materiel.net"
-  },
-  {
-    "id": "nothing3a",
-    "brand": "Nothing",
-    "title": "Nothing Phone (3a)",
-    "os": "Android",
-    "models": [
-      "Nothing Phone (3a)",
-      "Nothing Phone (3a) Pro",
-      "Nothing Phone (3a) Lite"
-    ],
-    "desc": "Linea Nothing (3a), Pro e Lite.",
-    "source": "https://it.nothing.tech/collections/phones",
-    "img": "https://cdn.cimri.io/image/1000x1000/nothing-phone-3a-pro-256gb-12gb-ram_979839331.jpg",
-    "credit": "Cimri"
-  },
-  {
-    "id": "cmf2",
-    "brand": "CMF",
-    "title": "CMF Phone 2 Pro",
-    "os": "Android",
-    "models": [
-      "CMF Phone 2 Pro"
-    ],
-    "desc": "Modello CMF by Nothing, con design originale.",
-    "source": "https://it.nothing.tech/collections/phones",
-    "img": "https://img.drz.lazcdn.com/static/np/p/1a212e42212ab3dfd50094640be7bd2d.png_720x720q80.png",
-    "credit": "Daraz"
   },
   {
     "id": "oneplus15",
@@ -398,14 +323,12 @@ window.SCELTOSMART_FAMIGLIE=[
   {
     "id": "motorolarazr70",
     "brand": "Motorola",
-    "title": "Motorola Razr 70",
+    "title": "Motorola Razr 70 Plus",
     "os": "Android",
     "models": [
-      "Motorola Razr 70",
-      "Motorola Razr 70 Plus",
-      "Motorola Razr 70 Ultra"
+      "Motorola Razr 70 Plus"
     ],
-    "desc": "Famiglia Razr 70 con modello standard, Plus e Ultra. Verifica la versione esatta prima di acquistare.",
+    "desc": "Motorola Razr 70 Plus: scheda e caratteristiche della versione pieghevole Plus.",
     "source": "https://www.motorola.com/it/it/family/moto-razr",
     "img": "https://api.technopolis.bg/medias/Product-details-main-510652.jpg?context=bWFzdGVyfHJvb3R8MTkyNzQ2fGltYWdlL2pwZWd8YUROaEwyZzBNUzgyTWpZMk9EZ3pNRGd6TkRjeE9DOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDgxTVRBMk5USXVhbkJufGQwOTRlZWY0NDhjYjA5NjgyYmQ1MGNmZTQ4YzhlOTg2ZDFjZDg5M2IxMTliMTRkMGRiNjIwNDFiMWQwOTk2OWU",
     "credit": "Technopolis"
